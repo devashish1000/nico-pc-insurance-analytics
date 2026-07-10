@@ -31,6 +31,118 @@ grant select on public.pipeline_runs to service_role;
 create schema if not exists private;
 revoke all on schema private from public, anon, authenticated;
 
+-- A reload must be idempotent. Earlier demo migrations did not constrain the
+-- current SCD row, so ON CONFLICT DO NOTHING could append another current row
+-- for every policy. Remap any already-referenced duplicates before removing them.
+with ranked as (
+  select
+    policy_key,
+    first_value(policy_key) over (
+      partition by policy_number
+      order by effective_date desc nulls last, valid_from desc, policy_key desc
+    ) as keeper_key
+  from public.dim_policy
+  where is_current
+)
+update public.fact_premium f
+set policy_key = r.keeper_key
+from ranked r
+where f.policy_key = r.policy_key
+  and r.policy_key <> r.keeper_key;
+
+with ranked as (
+  select
+    policy_key,
+    first_value(policy_key) over (
+      partition by policy_number
+      order by effective_date desc nulls last, valid_from desc, policy_key desc
+    ) as keeper_key
+  from public.dim_policy
+  where is_current
+)
+update public.fact_loss f
+set policy_key = r.keeper_key
+from ranked r
+where f.policy_key = r.policy_key
+  and r.policy_key <> r.keeper_key;
+
+with ranked as (
+  select
+    policy_key,
+    row_number() over (
+      partition by policy_number
+      order by effective_date desc nulls last, valid_from desc, policy_key desc
+    ) as policy_rank
+  from public.dim_policy
+  where is_current
+)
+delete from public.dim_policy p
+using ranked r
+where p.policy_key = r.policy_key
+  and r.policy_rank > 1;
+
+create unique index if not exists dim_policy_one_current_policy_idx
+  on public.dim_policy (policy_number)
+  where is_current;
+
+create or replace function public.sp_load_dimensions()
+returns void
+language plpgsql
+set search_path = ''
+as $$
+begin
+  perform public.sp_populate_dim_date(
+    least((select min(txn_date) from staging.raw_premium_txn),
+          (select min(effective_date) from staging.raw_premium_txn)),
+    greatest((select max(txn_date) from staging.raw_premium_txn),
+             (select max(expiration_date) from staging.raw_premium_txn)));
+
+  insert into public.dim_lob (lob_code, lob_name)
+  select distinct lob_code, lob_name from staging.raw_premium_txn
+  on conflict (lob_code) do update set lob_name = excluded.lob_name;
+
+  insert into public.dim_insured (insured_id, insured_name, state, segment)
+  select distinct insured_id, insured_name, state, segment from staging.raw_premium_txn
+  on conflict (insured_id) do update
+    set insured_name = excluded.insured_name, state = excluded.state, segment = excluded.segment;
+
+  insert into public.dim_agent (agent_id, agent_name, agency, region)
+  select distinct agent_id, agent_name, agency, region from staging.raw_premium_txn
+  on conflict (agent_id) do update
+    set agent_name = excluded.agent_name, agency = excluded.agency, region = excluded.region;
+
+  insert into public.dim_transaction_type (txn_code, txn_name, txn_group) values
+    ('NB','New Business','premium'), ('RN','Renewal','premium'),
+    ('EN','Endorsement','premium'), ('CN','Cancellation','premium'),
+    ('PD','Paid Loss','loss'), ('RS','Case Reserve','loss'), ('RC','Recovery','loss')
+  on conflict (txn_code) do update
+    set txn_name = excluded.txn_name, txn_group = excluded.txn_group;
+
+  insert into public.dim_policy (
+    policy_number, lob_key, insured_key, agent_key,
+    effective_date, expiration_date, status, valid_from, is_current
+  )
+  select distinct on (p.policy_number)
+         p.policy_number, l.lob_key, i.insured_key, a.agent_key,
+         p.effective_date, p.expiration_date, p.status, p.effective_date, true
+  from staging.raw_premium_txn p
+  join public.dim_lob l     on l.lob_code = p.lob_code
+  join public.dim_insured i on i.insured_id = p.insured_id
+  join public.dim_agent a   on a.agent_id = p.agent_id
+  order by p.policy_number, p.txn_date desc
+  on conflict (policy_number) where is_current do update
+    set lob_key = excluded.lob_key,
+        insured_key = excluded.insured_key,
+        agent_key = excluded.agent_key,
+        effective_date = excluded.effective_date,
+        expiration_date = excluded.expiration_date,
+        status = excluded.status,
+        valid_from = excluded.valid_from,
+        valid_to = null,
+        is_current = true;
+end
+$$;
+
 create or replace function private.run_nico_pipeline(p_trigger text)
 returns uuid
 language plpgsql
@@ -88,24 +200,25 @@ begin
           checks_total = v_checks_total
       where run_id = v_run_id;
     else
-      update public.pipeline_runs
-      set finished_at = clock_timestamp(),
-          status = 'failed',
-          duration_ms = greatest(1, round(extract(epoch from (clock_timestamp() - v_started_at)) * 1000)::integer),
-          premium_rows = v_premium_rows,
-          loss_rows = v_loss_rows,
-          dq_run_id = v_dq_run_id,
-          checks_passed = v_checks_passed,
-          checks_total = v_checks_total,
-          error_message = 'Data quality gate failed.'
-      where run_id = v_run_id;
+      -- Raising inside this nested block rolls back the dimension/fact refresh and
+      -- its DQ rows while leaving the outer pipeline_runs evidence row available.
+      raise exception using errcode = 'P0001', message = 'Data quality gate failed.';
     end if;
   exception when others then
     update public.pipeline_runs
     set finished_at = clock_timestamp(),
         status = 'failed',
         duration_ms = greatest(1, round(extract(epoch from (clock_timestamp() - v_started_at)) * 1000)::integer),
-        error_message = 'Pipeline execution failed (' || sqlstate || ').'
+        premium_rows = v_premium_rows,
+        loss_rows = v_loss_rows,
+        dq_run_id = v_dq_run_id,
+        checks_passed = v_checks_passed,
+        checks_total = v_checks_total,
+        error_message = case
+          when sqlstate = 'P0001' and sqlerrm = 'Data quality gate failed.'
+            then 'Data quality gate failed.'
+          else 'Pipeline execution failed (' || sqlstate || ').'
+        end
     where run_id = v_run_id;
   end;
 
@@ -125,6 +238,13 @@ declare
   v_previous_run uuid;
   v_run_id uuid;
 begin
+  -- Serialize the cooldown decision with execution. A blocking transaction lock
+  -- lets a concurrent request observe the first request's committed run before
+  -- deciding whether another manual refresh is allowed.
+  perform pg_catalog.pg_advisory_xact_lock(
+    pg_catalog.hashtext('nico-pc-warehouse-pipeline')
+  );
+
   select run_id into v_previous_run
   from public.pipeline_runs
   where trigger_type = 'manual'

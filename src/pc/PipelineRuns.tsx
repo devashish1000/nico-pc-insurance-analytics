@@ -28,7 +28,11 @@ export default function PipelineRuns() {
   const [notice, setNotice] = useState('');
 
   const load = useCallback(async () => {
-    const { data, error: queryError } = await supabase.rpc('get_pipeline_runs');
+    const { data, error: queryError } = await supabase
+      .from('vw_pipeline_runs')
+      .select('*')
+      .order('started_at', { ascending: false })
+      .limit(14);
     if (queryError) {
       setError(queryError.message.includes('schema cache') ? 'Pipeline history is awaiting the secure database migration.' : queryError.message);
     } else {
