@@ -25,13 +25,8 @@ create index if not exists pipeline_runs_started_at_idx
 alter table public.pipeline_runs enable row level security;
 
 drop policy if exists pipeline_runs_public_read on public.pipeline_runs;
-create policy pipeline_runs_public_read
-  on public.pipeline_runs for select
-  to anon, authenticated
-  using (true);
-
-grant select on public.pipeline_runs to anon, authenticated;
-revoke insert, update, delete, truncate, references, trigger on public.pipeline_runs from anon, authenticated;
+revoke all on public.pipeline_runs from public, anon, authenticated;
+grant select on public.pipeline_runs to service_role;
 
 create schema if not exists private;
 revoke all on schema private from public, anon, authenticated;
@@ -46,7 +41,6 @@ declare
   v_run_id uuid := gen_random_uuid();
   v_dq_run_id uuid;
   v_started_at timestamptz := clock_timestamp();
-  v_previous_run uuid;
   v_premium_rows integer;
   v_loss_rows integer;
   v_checks_passed integer;
@@ -54,20 +48,6 @@ declare
 begin
   if p_trigger not in ('manual', 'scheduled') then
     raise exception using errcode = '22023', message = 'Unsupported pipeline trigger';
-  end if;
-
-  if p_trigger = 'manual' then
-    select run_id into v_previous_run
-    from public.pipeline_runs
-    where trigger_type = 'manual'
-      and status in ('running', 'success')
-      and started_at > clock_timestamp() - interval '60 seconds'
-    order by started_at desc
-    limit 1;
-
-    if v_previous_run is not null then
-      return v_previous_run;
-    end if;
   end if;
 
   if not pg_catalog.pg_try_advisory_xact_lock(pg_catalog.hashtext('nico-pc-warehouse-pipeline')) then
@@ -96,16 +76,30 @@ begin
       from public.dq_results
       where run_id = v_dq_run_id;
 
-    update public.pipeline_runs
-    set finished_at = clock_timestamp(),
-        status = 'success',
-        duration_ms = greatest(1, round(extract(epoch from (clock_timestamp() - v_started_at)) * 1000)::integer),
-        premium_rows = v_premium_rows,
-        loss_rows = v_loss_rows,
-        dq_run_id = v_dq_run_id,
-        checks_passed = v_checks_passed,
-        checks_total = v_checks_total
-    where run_id = v_run_id;
+    if v_checks_total = 6 and v_checks_passed = v_checks_total then
+      update public.pipeline_runs
+      set finished_at = clock_timestamp(),
+          status = 'success',
+          duration_ms = greatest(1, round(extract(epoch from (clock_timestamp() - v_started_at)) * 1000)::integer),
+          premium_rows = v_premium_rows,
+          loss_rows = v_loss_rows,
+          dq_run_id = v_dq_run_id,
+          checks_passed = v_checks_passed,
+          checks_total = v_checks_total
+      where run_id = v_run_id;
+    else
+      update public.pipeline_runs
+      set finished_at = clock_timestamp(),
+          status = 'failed',
+          duration_ms = greatest(1, round(extract(epoch from (clock_timestamp() - v_started_at)) * 1000)::integer),
+          premium_rows = v_premium_rows,
+          loss_rows = v_loss_rows,
+          dq_run_id = v_dq_run_id,
+          checks_passed = v_checks_passed,
+          checks_total = v_checks_total,
+          error_message = 'Data quality gate failed.'
+      where run_id = v_run_id;
+    end if;
   exception when others then
     update public.pipeline_runs
     set finished_at = clock_timestamp(),
@@ -122,12 +116,29 @@ $$;
 revoke all on function private.run_nico_pipeline(text) from public, anon, authenticated;
 
 create or replace function public.run_demo_pipeline()
-returns uuid
-language sql
+returns jsonb
+language plpgsql
 security definer
 set search_path = ''
 as $$
-  select private.run_nico_pipeline('manual');
+declare
+  v_previous_run uuid;
+  v_run_id uuid;
+begin
+  select run_id into v_previous_run
+  from public.pipeline_runs
+  where trigger_type = 'manual'
+    and started_at > clock_timestamp() - interval '5 minutes'
+  order by started_at desc
+  limit 1;
+
+  if v_previous_run is not null then
+    return jsonb_build_object('run_id', v_previous_run, 'accepted', false);
+  end if;
+
+  v_run_id := private.run_nico_pipeline('manual');
+  return jsonb_build_object('run_id', v_run_id, 'accepted', true);
+end;
 $$;
 
 revoke all on function public.run_demo_pipeline() from public, anon, authenticated;
@@ -140,16 +151,36 @@ revoke execute on function public.sp_run_data_quality() from public, anon, authe
 alter default privileges in schema public revoke execute on functions from public;
 alter default privileges in schema public revoke execute on functions from anon, authenticated;
 
-create or replace view public.vw_pipeline_runs
-with (security_invoker = true)
-as
-select run_id, trigger_type, started_at, finished_at, status, duration_ms,
-       premium_rows, loss_rows, dq_run_id, checks_passed, checks_total, error_message
-from public.pipeline_runs
-order by started_at desc
-limit 14;
+create or replace function public.get_pipeline_runs()
+returns table (
+  run_id uuid,
+  trigger_type text,
+  started_at timestamptz,
+  finished_at timestamptz,
+  status text,
+  duration_ms integer,
+  premium_rows integer,
+  loss_rows integer,
+  dq_run_id uuid,
+  checks_passed integer,
+  checks_total integer,
+  error_message text
+)
+language sql
+stable
+security definer
+set search_path = ''
+as $$
+  select r.run_id, r.trigger_type, r.started_at, r.finished_at, r.status,
+         r.duration_ms, r.premium_rows, r.loss_rows, r.dq_run_id,
+         r.checks_passed, r.checks_total, r.error_message
+  from public.pipeline_runs r
+  order by r.started_at desc
+  limit 14;
+$$;
 
-grant select on public.vw_pipeline_runs to anon, authenticated;
+revoke all on function public.get_pipeline_runs() from public;
+grant execute on function public.get_pipeline_runs() to anon, authenticated, service_role;
 
 do $$
 declare

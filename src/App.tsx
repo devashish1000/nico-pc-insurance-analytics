@@ -34,7 +34,6 @@ export default function App() {
   const [tourOpen, setTourOpen] = useState(false);
   const effectivePersona: Persona = persona ?? 'data-engineer';
   const nav = useMemo(() => navigationFor(effectivePersona), [effectivePersona]);
-  const groups = useMemo(() => [...new Set(nav.map((item) => item.group))], [nav]);
 
   useEffect(() => {
     const handlePopState = () => {
@@ -110,12 +109,10 @@ export default function App() {
               <option value="business-analyst">Business Analyst</option>
             </select>
           </div>
-          {groups.map((group) => (
-            <div className="nav-group" key={group}>
-              <span>{group}</span>
-              {nav.filter((item) => item.group === group).map(({ id, label, icon: Icon }) => (
-                <button key={id} className={view === id ? 'active' : ''} onClick={() => navigate(id)}><Icon size={18} />{label}</button>
-              ))}
+          {nav.map(({ id, label, group, icon: Icon }, index) => (
+            <div className="nav-group nav-item" key={id}>
+              {(index === 0 || nav[index - 1].group !== group) && <span>{group}</span>}
+              <button className={view === id ? 'active' : ''} onClick={() => navigate(id)}><Icon size={18} />{label}</button>
             </div>
           ))}
           <button className="replay-tour" onClick={() => setTourOpen(true)}><RotateCcw size={17} /> Replay tour</button>

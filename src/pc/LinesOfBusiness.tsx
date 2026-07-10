@@ -36,7 +36,7 @@ export default function LinesOfBusiness() {
         icon={<Layers size={20} />}
       />
 
-      <Card className="overflow-hidden">
+      <Card className="data-table-scroll">
         <table className="w-full text-sm">
           <thead className="bg-slate-50 text-left text-xs uppercase tracking-wide text-slate-400">
             <tr>

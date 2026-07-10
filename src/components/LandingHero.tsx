@@ -17,7 +17,7 @@ export default function LandingHero({ persona, onSelect }: { persona: Persona | 
         <div className="editorial-rule" />
         <p>A live, synthetic-data work sample spanning warehouse engineering, quality controls, rating logic, and testable requirements.</p>
         <div className="persona-actions" aria-label="Choose a hiring perspective">
-          <button className={persona === 'data-engineer' ? 'persona-action active' : 'persona-action'} onClick={() => onSelect('data-engineer')}>
+          <button className={persona !== 'business-analyst' ? 'persona-action active' : 'persona-action'} onClick={() => onSelect('data-engineer')}>
             <Database size={19} /> Explore as a Data Engineer
           </button>
           <button className={persona === 'business-analyst' ? 'persona-action active' : 'persona-action'} onClick={() => onSelect('business-analyst')}>
@@ -38,4 +38,3 @@ export default function LandingHero({ persona, onSelect }: { persona: Persona | 
     </section>
   );
 }
-

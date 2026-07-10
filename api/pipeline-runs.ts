@@ -23,6 +23,10 @@ export default async function handler(request: VercelRequest, response: VercelRe
     return response.status(403).json({ message: 'This pipeline action is available only from the portfolio app.' });
   }
 
+  if (request.headers['sec-fetch-site'] && request.headers['sec-fetch-site'] !== 'same-origin') {
+    return response.status(403).json({ message: 'Cross-site pipeline requests are not allowed.' });
+  }
+
   const url = process.env.SUPABASE_URL;
   const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
   if (!url || !serviceRoleKey) {
@@ -30,15 +34,21 @@ export default async function handler(request: VercelRequest, response: VercelRe
   }
 
   const supabase = createClient(url, serviceRoleKey, { auth: { persistSession: false, autoRefreshToken: false } });
-  const { data: runId, error: runError } = await supabase.rpc('run_demo_pipeline');
-  if (runError || !runId) {
+  const { data: requestResult, error: runError } = await supabase.rpc('run_demo_pipeline');
+  const result = requestResult as { run_id?: string; accepted?: boolean } | null;
+  if (runError || !result?.run_id) {
     return response.status(502).json({ message: 'The controlled pipeline could not be started.' });
   }
 
+  if (!result.accepted) {
+    response.setHeader('Retry-After', '300');
+    return response.status(429).json({ message: 'A synthetic pipeline run was requested recently. Try again after the five-minute cooldown.' });
+  }
+
   const { data: run, error: readError } = await supabase
-    .from('vw_pipeline_runs')
+    .from('pipeline_runs')
     .select('*')
-    .eq('run_id', runId)
+    .eq('run_id', result.run_id)
     .single();
 
   if (readError || !run) {

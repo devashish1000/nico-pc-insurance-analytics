@@ -40,7 +40,7 @@ export default function DataQuality() {
         <StatCard label="Suite Status" value={passed === rows.length ? 'GREEN' : 'ATTENTION'} accent={passed === rows.length ? 'text-emerald-600' : 'text-red-600'} />
       </div>
 
-      <Card className="mt-4 overflow-hidden">
+      <Card className="mt-4 data-table-scroll">
         <table className="w-full text-sm">
           <thead className="bg-slate-50 text-left text-xs uppercase tracking-wide text-slate-400">
             <tr>

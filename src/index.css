@@ -55,8 +55,7 @@ h1, h2, h3, h4 { font-family: "Source Serif 4", Georgia, serif; color: var(--ink
 .persona-actions { display: flex; flex-wrap: wrap; gap: 12px; }
 .persona-action { min-height: 50px; display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 0 22px; border: 1px solid var(--ink); border-radius: 5px; color: var(--ink); background: transparent; font-weight: 700; cursor: pointer; transition: background .15s, color .15s, transform .15s; }
 .persona-action:hover { transform: translateY(-1px); }
-.persona-action.active, .persona-action:first-child { background: var(--ink); color: #fff; }
-.persona-action.active:first-child ~ .persona-action { background: transparent; color: var(--ink); }
+.persona-action.active { background: var(--ink); color: #fff; }
 .hero-pipeline { display: grid; grid-template-columns: repeat(5, 1fr); align-items: start; gap: 12px; }
 .hero-pipeline-step { position: relative; display: grid; justify-items: center; text-align: center; gap: 7px; min-width: 0; }
 .pipeline-icon { width: 54px; height: 54px; display: grid; place-items: center; border-radius: 50%; color: #fff; background: var(--ink); border: 2px solid #fff; outline: 1px solid var(--gold-soft); }
@@ -70,6 +69,8 @@ h1, h2, h3, h4 { font-family: "Source Serif 4", Georgia, serif; color: var(--ink
 .persona-control > span, .nav-group > span { display: block; margin-bottom: 7px; color: #aebbd0; font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: .09em; }
 .persona-control select { width: 100%; height: 42px; padding: 0 32px 0 12px; color: #fff; background: #0b2c52; border: 1px solid #9b7a3f; border-radius: 4px; }
 .nav-group { margin-top: 12px; }
+.nav-group.nav-item + .nav-group.nav-item { margin-top: 0; }
+.nav-group.nav-item > span { margin-top: 12px; }
 .nav-group button { width: 100%; min-height: 39px; display: flex; align-items: center; gap: 11px; padding: 8px 11px; border: 0; border-left: 3px solid transparent; color: #e3eaf3; background: transparent; text-align: left; font-size: 13px; cursor: pointer; }
 .nav-group button:hover { background: rgba(255,255,255,.07); }
 .nav-group button.active { border-left-color: #e8ad38; color: #fff; background: rgba(255,255,255,.105); }
