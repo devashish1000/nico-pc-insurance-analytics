@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+/* Dark mode via a `.dark` class on <html> (Tailwind v4 custom variant). */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ---------------------------------------------------------------------------
+   CommonSpirit design tokens — single source of truth.
+   Brand magenta anchored at brand-600 (#982f6a, sampled from commonspirit.org).
+   Charcoal "ink" ramp for dark shells. Figtree (display) + Inter (body).
+--------------------------------------------------------------------------- */
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Figtree", "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand-50: #fdf2f7;
+  --color-brand-100: #fbe3ee;
+  --color-brand-200: #f5c2d8;
+  --color-brand-300: #e892b8;
+  --color-brand-400: #cf5e93;
+  --color-brand-500: #b03b76;
+  --color-brand-600: #982f6a;
+  --color-brand-700: #7e2659;
+  --color-brand-800: #661f48;
+  --color-brand-900: #4f193a;
+  --color-brand-950: #340f27;
+
+  --color-ink-700: #3a3a40;
+  --color-ink-800: #2a2a2e;
+  --color-ink-900: #1c1c1f;
+  --color-ink-950: #141416;
+}
+
+/* Base typography */
+body {
+  font-family: var(--font-sans);
+}
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+}
+
+/* Dark mode: page canvas only — do NOT set global text color (causes light
+   text to inherit onto white cards and unreadable contrast). */
+.dark body {
+  background-color: #141416;
+}
+
+/* Semantic typography — always pair with matching surface (card or page canvas). */
+.text-page-title {
+  color: #0f172a;
+}
+.dark .text-page-title {
+  color: #f1f5f9;
+}
+
+.text-page-subtitle {
+  color: #475569;
+}
+.dark .text-page-subtitle {
+  color: #94a3b8;
+}
+
+.text-on-surface {
+  color: #0f172a;
+}
+.dark .text-on-surface {
+  color: #e2e8f0;
+}
+
+.text-muted-surface {
+  color: #64748b;
+}
+.dark .text-muted-surface {
+  color: #94a3b8;
+}
+
+/* Catch legacy slate body classes inside readable surfaces (dark cards) */
+.dark .surface-readable .text-slate-500,
+.dark .surface-readable .text-slate-600,
+.dark .surface-readable .text-slate-700 {
+  color: #cbd5e1;
+}
+
+.dark .surface-readable p,
+.dark .surface-readable li {
+  color: #cbd5e1;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.35s ease-out forwards;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.4s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
