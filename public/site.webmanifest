@@ -1,0 +1,10 @@
+{
+  "name": "P&C Insurance Analytics Platform",
+  "short_name": "P&C Analytics",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fbf8f1",
+  "theme_color": "#061f3d",
+  "icons": []
+}
+

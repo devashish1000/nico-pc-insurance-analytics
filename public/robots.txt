@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nico-pc-insurance-analytics.vercel.app/sitemap.xml
+

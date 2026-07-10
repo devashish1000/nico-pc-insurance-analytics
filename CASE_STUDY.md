@@ -2,7 +2,7 @@
 
 **Author:** Dev (Devashish) Neupane · **Built for:** National Indemnity Company (NICO) Data Warehouse team roles (Data Engineer & Business Analyst)
 
-A live, end-to-end work sample that mirrors what a P&C insurer's Data Warehouse team actually does — from source data through a dimensional warehouse to executive BI and the business requirements behind it. **All data is synthetic; no PII.**
+A live, end-to-end work sample that mirrors what a P&C insurer's Data Warehouse team actually does—from source data through a dimensional warehouse to executive BI, controlled operations, and executable requirements. **All data is synthetic; no PII.**
 
 - **Live app:** https://nico-pc-insurance-analytics.vercel.app
 - **Source:** https://github.com/devashish1000/nico-pc-insurance-analytics
@@ -12,7 +12,7 @@ A live, end-to-end work sample that mirrors what a P&C insurer's Data Warehouse 
 
 ## Why this exists
 
-NICO opened two roles on the same Data Warehouse team — a **Data Engineer** and a **Business Analyst**. Rather than only describe the skills on a resume, this project demonstrates them on realistic P&C insurance data: a Kimball star schema loaded by stored procedures, automated data-quality controls, BI dashboards, an interactive rating engine, and the requirements/acceptance-criteria artifacts a BA produces.
+NICO opened two roles on the same Data Warehouse team—a **Data Engineer** and a **Business Analyst**. Rather than only describe the skills on a resume, this project demonstrates them on realistic P&C insurance data. The entry experience can be viewed as either role, reordering the same evidence into a guided hiring-manager journey instead of duplicating or exaggerating work.
 
 ## Architecture — source → published
 
@@ -35,11 +35,14 @@ public: dim_* + fact_*  →  vw_* published views  →  React BI dashboards
 - **Dimensional modeling:** star schema with facts/dimensions, surrogate keys, SCD Type 2, and role-playing date dimensions.
 - **Source-to-published pipeline:** a clear staging → published separation, reloadable and idempotent.
 - **Data integrity:** `sp_run_data_quality()` runs 6 checks after each load — source-vs-published reconciliation, referential integrity, completeness, and validity (e.g. incurred = paid + reserve). Currently **6/6 passing**.
+- **Controlled operations:** a same-origin Vercel Function invokes one service-role-only RPC. Advisory locking, a manual cooldown, and sanitized responses prevent the public browser from receiving privileged SQL access.
+- **Scheduled evidence:** Supabase Cron runs the same internal pipeline nightly at 06:15 UTC and a read-only view publishes the latest 14 durations, row counts, and DQ results.
 
 ## Business Analysis highlights (Role 2)
 
 - **Rating engine:** an interactive P&C premium calculator — base rate × territory × risk tier × limits, with deductible credits, endorsements, discounts, and a prior-claims surcharge, plus a transparent rating worksheet.
 - **Requirements:** INVEST user stories with **Given/When/Then** acceptance criteria, MoSCoW priority, and traceable test cases mapping to the engine and warehouse behavior.
+- **Executable traceability:** 10 tests run against the actual rating functions and hosted warehouse views, reporting expected-versus-actual evidence and linking rating cases into reproducible inputs.
 - **Insight delivery:** the Overview surfaces a rate-adequacy alert when a line of business runs above a 100% loss ratio (in the synthetic book, Personal Auto and Homeowners) — the kind of finding a portfolio analyst escalates.
 
 ## Honest scope
@@ -47,6 +50,13 @@ public: dim_* + fact_*  →  vw_* published views  →  React BI dashboards
 - Data is **synthetic**, generated in Postgres. No real policyholder data.
 - The warehouse runs on **Supabase Postgres** rather than NICO's Microsoft/Azure stack — the *techniques* (dimensional modeling, stored-procedure ETL, source-to-published loads, data-quality controls) transfer directly; the specific tooling (Azure Data Factory, SSIS, SQL Server) would be a fast ramp.
 - The rating engine is a simplified illustrative model, not a filed rating plan.
+- The Azure Stack Mapping page names the closest Microsoft equivalents and the implementation ramp. It does not claim access to NICO systems or production Azure delivery.
+
+## Verification
+
+- `npm run typecheck`, `npm run lint`, `npm run test`, and `npm run build` are required release gates.
+- Playwright covers 1440×1000 desktop and 390×844 mobile journeys, including persona persistence, the acceptance suite, guided tours, and page-level overflow.
+- Database release validation includes one real manual run, six passing controls, cron job/run evidence, and Supabase security/performance advisors.
 
 ## Run locally
 

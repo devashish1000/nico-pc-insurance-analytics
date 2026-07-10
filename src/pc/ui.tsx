@@ -1,28 +1,31 @@
 import React from 'react';
 
 export const Card: React.FC<React.PropsWithChildren<{ className?: string }>> = ({ children, className = '' }) => (
-  <div className={`rounded-xl border border-slate-200 bg-white shadow-sm ${className}`}>{children}</div>
+  <div className={`data-surface ${className}`}>{children}</div>
 );
 
-export const SectionTitle: React.FC<{ title: string; subtitle?: string; icon?: React.ReactNode }> = ({
-  title, subtitle, icon,
+export const SectionTitle: React.FC<{ title: string; subtitle?: string; icon?: React.ReactNode; action?: React.ReactNode }> = ({
+  title, subtitle, icon, action,
 }) => (
-  <div className="mb-5">
-    <div className="flex items-center gap-2">
-      {icon && <span className="text-slate-500">{icon}</span>}
-      <h1 className="text-xl font-bold tracking-tight text-slate-900">{title}</h1>
+  <div className="section-title">
+    <div>
+      <div className="section-title-heading">
+        {icon && <span>{icon}</span>}
+        <h1>{title}</h1>
+      </div>
+      {subtitle && <p>{subtitle}</p>}
     </div>
-    {subtitle && <p className="mt-1 text-sm text-slate-500">{subtitle}</p>}
+    {action && <div className="section-title-action">{action}</div>}
   </div>
 );
 
 export const StatCard: React.FC<{
   label: string; value: string; sub?: string; accent?: string;
 }> = ({ label, value, sub, accent = 'text-slate-900' }) => (
-  <Card className="p-4">
-    <div className="text-[11px] font-semibold uppercase tracking-wide text-slate-400">{label}</div>
-    <div className={`mt-1 text-2xl font-bold tabular-nums ${accent}`}>{value}</div>
-    {sub && <div className="mt-0.5 text-xs text-slate-500">{sub}</div>}
+  <Card className="stat-card">
+    <div className="stat-label">{label}</div>
+    <div className={`stat-value ${accent}`}>{value}</div>
+    {sub && <div className="stat-sub">{sub}</div>}
   </Card>
 );
 
@@ -44,9 +47,9 @@ export const Badge: React.FC<React.PropsWithChildren<{ tone?: 'green' | 'amber' 
 };
 
 export const Loading: React.FC<{ label?: string }> = ({ label = 'Loading warehouse data…' }) => (
-  <div className="flex h-40 items-center justify-center text-sm text-slate-400">{label}</div>
+  <div className="loading-state" role="status"><span /><span /><span /><p>{label}</p></div>
 );
 
 export const ErrorNote: React.FC<{ msg: string }> = ({ msg }) => (
-  <div className="rounded-lg border border-red-200 bg-red-50 p-4 text-sm text-red-700">{msg}</div>
+  <div className="error-note" role="alert">{msg}</div>
 );
