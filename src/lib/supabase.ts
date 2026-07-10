@@ -1,10 +1,12 @@
 import { createClient } from '@supabase/supabase-js';
 
-// Publishable/anon key — safe to expose in client bundles (read-only, RLS-guarded synthetic data).
-const SUPABASE_URL =
-  import.meta.env.VITE_SUPABASE_URL ?? 'https://azmcrbiakbsauclgpzeh.supabase.co';
-const SUPABASE_KEY =
-  import.meta.env.VITE_SUPABASE_ANON_KEY ?? 'sb_publishable_SctEmhdRKZ43fYP8MBej5A_0Oyf5u5b';
+// Publishable key: browser-safe and RLS-guarded. Privileged keys are server-only.
+const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
+const SUPABASE_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY;
+
+if (!SUPABASE_URL || !SUPABASE_KEY) {
+  throw new Error('Missing public Supabase configuration.');
+}
 
 export const supabase = createClient(SUPABASE_URL, SUPABASE_KEY, {
   auth: { persistSession: false },
@@ -39,3 +41,17 @@ export type DqRow = {
   expected_value: string; actual_value: string; checked_at: string;
 };
 export type WhObject = { layer: string; object_name: string; row_count: number };
+export type PipelineRun = {
+  run_id: string;
+  trigger_type: 'manual' | 'scheduled';
+  started_at: string;
+  finished_at: string | null;
+  status: 'running' | 'success' | 'failed' | 'cooldown';
+  duration_ms: number | null;
+  premium_rows: number | null;
+  loss_rows: number | null;
+  dq_run_id: string | null;
+  checks_passed: number | null;
+  checks_total: number | null;
+  error_message: string | null;
+};

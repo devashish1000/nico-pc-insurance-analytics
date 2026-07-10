@@ -1,8 +1,9 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { Calculator, ArrowRight } from 'lucide-react';
 import {
   LOBS, TERRITORIES, TIERS, LIMIT_FACTORS, DEDUCTIBLES, ENDORSEMENTS, DISCOUNTS, rate, RatingInput, Lob,
 } from '../lib/ratingModel';
+import { ACCEPTANCE_CASES } from '../lib/acceptance';
 import { usd } from '../lib/format';
 import { Card, SectionTitle } from './ui';
 
@@ -47,12 +48,16 @@ const Chips: React.FC<{ label: string; options: { code: string; name: string; pr
   </div>
 );
 
-export default function RatingEngine() {
-  const [input, setInput] = useState<RatingInput>({
+export default function RatingEngine({ testId }: { testId?: string }) {
+  const preset = ACCEPTANCE_CASES.find((test) => test.id === testId)?.ratingInput;
+  const [input, setInput] = useState<RatingInput>(preset ?? {
     lob: 'CAUTO' as Lob, territory: 'NE', tier: 'STD', limit: 'L2', deductible: 'D1000',
     endorsements: ['EQ'], discounts: ['MULTI'], priorClaims: 0,
   });
   const result = useMemo(() => rate(input), [input]);
+  useEffect(() => {
+    if (preset) setInput(preset);
+  }, [preset]);
   const set = (patch: Partial<RatingInput>) => setInput((s) => ({ ...s, ...patch }));
   const toggle = (key: 'endorsements' | 'discounts', code: string) =>
     setInput((s) => ({ ...s, [key]: s[key].includes(code) ? s[key].filter((c) => c !== code) : [...s[key], code] }));
@@ -64,6 +69,10 @@ export default function RatingEngine() {
         subtitle="Interactive premium calculation — base rate × territory × risk tier × limits, with deductible credits, endorsements, discounts and surcharges. Documented in the Requirements tab."
         icon={<Calculator size={20} />}
       />
+
+      {testId && preset && (
+        <div className="success-note">Acceptance test <strong>{testId}</strong> loaded with its exact reproducible rating inputs.</div>
+      )}
 
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-5">
         <Card className="p-5 lg:col-span-3">

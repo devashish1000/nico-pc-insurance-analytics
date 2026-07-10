@@ -33,9 +33,6 @@ export default defineConfig(() => {
               if (id.includes('/recharts/')) {
                 return 'charts';
               }
-              if (id.includes('/motion/') || id.includes('/framer-motion/')) {
-                return 'motion';
-              }
               if (id.includes('/lucide-react/')) {
                 return 'icons';
               }
