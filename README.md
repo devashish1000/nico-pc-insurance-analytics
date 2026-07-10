@@ -4,7 +4,7 @@ An end-to-end **property & casualty insurance data-warehouse** work sample — K
 
 Built by **Dev (Devashish) Neupane**. **Synthetic data only — no PII.**
 
-👉 **See [CASE_STUDY.md](./CASE_STUDY.md) for the full write-up.**
+🔗 **Live:** https://nico-pc-insurance-analytics.vercel.app · 👉 **See [CASE_STUDY.md](./CASE_STUDY.md) for the full write-up.**
 
 ## What it demonstrates
 

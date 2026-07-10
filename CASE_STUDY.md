@@ -4,7 +4,7 @@
 
 A live, end-to-end work sample that mirrors what a P&C insurer's Data Warehouse team actually does — from source data through a dimensional warehouse to executive BI and the business requirements behind it. **All data is synthetic; no PII.**
 
-- **Live app:** _(Vercel URL)_
+- **Live app:** https://nico-pc-insurance-analytics.vercel.app
 - **Source:** https://github.com/devashish1000/nico-pc-insurance-analytics
 - **Stack:** React + Vite + Recharts (frontend) · Supabase **Postgres** (data warehouse) · PL/pgSQL stored procedures
 
