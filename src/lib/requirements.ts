@@ -174,7 +174,7 @@ export const STORIES: RequirementStory[] = [
     }],
     tests: [
       { id: 'AT-09', label: 'All six latest warehouse checks pass' },
-      { id: 'AT-10', label: 'Incurred loss validity and premium reconciliation both pass' },
+      { id: 'AT-10', label: 'All critical validity and reconciliation controls pass' },
     ],
   },
 ];

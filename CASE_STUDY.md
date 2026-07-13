@@ -43,6 +43,7 @@ public: dim_* + fact_*  →  vw_* published views  →  React BI dashboards
 - **Rating engine:** an interactive P&C premium calculator — base rate × territory × risk tier × limits, with deductible credits, endorsements, discounts, and a prior-claims surcharge, plus a transparent rating worksheet.
 - **Requirements:** INVEST user stories with **Given/When/Then** acceptance criteria, MoSCoW priority, and traceable test cases mapping to the engine and warehouse behavior.
 - **Executable traceability:** the live suite combines 6 deterministic rating cases with 4 read-only hosted warehouse checks, reporting expected-versus-actual evidence and linking rating cases into reproducible inputs. CI browser journeys use deterministic REST/API fixtures rather than claiming a live hosted result.
+- **Critical-control evidence:** AT-10 selects critical controls by structured category and severity—not display-name text—and requires every critical validity and reconciliation control to pass.
 - **Insight delivery:** the Overview surfaces a rate-adequacy alert when a line of business runs above a 100% loss ratio (in the synthetic book, Personal Auto and Homeowners) — the kind of finding a portfolio analyst escalates.
 
 ## Honest scope
