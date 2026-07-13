@@ -18,6 +18,25 @@ export type AcceptanceCase = Omit<AcceptanceResult, 'status' | 'actual' | 'durat
   execute: () => Promise<{ pass: boolean; actual: string }>;
 };
 
+type QualityControl = {
+  category: string | null;
+  severity: string | null;
+  status: string;
+};
+
+export function assessCriticalQualityControls(rows: QualityControl[]) {
+  const target = rows.filter((row) =>
+    row.severity === 'critical' &&
+    (row.category === 'validity' || row.category === 'reconciliation'));
+  const categories = new Set(target.map((row) => row.category));
+  const passed = target.filter((row) => row.status === 'pass').length;
+  return {
+    pass: categories.has('validity') && categories.has('reconciliation') &&
+      target.length >= 2 && passed === target.length,
+    actual: `${passed}/${target.length} pass`,
+  };
+}
+
 const ratingInput = (patch: Partial<RatingInput> = {}): RatingInput => ({
   lob: 'CAUTO', territory: 'NE', tier: 'STD', limit: 'L2', deductible: 'D500',
   endorsements: [], discounts: [], priorClaims: 0, ...patch,
@@ -105,10 +124,9 @@ export const ACCEPTANCE_CASES: AcceptanceCase[] = [
   {
     id: 'AT-10', storyId: 'US-05', label: 'Critical controls are green', expected: 'Validity + reconciliation pass',
     execute: async () => {
-      const { data, error } = await supabase.from('vw_data_quality_latest').select('check_name,status');
+      const { data, error } = await supabase.from('vw_data_quality_latest').select('category,severity,status');
       if (error) return { pass: false, actual: error.message };
-      const target = (data ?? []).filter((row) => row.check_name.includes('Incurred loss') || row.check_name.includes('reconciliation'));
-      return { pass: target.length === 2 && target.every((row) => row.status === 'pass'), actual: `${target.filter((row) => row.status === 'pass').length}/2 pass` };
+      return assessCriticalQualityControls(data ?? []);
     },
   },
 ];

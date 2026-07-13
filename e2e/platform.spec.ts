@@ -30,7 +30,7 @@ const dataQualityRows = [
   'Claim completeness',
 ].map((check_name, index) => ({
   check_name,
-  category: index < 2 ? 'reconciliation' : 'integrity',
+  category: index === 0 ? 'reconciliation' : index === 1 ? 'validity' : 'integrity',
   severity: 'critical',
   status: 'pass',
   expected_value: 'pass',
