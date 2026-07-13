@@ -1,0 +1,87 @@
+{
+  "format": "nico-hosted-migration-verification-v1",
+  "verifiedAtUtc": "2026-07-13T23:24:45.045Z",
+  "projectRef": "uketehwjsvpnohxhdvxa",
+  "postgresVersion": "17.6",
+  "baselineManifest": "artifacts/release/hosted-logical-backup-20260713T231304Z-manifest.json",
+  "appliedMigrations": [
+    {
+      "hostedVersion": "20260713232107",
+      "name": "warehouse_v2_foundation",
+      "source": "supabase/migrations/20260713232107_warehouse_v2_foundation.sql"
+    },
+    {
+      "hostedVersion": "20260713232116",
+      "name": "warehouse_v2_loaders",
+      "source": "supabase/migrations/20260713232116_warehouse_v2_loaders.sql"
+    },
+    {
+      "hostedVersion": "20260713232126",
+      "name": "warehouse_v2_orchestration_and_views",
+      "source": "supabase/migrations/20260713232126_warehouse_v2_orchestration_and_views.sql"
+    },
+    {
+      "hostedVersion": "20260713232357",
+      "name": "release_fk_indexes",
+      "source": "supabase/migrations/20260713232357_release_fk_indexes.sql"
+    }
+  ],
+  "counts": {
+    "public.dim_policy": 600,
+    "public.fact_premium": 600,
+    "public.fact_loss": 320,
+    "public.pipeline_runs": 7,
+    "staging.raw_premium_txn": 600,
+    "staging.raw_claim_txn": 320,
+    "ops.pipeline_batches": 1,
+    "ops.etl_watermarks": 2,
+    "ops.pipeline_stage_runs": 0,
+    "ops.quarantine_records": 0
+  },
+  "integrity": {
+    "stagingPremiumMissingSourceId": 0,
+    "stagingClaimMissingSourceId": 0,
+    "factPremiumMissingSourceId": 0,
+    "factLossMissingSourceId": 0,
+    "factPremiumDuplicateSourceIdGroups": 0,
+    "factLossDuplicateSourceIdGroups": 0,
+    "policyNumbersWithMultipleCurrentRows": 0,
+    "policyVersionOverlapPairs": 0,
+    "releaseForeignKeyIndexes": 5
+  },
+  "publicDataQuality": {
+    "controlCount": 6,
+    "passingCount": 6,
+    "statusValue": "pass"
+  },
+  "compatibility": {
+    "zeroArgumentRpcExists": true,
+    "actionRpcExists": true,
+    "anonCanExecuteZeroArgumentRpc": false,
+    "anonCanExecuteActionRpc": false,
+    "anonCanUseOpsSchema": false,
+    "anonCanUseStagingSchema": false,
+    "anonCanReadPipelineEvidence": true
+  },
+  "advisorSummary": {
+    "security": {
+      "warningOrErrorCount": 0,
+      "remainingLevel": "INFO",
+      "note": "RLS-without-policy notices describe intentionally sealed tables whose privileges are revoked from browser roles.",
+      "remediationReference": "https://supabase.com/docs/guides/database/database-linter?lint=0008_rls_enabled_no_policy"
+    },
+    "performance": {
+      "unindexedForeignKeyCount": 0,
+      "warningOrErrorCount": 0,
+      "remainingLevel": "INFO",
+      "note": "Remaining notices are expected unused-index observations immediately after an additive migration and legacy staging tables without primary keys; immutable source IDs and unique source-key indexes remain the load contract.",
+      "noPrimaryKeyReference": "https://supabase.com/docs/guides/database/database-linter?lint=0004_no_primary_key",
+      "unusedIndexReference": "https://supabase.com/docs/guides/database/database-linter?lint=0005_unused_index"
+    }
+  },
+  "boundaries": [
+    "All data is synthetic portfolio data.",
+    "Counts were verified after additive migrations and before the first warehouse-v2 production run.",
+    "This evidence does not represent NICO access, approval, UAT, or production scale."
+  ]
+}

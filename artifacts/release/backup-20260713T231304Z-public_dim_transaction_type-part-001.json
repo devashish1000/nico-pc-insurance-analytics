@@ -1,0 +1,55 @@
+{
+  "format": "nico-logical-table-part-v1",
+  "capturedAtUtc": "2026-07-13T23:13:04.347568Z",
+  "projectRef": "uketehwjsvpnohxhdvxa",
+  "schema": "public",
+  "table": "dim_transaction_type",
+  "orderBy": "txn_type_key",
+  "part": 1,
+  "offset": 0,
+  "rowCount": 7,
+  "rows": [
+    {
+      "txn_code": "NB",
+      "txn_name": "New Business",
+      "txn_group": "premium",
+      "txn_type_key": 1
+    },
+    {
+      "txn_code": "RN",
+      "txn_name": "Renewal",
+      "txn_group": "premium",
+      "txn_type_key": 2
+    },
+    {
+      "txn_code": "EN",
+      "txn_name": "Endorsement",
+      "txn_group": "premium",
+      "txn_type_key": 3
+    },
+    {
+      "txn_code": "CN",
+      "txn_name": "Cancellation",
+      "txn_group": "premium",
+      "txn_type_key": 4
+    },
+    {
+      "txn_code": "PD",
+      "txn_name": "Paid Loss",
+      "txn_group": "loss",
+      "txn_type_key": 5
+    },
+    {
+      "txn_code": "RS",
+      "txn_name": "Case Reserve",
+      "txn_group": "loss",
+      "txn_type_key": 6
+    },
+    {
+      "txn_code": "RC",
+      "txn_name": "Recovery",
+      "txn_group": "loss",
+      "txn_type_key": 7
+    }
+  ]
+}

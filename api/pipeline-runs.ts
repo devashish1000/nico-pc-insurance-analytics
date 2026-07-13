@@ -1,5 +1,17 @@
-import type { VercelRequest, VercelResponse } from '@vercel/node';
+import type { IncomingHttpHeaders } from 'node:http';
 import { createClient } from '@supabase/supabase-js';
+
+export type PipelineRequest = {
+  body?: unknown;
+  headers: IncomingHttpHeaders;
+  method?: string;
+};
+
+export type PipelineResponse = {
+  json: (body: unknown) => PipelineResponse;
+  setHeader: (name: string, value: string) => PipelineResponse;
+  status: (statusCode: number) => PipelineResponse;
+};
 
 const productionOrigin = 'https://nico-pc-insurance-analytics.vercel.app';
 const uuidPattern = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
@@ -170,7 +182,7 @@ function evidenceResponse(run: PipelineRunRow, stages: StageRow[], quarantine: Q
   };
 }
 
-export default async function handler(request: VercelRequest, response: VercelResponse) {
+export default async function handler(request: PipelineRequest, response: PipelineResponse) {
   response.setHeader('Cache-Control', 'no-store');
   response.setHeader('Content-Type', 'application/json; charset=utf-8');
 

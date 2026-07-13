@@ -1,0 +1,221 @@
+{
+  "format": "nico-hosted-logical-backup-manifest-v1",
+  "capturedAtUtc": "2026-07-13T23:13:04.347568Z",
+  "projectRef": "uketehwjsvpnohxhdvxa",
+  "projectName": "NICO P&C Insurance Analytics",
+  "postgresVersion": "17.6",
+  "schemaFingerprint": "982e92211df5a0a6588ad767f44d442e",
+  "sourceChecksums": {
+    "public.dim_policy": "96e6c284d123feb1f1758229b160ce50",
+    "public.fact_premium": "a0e488f325b68b41f28fe91830fb4a96",
+    "public.fact_loss": "67b0f090df306b4b16ff434cc0f9658a",
+    "public.pipeline_runs": "c939c727d62d54f373141be4f60a064a",
+    "staging.raw_premium_txn": "8d4c86c8e99176797efafe7616ec015a",
+    "staging.raw_claim_txn": "c0e54dbfed2dc27d7740ad240453f292"
+  },
+  "counts": {
+    "public.dim_agent": 12,
+    "public.dim_date": 1065,
+    "public.dim_insured": 600,
+    "public.dim_lob": 5,
+    "public.dim_policy": 600,
+    "public.dim_transaction_type": 7,
+    "public.dq_results": 48,
+    "public.fact_loss": 320,
+    "public.fact_premium": 600,
+    "public.pipeline_runs": 7,
+    "staging.raw_claim_txn": 320,
+    "staging.raw_premium_txn": 600
+  },
+  "totalRows": 4184,
+  "parts": [
+    {
+      "file": "artifacts/release/backup-20260713T231304Z-public_dim_agent-part-001.json",
+      "table": "public.dim_agent",
+      "part": 1,
+      "rows": 12,
+      "sha256": "f2a32e7a2f56a889b9d2a95d9b3bb4d935e40b1134b3261fc2a85d97f7d4a945"
+    },
+    {
+      "file": "artifacts/release/backup-20260713T231304Z-public_dim_date-part-001.json",
+      "table": "public.dim_date",
+      "part": 1,
+      "rows": 250,
+      "sha256": "52dd0b3e3b56b21cbd9d7f832e8d07b23cab7ee95228d70f6add205a3c956ed2"
+    },
+    {
+      "file": "artifacts/release/backup-20260713T231304Z-public_dim_date-part-002.json",
+      "table": "public.dim_date",
+      "part": 2,
+      "rows": 250,
+      "sha256": "664d27e9cec67bef75135d830ee1c17abb21f837d7d4d0519c9a6f568d1294c8"
+    },
+    {
+      "file": "artifacts/release/backup-20260713T231304Z-public_dim_date-part-003.json",
+      "table": "public.dim_date",
+      "part": 3,
+      "rows": 250,
+      "sha256": "be23e73c60b857f841e102f1d989033d64fec6e164ff510dcba6fe42fd21ac22"
+    },
+    {
+      "file": "artifacts/release/backup-20260713T231304Z-public_dim_date-part-004.json",
+      "table": "public.dim_date",
+      "part": 4,
+      "rows": 250,
+      "sha256": "8a6842463c6b1eb6421474f7704ec5fd9917a2ffb759732f865ec8fb86426102"
+    },
+    {
+      "file": "artifacts/release/backup-20260713T231304Z-public_dim_date-part-005.json",
+      "table": "public.dim_date",
+      "part": 5,
+      "rows": 65,
+      "sha256": "b3b84611770d0b8f0e1d009c143e839fe50d5b69f8152492e5b29901f8abdca5"
+    },
+    {
+      "file": "artifacts/release/backup-20260713T231304Z-public_dim_insured-part-001.json",
+      "table": "public.dim_insured",
+      "part": 1,
+      "rows": 250,
+      "sha256": "b0826189aff2f5a6f0dcdbb561003e52fd9553f7ccbcd2d9088198aa3889fa6b"
+    },
+    {
+      "file": "artifacts/release/backup-20260713T231304Z-public_dim_insured-part-002.json",
+      "table": "public.dim_insured",
+      "part": 2,
+      "rows": 250,
+      "sha256": "bce52be383812b321067509f8a071e4b0a8e7f6c518d5dfca9988171acea83bb"
+    },
+    {
+      "file": "artifacts/release/backup-20260713T231304Z-public_dim_insured-part-003.json",
+      "table": "public.dim_insured",
+      "part": 3,
+      "rows": 100,
+      "sha256": "30f0c6fcc84194c45aa9fe69d8a36e0808773442e33b0179e18944dfbdd5e358"
+    },
+    {
+      "file": "artifacts/release/backup-20260713T231304Z-public_dim_lob-part-001.json",
+      "table": "public.dim_lob",
+      "part": 1,
+      "rows": 5,
+      "sha256": "2346b3afd4f47eae49c77f8a1c51505805cf75b43b0443b0c705cbc3935fba9f"
+    },
+    {
+      "file": "artifacts/release/backup-20260713T231304Z-public_dim_policy-part-001.json",
+      "table": "public.dim_policy",
+      "part": 1,
+      "rows": 250,
+      "sha256": "7429c8eccf2ca30640b2794adf59d75db19d53c7e73a494bab52c263973a477a"
+    },
+    {
+      "file": "artifacts/release/backup-20260713T231304Z-public_dim_policy-part-002.json",
+      "table": "public.dim_policy",
+      "part": 2,
+      "rows": 250,
+      "sha256": "a749074793812daf89a98ce73f26f94eec931dae4e55c0e4782a5f9d18ec5aa1"
+    },
+    {
+      "file": "artifacts/release/backup-20260713T231304Z-public_dim_policy-part-003.json",
+      "table": "public.dim_policy",
+      "part": 3,
+      "rows": 100,
+      "sha256": "49bbe187e3214d30e73bee737c0cc547e9d318f8641eaac2c9620bd3419fd4fc"
+    },
+    {
+      "file": "artifacts/release/backup-20260713T231304Z-public_dim_transaction_type-part-001.json",
+      "table": "public.dim_transaction_type",
+      "part": 1,
+      "rows": 7,
+      "sha256": "ccb49bae2d1348371dcc324a68fb5de467a1ddd33be991d5e5087db858fc4508"
+    },
+    {
+      "file": "artifacts/release/backup-20260713T231304Z-public_dq_results-part-001.json",
+      "table": "public.dq_results",
+      "part": 1,
+      "rows": 48,
+      "sha256": "c10a34881e89e45cb25a79e23c2a83949eb5259cdd12c42da7a6e9164eef2b9f"
+    },
+    {
+      "file": "artifacts/release/backup-20260713T231304Z-public_fact_loss-part-001.json",
+      "table": "public.fact_loss",
+      "part": 1,
+      "rows": 250,
+      "sha256": "313bb8786501f09442c431c1e475f325e4b5b4aa50d6689bfcb9416fa682eb71"
+    },
+    {
+      "file": "artifacts/release/backup-20260713T231304Z-public_fact_loss-part-002.json",
+      "table": "public.fact_loss",
+      "part": 2,
+      "rows": 70,
+      "sha256": "ecc68a7316c46a1231d9eb3f89ce6f7f90e3603c62ccccd8545a7d32bb30f1c9"
+    },
+    {
+      "file": "artifacts/release/backup-20260713T231304Z-public_fact_premium-part-001.json",
+      "table": "public.fact_premium",
+      "part": 1,
+      "rows": 250,
+      "sha256": "839281183cd4e3346dc77c2204a7ff60ad61bb56e1d06965017135cc3cf6db8b"
+    },
+    {
+      "file": "artifacts/release/backup-20260713T231304Z-public_fact_premium-part-002.json",
+      "table": "public.fact_premium",
+      "part": 2,
+      "rows": 250,
+      "sha256": "670438d717516236edc261e13343f43d760478ad0802914116f4c356d4d74761"
+    },
+    {
+      "file": "artifacts/release/backup-20260713T231304Z-public_fact_premium-part-003.json",
+      "table": "public.fact_premium",
+      "part": 3,
+      "rows": 100,
+      "sha256": "75fb78d64f0e656f5005dd4b0ce705228580a793a0fa0888701e05dfaf52f961"
+    },
+    {
+      "file": "artifacts/release/backup-20260713T231304Z-public_pipeline_runs-part-001.json",
+      "table": "public.pipeline_runs",
+      "part": 1,
+      "rows": 7,
+      "sha256": "b83be979012ca7742afcdb8fb50b9e1f2ab59ad4d530d4bddeb6a2ee0781b181"
+    },
+    {
+      "file": "artifacts/release/backup-20260713T231304Z-staging_raw_claim_txn-part-001.json",
+      "table": "staging.raw_claim_txn",
+      "part": 1,
+      "rows": 250,
+      "sha256": "378747e1792c231720b4abbe34387a2a8a5615d67d8beeda2b63d81912f2763d"
+    },
+    {
+      "file": "artifacts/release/backup-20260713T231304Z-staging_raw_claim_txn-part-002.json",
+      "table": "staging.raw_claim_txn",
+      "part": 2,
+      "rows": 70,
+      "sha256": "8f2b64cc5651c6be4889df0491087896e209afd34feb6fa7000e3c094dc70664"
+    },
+    {
+      "file": "artifacts/release/backup-20260713T231304Z-staging_raw_premium_txn-part-001.json",
+      "table": "staging.raw_premium_txn",
+      "part": 1,
+      "rows": 250,
+      "sha256": "eb134e0bfd877626907970cb2a2b76dd1bd69249679f40bf7073cfa9d169dceb"
+    },
+    {
+      "file": "artifacts/release/backup-20260713T231304Z-staging_raw_premium_txn-part-002.json",
+      "table": "staging.raw_premium_txn",
+      "part": 2,
+      "rows": 250,
+      "sha256": "12e1ecc330caf155d0ca92e6e9afec81237b705dd2fc40752704268f564358c4"
+    },
+    {
+      "file": "artifacts/release/backup-20260713T231304Z-staging_raw_premium_txn-part-003.json",
+      "table": "staging.raw_premium_txn",
+      "part": 3,
+      "rows": 100,
+      "sha256": "f09bdcdda3b6b97ca40bd47536c4ca25f9383c2318ec903868d25e0313bf4baf"
+    }
+  ],
+  "aggregateSha256": "eae39df54c1f1ff8bdb549649dcc0a8d3f4a2a4ef762c798f8c65ca68866e5dc",
+  "boundaries": [
+    "All exported rows are synthetic portfolio data.",
+    "The migration files in supabase/migrations remain the schema source of truth.",
+    "This snapshot was captured before the additive warehouse-v2 release migration sequence."
+  ]
+}

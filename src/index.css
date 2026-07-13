@@ -71,7 +71,7 @@ h1, h2, h3, h4 { font-family: "Source Serif 4", Georgia, serif; color: var(--ink
 }
 .proof-strip-heading { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 8px; }
 .proof-strip-heading > span { color: #efbd55; font-size: 10px; font-weight: 850; letter-spacing: .12em; text-transform: uppercase; }
-.proof-strip-heading button { display: inline-flex; align-items: center; gap: 6px; padding: 0; color: #dce6f1; background: transparent; border: 0; font-size: 11px; cursor: pointer; }
+.proof-strip-heading button { min-height: 32px; display: inline-flex; align-items: center; gap: 6px; padding: 4px 0; color: #dce6f1; background: transparent; border: 0; font-size: 11px; cursor: pointer; }
 .proof-strip-heading button:disabled { opacity: .65; cursor: progress; }
 .proof-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
 .proof-metric { min-width: 0; display: flex; align-items: center; gap: 11px; padding: 10px 12px; background: #0b2c52; border: 1px solid #395573; border-left: 3px solid #6f8195; }
@@ -206,7 +206,7 @@ h1, h2, h3, h4 { font-family: "Source Serif 4", Georgia, serif; color: var(--ink
 .delivery-table td span { margin-top: 4px; color: #66758b; }
 .delivery-table td code { width: max-content; max-width: 190px; margin: 3px 0; overflow: hidden; color: #24405f; text-overflow: ellipsis; }
 .delivery-table td ul { margin: 0; padding-left: 15px; }
-.delivery-evidence-link { display: inline-flex; align-items: center; gap: 5px; padding: 0; color: #115f9f; background: transparent; border: 0; font-size: 11px; font-weight: 750; text-align: left; cursor: pointer; }
+.delivery-evidence-link { min-height: 32px; display: inline-flex; align-items: center; gap: 5px; padding: 5px 4px; color: #115f9f; background: transparent; border: 0; font-size: 11px; font-weight: 750; text-align: left; cursor: pointer; }
 .delivery-evidence-link:hover { text-decoration: underline; }
 .delivery-workflows { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .delivery-workflow { overflow: hidden; background: #fff; border: 1px solid var(--line); }
@@ -406,6 +406,7 @@ h1, h2, h3, h4 { font-family: "Source Serif 4", Georgia, serif; color: var(--ink
   .persona-action { min-height: 58px; padding: 8px 10px; font-family: "Source Serif 4", Georgia, serif; font-size: 16px; line-height: 1.1; }
   .hero-pipeline { display: none; }
   .proof-strip { gap: 10px; padding: 14px 20px 16px; }
+  .proof-strip-heading button { min-height: 44px; }
   .proof-grid { grid-template-columns: 1fr 1fr; }
   .platform-shell { display: block; min-height: 0; border: 0; }
   .platform-nav { position: fixed; inset: 70px 0 0 22%; z-index: 60; display: none; overflow-y: auto; box-shadow: -20px 0 60px rgba(0,0,0,.35); }

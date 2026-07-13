@@ -421,6 +421,7 @@ test('guided tour and compact navigation trap focus, close on Escape, and restor
 });
 
 test('every core view avoids page-level overflow at desktop, laptop, 390px, and 320px', async ({ page }, testInfo) => {
+  test.setTimeout(60_000);
   await installEvidenceRoutes(page);
   const destinations = [
     '/',

@@ -23,16 +23,20 @@ jobs:
       VITE_SUPABASE_URL: https://ci-placeholder.supabase.co
       VITE_SUPABASE_ANON_KEY: ci-placeholder-anon-key
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v6
         with:
           node-version: 24
           cache: npm
       - run: npm ci
+      - run: npm audit --audit-level=high
       - run: npm run typecheck
       - run: npm run lint
       - run: npm test
       - run: npm run build
+      - run: npm run check:bundle
 
   browser:
     name: Chromium E2E and accessibility checks
@@ -48,8 +52,10 @@ jobs:
       PLAYWRIGHT_HTML_OPEN: never
       PLAYWRIGHT_HTML_OUTPUT_DIR: playwright-report
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v6
         with:
           node-version: 24
           cache: npm
@@ -66,7 +72,7 @@ jobs:
           --reporter=line,html
       - name: Upload Playwright diagnostics
         if: failure()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: playwright-chromium-${{ github.run_id }}-${{ github.run_attempt }}
           path: |
@@ -80,8 +86,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v6
         with:
           node-version: 24
       - uses: supabase/setup-cli@v1
@@ -101,7 +109,7 @@ jobs:
         run: node scripts/validate-benchmark-result.mjs /tmp/nico-benchmark-smoke.json
       - name: Upload benchmark evidence
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: nico-benchmark-smoke-${{ github.run_id }}
           path: /tmp/nico-benchmark-smoke.json

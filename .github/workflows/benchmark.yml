@@ -37,8 +37,10 @@ jobs:
     env:
       BENCHMARK_MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.mode || 'primary' }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v6
         with:
           node-version: 24
       - uses: supabase/setup-cli@v1
@@ -58,7 +60,7 @@ jobs:
         run: node scripts/validate-benchmark-result.mjs "/tmp/nico-benchmark-$BENCHMARK_MODE.json"
       - name: Upload benchmark evidence
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: nico-benchmark-${{ env.BENCHMARK_MODE }}-${{ github.run_id }}
           path: /tmp/nico-benchmark-${{ env.BENCHMARK_MODE }}.json

@@ -1,0 +1,1763 @@
+{
+  "format": "nico-logical-table-part-v1",
+  "capturedAtUtc": "2026-07-13T23:13:04.347568Z",
+  "projectRef": "uketehwjsvpnohxhdvxa",
+  "schema": "public",
+  "table": "dim_insured",
+  "orderBy": "insured_key",
+  "part": 2,
+  "offset": 250,
+  "rowCount": 250,
+  "rows": [
+    {
+      "state": "CO",
+      "segment": "Personal",
+      "insured_id": "INS-0004",
+      "insured_key": 251,
+      "insured_name": "Insured 4"
+    },
+    {
+      "state": "CO",
+      "segment": "Personal",
+      "insured_id": "INS-0498",
+      "insured_key": 252,
+      "insured_name": "Insured 498"
+    },
+    {
+      "state": "CO",
+      "segment": "Commercial",
+      "insured_id": "INS-0332",
+      "insured_key": 253,
+      "insured_name": "Insured 332"
+    },
+    {
+      "state": "MO",
+      "segment": "Commercial",
+      "insured_id": "INS-0372",
+      "insured_key": 254,
+      "insured_name": "Insured 372"
+    },
+    {
+      "state": "SD",
+      "segment": "Personal",
+      "insured_id": "INS-0583",
+      "insured_key": 255,
+      "insured_name": "Insured 583"
+    },
+    {
+      "state": "NE",
+      "segment": "Personal",
+      "insured_id": "INS-0130",
+      "insured_key": 256,
+      "insured_name": "Insured 130"
+    },
+    {
+      "state": "NE",
+      "segment": "Commercial",
+      "insured_id": "INS-0484",
+      "insured_key": 257,
+      "insured_name": "Insured 484"
+    },
+    {
+      "state": "NE",
+      "segment": "Commercial",
+      "insured_id": "INS-0045",
+      "insured_key": 258,
+      "insured_name": "Insured 45"
+    },
+    {
+      "state": "CO",
+      "segment": "Personal",
+      "insured_id": "INS-0371",
+      "insured_key": 259,
+      "insured_name": "Insured 371"
+    },
+    {
+      "state": "SD",
+      "segment": "Commercial",
+      "insured_id": "INS-0142",
+      "insured_key": 260,
+      "insured_name": "Insured 142"
+    },
+    {
+      "state": "NE",
+      "segment": "Personal",
+      "insured_id": "INS-0443",
+      "insured_key": 261,
+      "insured_name": "Insured 443"
+    },
+    {
+      "state": "CO",
+      "segment": "Commercial",
+      "insured_id": "INS-0126",
+      "insured_key": 262,
+      "insured_name": "Insured 126"
+    },
+    {
+      "state": "CO",
+      "segment": "Personal",
+      "insured_id": "INS-0565",
+      "insured_key": 263,
+      "insured_name": "Insured 565"
+    },
+    {
+      "state": "CO",
+      "segment": "Personal",
+      "insured_id": "INS-0428",
+      "insured_key": 264,
+      "insured_name": "Insured 428"
+    },
+    {
+      "state": "CO",
+      "segment": "Commercial",
+      "insured_id": "INS-0578",
+      "insured_key": 265,
+      "insured_name": "Insured 578"
+    },
+    {
+      "state": "IA",
+      "segment": "Commercial",
+      "insured_id": "INS-0176",
+      "insured_key": 266,
+      "insured_name": "Insured 176"
+    },
+    {
+      "state": "NE",
+      "segment": "Personal",
+      "insured_id": "INS-0113",
+      "insured_key": 267,
+      "insured_name": "Insured 113"
+    },
+    {
+      "state": "NE",
+      "segment": "Commercial",
+      "insured_id": "INS-0123",
+      "insured_key": 268,
+      "insured_name": "Insured 123"
+    },
+    {
+      "state": "NE",
+      "segment": "Commercial",
+      "insured_id": "INS-0271",
+      "insured_key": 269,
+      "insured_name": "Insured 271"
+    },
+    {
+      "state": "SD",
+      "segment": "Personal",
+      "insured_id": "INS-0587",
+      "insured_key": 270,
+      "insured_name": "Insured 587"
+    },
+    {
+      "state": "SD",
+      "segment": "Personal",
+      "insured_id": "INS-0319",
+      "insured_key": 271,
+      "insured_name": "Insured 319"
+    },
+    {
+      "state": "SD",
+      "segment": "Commercial",
+      "insured_id": "INS-0384",
+      "insured_key": 272,
+      "insured_name": "Insured 384"
+    },
+    {
+      "state": "SD",
+      "segment": "Commercial",
+      "insured_id": "INS-0367",
+      "insured_key": 273,
+      "insured_name": "Insured 367"
+    },
+    {
+      "state": "IA",
+      "segment": "Personal",
+      "insured_id": "INS-0513",
+      "insured_key": 274,
+      "insured_name": "Insured 513"
+    },
+    {
+      "state": "MO",
+      "segment": "Commercial",
+      "insured_id": "INS-0109",
+      "insured_key": 275,
+      "insured_name": "Insured 109"
+    },
+    {
+      "state": "KS",
+      "segment": "Commercial",
+      "insured_id": "INS-0469",
+      "insured_key": 276,
+      "insured_name": "Insured 469"
+    },
+    {
+      "state": "IA",
+      "segment": "Commercial",
+      "insured_id": "INS-0425",
+      "insured_key": 277,
+      "insured_name": "Insured 425"
+    },
+    {
+      "state": "MO",
+      "segment": "Personal",
+      "insured_id": "INS-0161",
+      "insured_key": 278,
+      "insured_name": "Insured 161"
+    },
+    {
+      "state": "SD",
+      "segment": "Personal",
+      "insured_id": "INS-0267",
+      "insured_key": 279,
+      "insured_name": "Insured 267"
+    },
+    {
+      "state": "NE",
+      "segment": "Commercial",
+      "insured_id": "INS-0075",
+      "insured_key": 280,
+      "insured_name": "Insured 75"
+    },
+    {
+      "state": "SD",
+      "segment": "Commercial",
+      "insured_id": "INS-0361",
+      "insured_key": 281,
+      "insured_name": "Insured 361"
+    },
+    {
+      "state": "SD",
+      "segment": "Commercial",
+      "insured_id": "INS-0140",
+      "insured_key": 282,
+      "insured_name": "Insured 140"
+    },
+    {
+      "state": "IA",
+      "segment": "Personal",
+      "insured_id": "INS-0432",
+      "insured_key": 283,
+      "insured_name": "Insured 432"
+    },
+    {
+      "state": "NE",
+      "segment": "Personal",
+      "insured_id": "INS-0557",
+      "insured_key": 284,
+      "insured_name": "Insured 557"
+    },
+    {
+      "state": "CO",
+      "segment": "Commercial",
+      "insured_id": "INS-0022",
+      "insured_key": 285,
+      "insured_name": "Insured 22"
+    },
+    {
+      "state": "IA",
+      "segment": "Commercial",
+      "insured_id": "INS-0478",
+      "insured_key": 286,
+      "insured_name": "Insured 478"
+    },
+    {
+      "state": "NE",
+      "segment": "Commercial",
+      "insured_id": "INS-0188",
+      "insured_key": 287,
+      "insured_name": "Insured 188"
+    },
+    {
+      "state": "MO",
+      "segment": "Personal",
+      "insured_id": "INS-0368",
+      "insured_key": 288,
+      "insured_name": "Insured 368"
+    },
+    {
+      "state": "CO",
+      "segment": "Personal",
+      "insured_id": "INS-0168",
+      "insured_key": 289,
+      "insured_name": "Insured 168"
+    },
+    {
+      "state": "SD",
+      "segment": "Commercial",
+      "insured_id": "INS-0167",
+      "insured_key": 290,
+      "insured_name": "Insured 167"
+    },
+    {
+      "state": "CO",
+      "segment": "Commercial",
+      "insured_id": "INS-0257",
+      "insured_key": 291,
+      "insured_name": "Insured 257"
+    },
+    {
+      "state": "CO",
+      "segment": "Commercial",
+      "insured_id": "INS-0291",
+      "insured_key": 292,
+      "insured_name": "Insured 291"
+    },
+    {
+      "state": "SD",
+      "segment": "Commercial",
+      "insured_id": "INS-0308",
+      "insured_key": 293,
+      "insured_name": "Insured 308"
+    },
+    {
+      "state": "KS",
+      "segment": "Personal",
+      "insured_id": "INS-0031",
+      "insured_key": 294,
+      "insured_name": "Insured 31"
+    },
+    {
+      "state": "MO",
+      "segment": "Personal",
+      "insured_id": "INS-0200",
+      "insured_key": 295,
+      "insured_name": "Insured 200"
+    },
+    {
+      "state": "SD",
+      "segment": "Commercial",
+      "insured_id": "INS-0194",
+      "insured_key": 296,
+      "insured_name": "Insured 194"
+    },
+    {
+      "state": "KS",
+      "segment": "Commercial",
+      "insured_id": "INS-0111",
+      "insured_key": 297,
+      "insured_name": "Insured 111"
+    },
+    {
+      "state": "IA",
+      "segment": "Personal",
+      "insured_id": "INS-0095",
+      "insured_key": 298,
+      "insured_name": "Insured 95"
+    },
+    {
+      "state": "IA",
+      "segment": "Personal",
+      "insured_id": "INS-0393",
+      "insured_key": 299,
+      "insured_name": "Insured 393"
+    },
+    {
+      "state": "CO",
+      "segment": "Personal",
+      "insured_id": "INS-0299",
+      "insured_key": 300,
+      "insured_name": "Insured 299"
+    },
+    {
+      "state": "NE",
+      "segment": "Commercial",
+      "insured_id": "INS-0481",
+      "insured_key": 301,
+      "insured_name": "Insured 481"
+    },
+    {
+      "state": "MO",
+      "segment": "Personal",
+      "insured_id": "INS-0380",
+      "insured_key": 302,
+      "insured_name": "Insured 380"
+    },
+    {
+      "state": "KS",
+      "segment": "Personal",
+      "insured_id": "INS-0324",
+      "insured_key": 303,
+      "insured_name": "Insured 324"
+    },
+    {
+      "state": "NE",
+      "segment": "Commercial",
+      "insured_id": "INS-0347",
+      "insured_key": 304,
+      "insured_name": "Insured 347"
+    },
+    {
+      "state": "NE",
+      "segment": "Personal",
+      "insured_id": "INS-0024",
+      "insured_key": 305,
+      "insured_name": "Insured 24"
+    },
+    {
+      "state": "IA",
+      "segment": "Personal",
+      "insured_id": "INS-0465",
+      "insured_key": 306,
+      "insured_name": "Insured 465"
+    },
+    {
+      "state": "IA",
+      "segment": "Personal",
+      "insured_id": "INS-0375",
+      "insured_key": 307,
+      "insured_name": "Insured 375"
+    },
+    {
+      "state": "KS",
+      "segment": "Personal",
+      "insured_id": "INS-0074",
+      "insured_key": 308,
+      "insured_name": "Insured 74"
+    },
+    {
+      "state": "IA",
+      "segment": "Commercial",
+      "insured_id": "INS-0594",
+      "insured_key": 309,
+      "insured_name": "Insured 594"
+    },
+    {
+      "state": "KS",
+      "segment": "Commercial",
+      "insured_id": "INS-0360",
+      "insured_key": 310,
+      "insured_name": "Insured 360"
+    },
+    {
+      "state": "SD",
+      "segment": "Personal",
+      "insured_id": "INS-0087",
+      "insured_key": 311,
+      "insured_name": "Insured 87"
+    },
+    {
+      "state": "SD",
+      "segment": "Commercial",
+      "insured_id": "INS-0339",
+      "insured_key": 312,
+      "insured_name": "Insured 339"
+    },
+    {
+      "state": "IA",
+      "segment": "Commercial",
+      "insured_id": "INS-0408",
+      "insured_key": 313,
+      "insured_name": "Insured 408"
+    },
+    {
+      "state": "SD",
+      "segment": "Personal",
+      "insured_id": "INS-0112",
+      "insured_key": 314,
+      "insured_name": "Insured 112"
+    },
+    {
+      "state": "IA",
+      "segment": "Personal",
+      "insured_id": "INS-0472",
+      "insured_key": 315,
+      "insured_name": "Insured 472"
+    },
+    {
+      "state": "IA",
+      "segment": "Personal",
+      "insured_id": "INS-0322",
+      "insured_key": 316,
+      "insured_name": "Insured 322"
+    },
+    {
+      "state": "MO",
+      "segment": "Commercial",
+      "insured_id": "INS-0208",
+      "insured_key": 317,
+      "insured_name": "Insured 208"
+    },
+    {
+      "state": "CO",
+      "segment": "Commercial",
+      "insured_id": "INS-0220",
+      "insured_key": 318,
+      "insured_name": "Insured 220"
+    },
+    {
+      "state": "KS",
+      "segment": "Commercial",
+      "insured_id": "INS-0064",
+      "insured_key": 319,
+      "insured_name": "Insured 64"
+    },
+    {
+      "state": "NE",
+      "segment": "Commercial",
+      "insured_id": "INS-0579",
+      "insured_key": 320,
+      "insured_name": "Insured 579"
+    },
+    {
+      "state": "SD",
+      "segment": "Personal",
+      "insured_id": "INS-0435",
+      "insured_key": 321,
+      "insured_name": "Insured 435"
+    },
+    {
+      "state": "CO",
+      "segment": "Personal",
+      "insured_id": "INS-0278",
+      "insured_key": 322,
+      "insured_name": "Insured 278"
+    },
+    {
+      "state": "IA",
+      "segment": "Personal",
+      "insured_id": "INS-0158",
+      "insured_key": 323,
+      "insured_name": "Insured 158"
+    },
+    {
+      "state": "MO",
+      "segment": "Commercial",
+      "insured_id": "INS-0096",
+      "insured_key": 324,
+      "insured_name": "Insured 96"
+    },
+    {
+      "state": "KS",
+      "segment": "Personal",
+      "insured_id": "INS-0350",
+      "insured_key": 325,
+      "insured_name": "Insured 350"
+    },
+    {
+      "state": "NE",
+      "segment": "Personal",
+      "insured_id": "INS-0553",
+      "insured_key": 326,
+      "insured_name": "Insured 553"
+    },
+    {
+      "state": "SD",
+      "segment": "Personal",
+      "insured_id": "INS-0514",
+      "insured_key": 327,
+      "insured_name": "Insured 514"
+    },
+    {
+      "state": "CO",
+      "segment": "Commercial",
+      "insured_id": "INS-0246",
+      "insured_key": 328,
+      "insured_name": "Insured 246"
+    },
+    {
+      "state": "CO",
+      "segment": "Personal",
+      "insured_id": "INS-0069",
+      "insured_key": 329,
+      "insured_name": "Insured 69"
+    },
+    {
+      "state": "CO",
+      "segment": "Personal",
+      "insured_id": "INS-0585",
+      "insured_key": 330,
+      "insured_name": "Insured 585"
+    },
+    {
+      "state": "SD",
+      "segment": "Commercial",
+      "insured_id": "INS-0279",
+      "insured_key": 331,
+      "insured_name": "Insured 279"
+    },
+    {
+      "state": "IA",
+      "segment": "Commercial",
+      "insured_id": "INS-0211",
+      "insured_key": 332,
+      "insured_name": "Insured 211"
+    },
+    {
+      "state": "IA",
+      "segment": "Personal",
+      "insured_id": "INS-0369",
+      "insured_key": 333,
+      "insured_name": "Insured 369"
+    },
+    {
+      "state": "IA",
+      "segment": "Commercial",
+      "insured_id": "INS-0165",
+      "insured_key": 334,
+      "insured_name": "Insured 165"
+    },
+    {
+      "state": "MO",
+      "segment": "Personal",
+      "insured_id": "INS-0248",
+      "insured_key": 335,
+      "insured_name": "Insured 248"
+    },
+    {
+      "state": "SD",
+      "segment": "Personal",
+      "insured_id": "INS-0352",
+      "insured_key": 336,
+      "insured_name": "Insured 352"
+    },
+    {
+      "state": "IA",
+      "segment": "Personal",
+      "insured_id": "INS-0236",
+      "insured_key": 337,
+      "insured_name": "Insured 236"
+    },
+    {
+      "state": "SD",
+      "segment": "Commercial",
+      "insured_id": "INS-0227",
+      "insured_key": 338,
+      "insured_name": "Insured 227"
+    },
+    {
+      "state": "SD",
+      "segment": "Personal",
+      "insured_id": "INS-0052",
+      "insured_key": 339,
+      "insured_name": "Insured 52"
+    },
+    {
+      "state": "IA",
+      "segment": "Commercial",
+      "insured_id": "INS-0395",
+      "insured_key": 340,
+      "insured_name": "Insured 395"
+    },
+    {
+      "state": "CO",
+      "segment": "Commercial",
+      "insured_id": "INS-0003",
+      "insured_key": 341,
+      "insured_name": "Insured 3"
+    },
+    {
+      "state": "MO",
+      "segment": "Commercial",
+      "insured_id": "INS-0104",
+      "insured_key": 342,
+      "insured_name": "Insured 104"
+    },
+    {
+      "state": "KS",
+      "segment": "Commercial",
+      "insured_id": "INS-0063",
+      "insured_key": 343,
+      "insured_name": "Insured 63"
+    },
+    {
+      "state": "CO",
+      "segment": "Commercial",
+      "insured_id": "INS-0019",
+      "insured_key": 344,
+      "insured_name": "Insured 19"
+    },
+    {
+      "state": "CO",
+      "segment": "Commercial",
+      "insured_id": "INS-0448",
+      "insured_key": 345,
+      "insured_name": "Insured 448"
+    },
+    {
+      "state": "NE",
+      "segment": "Personal",
+      "insured_id": "INS-0476",
+      "insured_key": 346,
+      "insured_name": "Insured 476"
+    },
+    {
+      "state": "KS",
+      "segment": "Commercial",
+      "insured_id": "INS-0309",
+      "insured_key": 347,
+      "insured_name": "Insured 309"
+    },
+    {
+      "state": "NE",
+      "segment": "Personal",
+      "insured_id": "INS-0232",
+      "insured_key": 348,
+      "insured_name": "Insured 232"
+    },
+    {
+      "state": "CO",
+      "segment": "Personal",
+      "insured_id": "INS-0076",
+      "insured_key": 349,
+      "insured_name": "Insured 76"
+    },
+    {
+      "state": "CO",
+      "segment": "Personal",
+      "insured_id": "INS-0378",
+      "insured_key": 350,
+      "insured_name": "Insured 378"
+    },
+    {
+      "state": "CO",
+      "segment": "Commercial",
+      "insured_id": "INS-0179",
+      "insured_key": 351,
+      "insured_name": "Insured 179"
+    },
+    {
+      "state": "SD",
+      "segment": "Commercial",
+      "insured_id": "INS-0007",
+      "insured_key": 352,
+      "insured_name": "Insured 7"
+    },
+    {
+      "state": "SD",
+      "segment": "Commercial",
+      "insured_id": "INS-0060",
+      "insured_key": 353,
+      "insured_name": "Insured 60"
+    },
+    {
+      "state": "NE",
+      "segment": "Commercial",
+      "insured_id": "INS-0192",
+      "insured_key": 354,
+      "insured_name": "Insured 192"
+    },
+    {
+      "state": "SD",
+      "segment": "Personal",
+      "insured_id": "INS-0189",
+      "insured_key": 355,
+      "insured_name": "Insured 189"
+    },
+    {
+      "state": "MO",
+      "segment": "Personal",
+      "insured_id": "INS-0506",
+      "insured_key": 356,
+      "insured_name": "Insured 506"
+    },
+    {
+      "state": "IA",
+      "segment": "Commercial",
+      "insured_id": "INS-0092",
+      "insured_key": 357,
+      "insured_name": "Insured 92"
+    },
+    {
+      "state": "NE",
+      "segment": "Commercial",
+      "insured_id": "INS-0081",
+      "insured_key": 358,
+      "insured_name": "Insured 81"
+    },
+    {
+      "state": "IA",
+      "segment": "Commercial",
+      "insured_id": "INS-0546",
+      "insured_key": 359,
+      "insured_name": "Insured 546"
+    },
+    {
+      "state": "IA",
+      "segment": "Commercial",
+      "insured_id": "INS-0301",
+      "insured_key": 360,
+      "insured_name": "Insured 301"
+    },
+    {
+      "state": "SD",
+      "segment": "Personal",
+      "insured_id": "INS-0325",
+      "insured_key": 361,
+      "insured_name": "Insured 325"
+    },
+    {
+      "state": "IA",
+      "segment": "Commercial",
+      "insured_id": "INS-0121",
+      "insured_key": 362,
+      "insured_name": "Insured 121"
+    },
+    {
+      "state": "NE",
+      "segment": "Commercial",
+      "insured_id": "INS-0046",
+      "insured_key": 363,
+      "insured_name": "Insured 46"
+    },
+    {
+      "state": "CO",
+      "segment": "Personal",
+      "insured_id": "INS-0492",
+      "insured_key": 364,
+      "insured_name": "Insured 492"
+    },
+    {
+      "state": "CO",
+      "segment": "Commercial",
+      "insured_id": "INS-0500",
+      "insured_key": 365,
+      "insured_name": "Insured 500"
+    },
+    {
+      "state": "NE",
+      "segment": "Commercial",
+      "insured_id": "INS-0342",
+      "insured_key": 366,
+      "insured_name": "Insured 342"
+    },
+    {
+      "state": "KS",
+      "segment": "Personal",
+      "insured_id": "INS-0502",
+      "insured_key": 367,
+      "insured_name": "Insured 502"
+    },
+    {
+      "state": "SD",
+      "segment": "Commercial",
+      "insured_id": "INS-0079",
+      "insured_key": 368,
+      "insured_name": "Insured 79"
+    },
+    {
+      "state": "IA",
+      "segment": "Commercial",
+      "insured_id": "INS-0346",
+      "insured_key": 369,
+      "insured_name": "Insured 346"
+    },
+    {
+      "state": "KS",
+      "segment": "Commercial",
+      "insured_id": "INS-0131",
+      "insured_key": 370,
+      "insured_name": "Insured 131"
+    },
+    {
+      "state": "IA",
+      "segment": "Commercial",
+      "insured_id": "INS-0138",
+      "insured_key": 371,
+      "insured_name": "Insured 138"
+    },
+    {
+      "state": "NE",
+      "segment": "Personal",
+      "insured_id": "INS-0166",
+      "insured_key": 372,
+      "insured_name": "Insured 166"
+    },
+    {
+      "state": "CO",
+      "segment": "Commercial",
+      "insured_id": "INS-0094",
+      "insured_key": 373,
+      "insured_name": "Insured 94"
+    },
+    {
+      "state": "NE",
+      "segment": "Personal",
+      "insured_id": "INS-0149",
+      "insured_key": 374,
+      "insured_name": "Insured 149"
+    },
+    {
+      "state": "CO",
+      "segment": "Commercial",
+      "insured_id": "INS-0440",
+      "insured_key": 375,
+      "insured_name": "Insured 440"
+    },
+    {
+      "state": "CO",
+      "segment": "Commercial",
+      "insured_id": "INS-0354",
+      "insured_key": 376,
+      "insured_name": "Insured 354"
+    },
+    {
+      "state": "SD",
+      "segment": "Personal",
+      "insured_id": "INS-0457",
+      "insured_key": 377,
+      "insured_name": "Insured 457"
+    },
+    {
+      "state": "KS",
+      "segment": "Commercial",
+      "insured_id": "INS-0277",
+      "insured_key": 378,
+      "insured_name": "Insured 277"
+    },
+    {
+      "state": "IA",
+      "segment": "Commercial",
+      "insured_id": "INS-0048",
+      "insured_key": 379,
+      "insured_name": "Insured 48"
+    },
+    {
+      "state": "KS",
+      "segment": "Personal",
+      "insured_id": "INS-0070",
+      "insured_key": 380,
+      "insured_name": "Insured 70"
+    },
+    {
+      "state": "NE",
+      "segment": "Personal",
+      "insured_id": "INS-0203",
+      "insured_key": 381,
+      "insured_name": "Insured 203"
+    },
+    {
+      "state": "IA",
+      "segment": "Commercial",
+      "insured_id": "INS-0535",
+      "insured_key": 382,
+      "insured_name": "Insured 535"
+    },
+    {
+      "state": "MO",
+      "segment": "Commercial",
+      "insured_id": "INS-0037",
+      "insured_key": 383,
+      "insured_name": "Insured 37"
+    },
+    {
+      "state": "KS",
+      "segment": "Personal",
+      "insured_id": "INS-0524",
+      "insured_key": 384,
+      "insured_name": "Insured 524"
+    },
+    {
+      "state": "CO",
+      "segment": "Commercial",
+      "insured_id": "INS-0025",
+      "insured_key": 385,
+      "insured_name": "Insured 25"
+    },
+    {
+      "state": "IA",
+      "segment": "Commercial",
+      "insured_id": "INS-0406",
+      "insured_key": 386,
+      "insured_name": "Insured 406"
+    },
+    {
+      "state": "KS",
+      "segment": "Commercial",
+      "insured_id": "INS-0429",
+      "insured_key": 387,
+      "insured_name": "Insured 429"
+    },
+    {
+      "state": "CO",
+      "segment": "Commercial",
+      "insured_id": "INS-0597",
+      "insured_key": 388,
+      "insured_name": "Insured 597"
+    },
+    {
+      "state": "MO",
+      "segment": "Commercial",
+      "insured_id": "INS-0137",
+      "insured_key": 389,
+      "insured_name": "Insured 137"
+    },
+    {
+      "state": "KS",
+      "segment": "Personal",
+      "insured_id": "INS-0561",
+      "insured_key": 390,
+      "insured_name": "Insured 561"
+    },
+    {
+      "state": "CO",
+      "segment": "Commercial",
+      "insured_id": "INS-0311",
+      "insured_key": 391,
+      "insured_name": "Insured 311"
+    },
+    {
+      "state": "KS",
+      "segment": "Commercial",
+      "insured_id": "INS-0317",
+      "insured_key": 392,
+      "insured_name": "Insured 317"
+    },
+    {
+      "state": "IA",
+      "segment": "Commercial",
+      "insured_id": "INS-0276",
+      "insured_key": 393,
+      "insured_name": "Insured 276"
+    },
+    {
+      "state": "SD",
+      "segment": "Commercial",
+      "insured_id": "INS-0195",
+      "insured_key": 394,
+      "insured_name": "Insured 195"
+    },
+    {
+      "state": "KS",
+      "segment": "Personal",
+      "insured_id": "INS-0185",
+      "insured_key": 395,
+      "insured_name": "Insured 185"
+    },
+    {
+      "state": "CO",
+      "segment": "Personal",
+      "insured_id": "INS-0323",
+      "insured_key": 396,
+      "insured_name": "Insured 323"
+    },
+    {
+      "state": "CO",
+      "segment": "Personal",
+      "insured_id": "INS-0262",
+      "insured_key": 397,
+      "insured_name": "Insured 262"
+    },
+    {
+      "state": "MO",
+      "segment": "Commercial",
+      "insured_id": "INS-0221",
+      "insured_key": 398,
+      "insured_name": "Insured 221"
+    },
+    {
+      "state": "SD",
+      "segment": "Commercial",
+      "insured_id": "INS-0396",
+      "insured_key": 399,
+      "insured_name": "Insured 396"
+    },
+    {
+      "state": "SD",
+      "segment": "Personal",
+      "insured_id": "INS-0015",
+      "insured_key": 400,
+      "insured_name": "Insured 15"
+    },
+    {
+      "state": "IA",
+      "segment": "Commercial",
+      "insured_id": "INS-0591",
+      "insured_key": 401,
+      "insured_name": "Insured 591"
+    },
+    {
+      "state": "CO",
+      "segment": "Commercial",
+      "insured_id": "INS-0520",
+      "insured_key": 402,
+      "insured_name": "Insured 520"
+    },
+    {
+      "state": "SD",
+      "segment": "Commercial",
+      "insured_id": "INS-0117",
+      "insured_key": 403,
+      "insured_name": "Insured 117"
+    },
+    {
+      "state": "IA",
+      "segment": "Personal",
+      "insured_id": "INS-0122",
+      "insured_key": 404,
+      "insured_name": "Insured 122"
+    },
+    {
+      "state": "SD",
+      "segment": "Commercial",
+      "insured_id": "INS-0213",
+      "insured_key": 405,
+      "insured_name": "Insured 213"
+    },
+    {
+      "state": "IA",
+      "segment": "Commercial",
+      "insured_id": "INS-0114",
+      "insured_key": 406,
+      "insured_name": "Insured 114"
+    },
+    {
+      "state": "IA",
+      "segment": "Personal",
+      "insured_id": "INS-0357",
+      "insured_key": 407,
+      "insured_name": "Insured 357"
+    },
+    {
+      "state": "SD",
+      "segment": "Personal",
+      "insured_id": "INS-0599",
+      "insured_key": 408,
+      "insured_name": "Insured 599"
+    },
+    {
+      "state": "KS",
+      "segment": "Commercial",
+      "insured_id": "INS-0586",
+      "insured_key": 409,
+      "insured_name": "Insured 586"
+    },
+    {
+      "state": "KS",
+      "segment": "Personal",
+      "insured_id": "INS-0563",
+      "insured_key": 410,
+      "insured_name": "Insured 563"
+    },
+    {
+      "state": "IA",
+      "segment": "Personal",
+      "insured_id": "INS-0468",
+      "insured_key": 411,
+      "insured_name": "Insured 468"
+    },
+    {
+      "state": "NE",
+      "segment": "Commercial",
+      "insured_id": "INS-0320",
+      "insured_key": 412,
+      "insured_name": "Insured 320"
+    },
+    {
+      "state": "IA",
+      "segment": "Commercial",
+      "insured_id": "INS-0531",
+      "insured_key": 413,
+      "insured_name": "Insured 531"
+    },
+    {
+      "state": "SD",
+      "segment": "Commercial",
+      "insured_id": "INS-0447",
+      "insured_key": 414,
+      "insured_name": "Insured 447"
+    },
+    {
+      "state": "IA",
+      "segment": "Personal",
+      "insured_id": "INS-0487",
+      "insured_key": 415,
+      "insured_name": "Insured 487"
+    },
+    {
+      "state": "KS",
+      "segment": "Commercial",
+      "insured_id": "INS-0348",
+      "insured_key": 416,
+      "insured_name": "Insured 348"
+    },
+    {
+      "state": "NE",
+      "segment": "Commercial",
+      "insured_id": "INS-0160",
+      "insured_key": 417,
+      "insured_name": "Insured 160"
+    },
+    {
+      "state": "CO",
+      "segment": "Commercial",
+      "insured_id": "INS-0382",
+      "insured_key": 418,
+      "insured_name": "Insured 382"
+    },
+    {
+      "state": "CO",
+      "segment": "Personal",
+      "insured_id": "INS-0251",
+      "insured_key": 419,
+      "insured_name": "Insured 251"
+    },
+    {
+      "state": "SD",
+      "segment": "Personal",
+      "insured_id": "INS-0329",
+      "insured_key": 420,
+      "insured_name": "Insured 329"
+    },
+    {
+      "state": "KS",
+      "segment": "Commercial",
+      "insured_id": "INS-0470",
+      "insured_key": 421,
+      "insured_name": "Insured 470"
+    },
+    {
+      "state": "CO",
+      "segment": "Commercial",
+      "insured_id": "INS-0391",
+      "insured_key": 422,
+      "insured_name": "Insured 391"
+    },
+    {
+      "state": "IA",
+      "segment": "Commercial",
+      "insured_id": "INS-0041",
+      "insured_key": 423,
+      "insured_name": "Insured 41"
+    },
+    {
+      "state": "IA",
+      "segment": "Commercial",
+      "insured_id": "INS-0377",
+      "insured_key": 424,
+      "insured_name": "Insured 377"
+    },
+    {
+      "state": "NE",
+      "segment": "Commercial",
+      "insured_id": "INS-0128",
+      "insured_key": 425,
+      "insured_name": "Insured 128"
+    },
+    {
+      "state": "MO",
+      "segment": "Commercial",
+      "insured_id": "INS-0376",
+      "insured_key": 426,
+      "insured_name": "Insured 376"
+    },
+    {
+      "state": "MO",
+      "segment": "Commercial",
+      "insured_id": "INS-0452",
+      "insured_key": 427,
+      "insured_name": "Insured 452"
+    },
+    {
+      "state": "IA",
+      "segment": "Commercial",
+      "insured_id": "INS-0577",
+      "insured_key": 428,
+      "insured_name": "Insured 577"
+    },
+    {
+      "state": "MO",
+      "segment": "Commercial",
+      "insured_id": "INS-0214",
+      "insured_key": 429,
+      "insured_name": "Insured 214"
+    },
+    {
+      "state": "SD",
+      "segment": "Commercial",
+      "insured_id": "INS-0129",
+      "insured_key": 430,
+      "insured_name": "Insured 129"
+    },
+    {
+      "state": "IA",
+      "segment": "Personal",
+      "insured_id": "INS-0009",
+      "insured_key": 431,
+      "insured_name": "Insured 9"
+    },
+    {
+      "state": "CO",
+      "segment": "Commercial",
+      "insured_id": "INS-0419",
+      "insured_key": 432,
+      "insured_name": "Insured 419"
+    },
+    {
+      "state": "IA",
+      "segment": "Personal",
+      "insured_id": "INS-0571",
+      "insured_key": 433,
+      "insured_name": "Insured 571"
+    },
+    {
+      "state": "IA",
+      "segment": "Commercial",
+      "insured_id": "INS-0148",
+      "insured_key": 434,
+      "insured_name": "Insured 148"
+    },
+    {
+      "state": "MO",
+      "segment": "Commercial",
+      "insured_id": "INS-0575",
+      "insured_key": 435,
+      "insured_name": "Insured 575"
+    },
+    {
+      "state": "NE",
+      "segment": "Commercial",
+      "insured_id": "INS-0424",
+      "insured_key": 436,
+      "insured_name": "Insured 424"
+    },
+    {
+      "state": "NE",
+      "segment": "Personal",
+      "insured_id": "INS-0547",
+      "insured_key": 437,
+      "insured_name": "Insured 547"
+    },
+    {
+      "state": "CO",
+      "segment": "Commercial",
+      "insured_id": "INS-0290",
+      "insured_key": 438,
+      "insured_name": "Insured 290"
+    },
+    {
+      "state": "KS",
+      "segment": "Personal",
+      "insured_id": "INS-0196",
+      "insured_key": 439,
+      "insured_name": "Insured 196"
+    },
+    {
+      "state": "MO",
+      "segment": "Commercial",
+      "insured_id": "INS-0584",
+      "insured_key": 440,
+      "insured_name": "Insured 584"
+    },
+    {
+      "state": "SD",
+      "segment": "Commercial",
+      "insured_id": "INS-0385",
+      "insured_key": 441,
+      "insured_name": "Insured 385"
+    },
+    {
+      "state": "NE",
+      "segment": "Commercial",
+      "insured_id": "INS-0269",
+      "insured_key": 442,
+      "insured_name": "Insured 269"
+    },
+    {
+      "state": "SD",
+      "segment": "Personal",
+      "insured_id": "INS-0390",
+      "insured_key": 443,
+      "insured_name": "Insured 390"
+    },
+    {
+      "state": "IA",
+      "segment": "Personal",
+      "insured_id": "INS-0450",
+      "insured_key": 444,
+      "insured_name": "Insured 450"
+    },
+    {
+      "state": "CO",
+      "segment": "Commercial",
+      "insured_id": "INS-0345",
+      "insured_key": 445,
+      "insured_name": "Insured 345"
+    },
+    {
+      "state": "CO",
+      "segment": "Commercial",
+      "insured_id": "INS-0559",
+      "insured_key": 446,
+      "insured_name": "Insured 559"
+    },
+    {
+      "state": "CO",
+      "segment": "Personal",
+      "insured_id": "INS-0127",
+      "insured_key": 447,
+      "insured_name": "Insured 127"
+    },
+    {
+      "state": "IA",
+      "segment": "Commercial",
+      "insured_id": "INS-0297",
+      "insured_key": 448,
+      "insured_name": "Insured 297"
+    },
+    {
+      "state": "MO",
+      "segment": "Personal",
+      "insured_id": "INS-0529",
+      "insured_key": 449,
+      "insured_name": "Insured 529"
+    },
+    {
+      "state": "KS",
+      "segment": "Personal",
+      "insured_id": "INS-0466",
+      "insured_key": 450,
+      "insured_name": "Insured 466"
+    },
+    {
+      "state": "IA",
+      "segment": "Commercial",
+      "insured_id": "INS-0362",
+      "insured_key": 451,
+      "insured_name": "Insured 362"
+    },
+    {
+      "state": "MO",
+      "segment": "Commercial",
+      "insured_id": "INS-0284",
+      "insured_key": 452,
+      "insured_name": "Insured 284"
+    },
+    {
+      "state": "CO",
+      "segment": "Commercial",
+      "insured_id": "INS-0101",
+      "insured_key": 453,
+      "insured_name": "Insured 101"
+    },
+    {
+      "state": "SD",
+      "segment": "Commercial",
+      "insured_id": "INS-0431",
+      "insured_key": 454,
+      "insured_name": "Insured 431"
+    },
+    {
+      "state": "SD",
+      "segment": "Commercial",
+      "insured_id": "INS-0029",
+      "insured_key": 455,
+      "insured_name": "Insured 29"
+    },
+    {
+      "state": "MO",
+      "segment": "Personal",
+      "insured_id": "INS-0489",
+      "insured_key": 456,
+      "insured_name": "Insured 489"
+    },
+    {
+      "state": "MO",
+      "segment": "Personal",
+      "insured_id": "INS-0012",
+      "insured_key": 457,
+      "insured_name": "Insured 12"
+    },
+    {
+      "state": "CO",
+      "segment": "Commercial",
+      "insured_id": "INS-0289",
+      "insured_key": 458,
+      "insured_name": "Insured 289"
+    },
+    {
+      "state": "NE",
+      "segment": "Personal",
+      "insured_id": "INS-0050",
+      "insured_key": 459,
+      "insured_name": "Insured 50"
+    },
+    {
+      "state": "NE",
+      "segment": "Personal",
+      "insured_id": "INS-0414",
+      "insured_key": 460,
+      "insured_name": "Insured 414"
+    },
+    {
+      "state": "KS",
+      "segment": "Personal",
+      "insured_id": "INS-0146",
+      "insured_key": 461,
+      "insured_name": "Insured 146"
+    },
+    {
+      "state": "IA",
+      "segment": "Personal",
+      "insured_id": "INS-0215",
+      "insured_key": 462,
+      "insured_name": "Insured 215"
+    },
+    {
+      "state": "IA",
+      "segment": "Commercial",
+      "insured_id": "INS-0413",
+      "insured_key": 463,
+      "insured_name": "Insured 413"
+    },
+    {
+      "state": "SD",
+      "segment": "Commercial",
+      "insured_id": "INS-0488",
+      "insured_key": 464,
+      "insured_name": "Insured 488"
+    },
+    {
+      "state": "CO",
+      "segment": "Personal",
+      "insured_id": "INS-0338",
+      "insured_key": 465,
+      "insured_name": "Insured 338"
+    },
+    {
+      "state": "IA",
+      "segment": "Personal",
+      "insured_id": "INS-0228",
+      "insured_key": 466,
+      "insured_name": "Insured 228"
+    },
+    {
+      "state": "SD",
+      "segment": "Personal",
+      "insured_id": "INS-0511",
+      "insured_key": 467,
+      "insured_name": "Insured 511"
+    },
+    {
+      "state": "MO",
+      "segment": "Commercial",
+      "insured_id": "INS-0152",
+      "insured_key": 468,
+      "insured_name": "Insured 152"
+    },
+    {
+      "state": "SD",
+      "segment": "Commercial",
+      "insured_id": "INS-0442",
+      "insured_key": 469,
+      "insured_name": "Insured 442"
+    },
+    {
+      "state": "MO",
+      "segment": "Personal",
+      "insured_id": "INS-0516",
+      "insured_key": 470,
+      "insured_name": "Insured 516"
+    },
+    {
+      "state": "NE",
+      "segment": "Personal",
+      "insured_id": "INS-0505",
+      "insured_key": 471,
+      "insured_name": "Insured 505"
+    },
+    {
+      "state": "IA",
+      "segment": "Personal",
+      "insured_id": "INS-0133",
+      "insured_key": 472,
+      "insured_name": "Insured 133"
+    },
+    {
+      "state": "IA",
+      "segment": "Commercial",
+      "insured_id": "INS-0356",
+      "insured_key": 473,
+      "insured_name": "Insured 356"
+    },
+    {
+      "state": "NE",
+      "segment": "Personal",
+      "insured_id": "INS-0223",
+      "insured_key": 474,
+      "insured_name": "Insured 223"
+    },
+    {
+      "state": "KS",
+      "segment": "Personal",
+      "insured_id": "INS-0456",
+      "insured_key": 475,
+      "insured_name": "Insured 456"
+    },
+    {
+      "state": "CO",
+      "segment": "Commercial",
+      "insured_id": "INS-0263",
+      "insured_key": 476,
+      "insured_name": "Insured 263"
+    },
+    {
+      "state": "MO",
+      "segment": "Personal",
+      "insured_id": "INS-0008",
+      "insured_key": 477,
+      "insured_name": "Insured 8"
+    },
+    {
+      "state": "NE",
+      "segment": "Commercial",
+      "insured_id": "INS-0021",
+      "insured_key": 478,
+      "insured_name": "Insured 21"
+    },
+    {
+      "state": "CO",
+      "segment": "Commercial",
+      "insured_id": "INS-0183",
+      "insured_key": 479,
+      "insured_name": "Insured 183"
+    },
+    {
+      "state": "MO",
+      "segment": "Personal",
+      "insured_id": "INS-0274",
+      "insured_key": 480,
+      "insured_name": "Insured 274"
+    },
+    {
+      "state": "IA",
+      "segment": "Personal",
+      "insured_id": "INS-0555",
+      "insured_key": 481,
+      "insured_name": "Insured 555"
+    },
+    {
+      "state": "MO",
+      "segment": "Commercial",
+      "insured_id": "INS-0590",
+      "insured_key": 482,
+      "insured_name": "Insured 590"
+    },
+    {
+      "state": "SD",
+      "segment": "Personal",
+      "insured_id": "INS-0302",
+      "insured_key": 483,
+      "insured_name": "Insured 302"
+    },
+    {
+      "state": "MO",
+      "segment": "Personal",
+      "insured_id": "INS-0080",
+      "insured_key": 484,
+      "insured_name": "Insured 80"
+    },
+    {
+      "state": "CO",
+      "segment": "Personal",
+      "insured_id": "INS-0134",
+      "insured_key": 485,
+      "insured_name": "Insured 134"
+    },
+    {
+      "state": "SD",
+      "segment": "Commercial",
+      "insured_id": "INS-0078",
+      "insured_key": 486,
+      "insured_name": "Insured 78"
+    },
+    {
+      "state": "IA",
+      "segment": "Commercial",
+      "insured_id": "INS-0044",
+      "insured_key": 487,
+      "insured_name": "Insured 44"
+    },
+    {
+      "state": "CO",
+      "segment": "Commercial",
+      "insured_id": "INS-0532",
+      "insured_key": 488,
+      "insured_name": "Insured 532"
+    },
+    {
+      "state": "KS",
+      "segment": "Commercial",
+      "insured_id": "INS-0068",
+      "insured_key": 489,
+      "insured_name": "Insured 68"
+    },
+    {
+      "state": "KS",
+      "segment": "Personal",
+      "insured_id": "INS-0551",
+      "insured_key": 490,
+      "insured_name": "Insured 551"
+    },
+    {
+      "state": "NE",
+      "segment": "Commercial",
+      "insured_id": "INS-0337",
+      "insured_key": 491,
+      "insured_name": "Insured 337"
+    },
+    {
+      "state": "SD",
+      "segment": "Personal",
+      "insured_id": "INS-0340",
+      "insured_key": 492,
+      "insured_name": "Insured 340"
+    },
+    {
+      "state": "KS",
+      "segment": "Commercial",
+      "insured_id": "INS-0164",
+      "insured_key": 493,
+      "insured_name": "Insured 164"
+    },
+    {
+      "state": "NE",
+      "segment": "Personal",
+      "insured_id": "INS-0335",
+      "insured_key": 494,
+      "insured_name": "Insured 335"
+    },
+    {
+      "state": "NE",
+      "segment": "Commercial",
+      "insured_id": "INS-0569",
+      "insured_key": 495,
+      "insured_name": "Insured 569"
+    },
+    {
+      "state": "SD",
+      "segment": "Commercial",
+      "insured_id": "INS-0510",
+      "insured_key": 496,
+      "insured_name": "Insured 510"
+    },
+    {
+      "state": "SD",
+      "segment": "Commercial",
+      "insured_id": "INS-0303",
+      "insured_key": 497,
+      "insured_name": "Insured 303"
+    },
+    {
+      "state": "MO",
+      "segment": "Commercial",
+      "insured_id": "INS-0313",
+      "insured_key": 498,
+      "insured_name": "Insured 313"
+    },
+    {
+      "state": "NE",
+      "segment": "Commercial",
+      "insured_id": "INS-0201",
+      "insured_key": 499,
+      "insured_name": "Insured 201"
+    },
+    {
+      "state": "IA",
+      "segment": "Commercial",
+      "insured_id": "INS-0280",
+      "insured_key": 500,
+      "insured_name": "Insured 280"
+    }
+  ]
+}

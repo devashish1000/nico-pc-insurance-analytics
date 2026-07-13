@@ -1,5 +1,4 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import type { VercelRequest, VercelResponse } from '@vercel/node';
 
 const supabaseMocks = vi.hoisted(() => ({
   createClient: vi.fn(),
@@ -11,7 +10,12 @@ vi.mock('@supabase/supabase-js', () => ({
   createClient: supabaseMocks.createClient,
 }));
 
-import handler, { isAllowedOrigin, parsePipelineAction } from '../api/pipeline-runs';
+import handler, {
+  isAllowedOrigin,
+  parsePipelineAction,
+  type PipelineRequest,
+  type PipelineResponse,
+} from '../api/pipeline-runs';
 
 const runId = '11111111-1111-4111-8111-111111111111';
 const recoveryRunId = '22222222-2222-4222-8222-222222222222';
@@ -79,7 +83,7 @@ function mockResponse() {
     setHeader(name: string, value: string) { state.headers[name] = value; return response; },
     status(code: number) { state.status = code; return response; },
     json(body: unknown) { state.body = body; return response; },
-  } as unknown as VercelResponse;
+  } as unknown as PipelineResponse;
   return { response, state };
 }
 
@@ -93,7 +97,7 @@ function mockRequest(
     method,
     body,
     headers: { origin, 'sec-fetch-site': secFetchSite },
-  } as unknown as VercelRequest;
+  } as unknown as PipelineRequest;
 }
 
 function queryBuilder(result: { data: unknown; error: unknown }) {
