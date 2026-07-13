@@ -18,4 +18,13 @@ describe('client/server secret boundary', () => {
     expect(serverSource).toContain('process.env.SUPABASE_SERVICE_ROLE_KEY');
     expect(serverSource).not.toContain('VITE_SUPABASE_SERVICE_ROLE_KEY');
   });
+
+  it('fails closed behind a server-only execution flag and selects bounded evidence', () => {
+    expect(serverSource).toContain("process.env.PIPELINE_EXECUTION_ENABLED !== 'true'");
+    expect(serverSource).not.toContain('VITE_PIPELINE_EXECUTION_ENABLED');
+    expect(serverSource).not.toContain(".select('*')");
+    expect(serverSource).not.toContain(".select('payload");
+    expect(serverSource).toContain(".from('vw_quarantine_evidence')");
+    expect(serverSource).toContain(".from('vw_pipeline_stage_runs')");
+  });
 });
