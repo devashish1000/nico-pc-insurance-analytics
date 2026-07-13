@@ -17,6 +17,11 @@ jobs:
     name: Application checks
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    env:
+      # Browser configuration is required at module-import/build time. These
+      # inert values keep CI deterministic; no network-backed tests use them.
+      VITE_SUPABASE_URL: https://ci-placeholder.supabase.co
+      VITE_SUPABASE_ANON_KEY: ci-placeholder-anon-key
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
