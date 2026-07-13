@@ -55,7 +55,7 @@
       {
         "hostedVersion": "20260713232357",
         "hostedName": "release_fk_indexes",
-        "sourceReference": "supabase/migrations/20260710222439_lock_down_base_tables_and_fk_indexes.sql"
+        "sourcePath": "supabase/migrations/20260713232357_release_fk_indexes.sql"
       }
     ],
     "foreignKeyIndexVerification": {
