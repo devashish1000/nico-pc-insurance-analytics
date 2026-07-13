@@ -1,0 +1,69 @@
+name: Pipeline benchmark
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'supabase/**'
+      - 'benchmarks/**'
+      - 'scripts/run-benchmark.mjs'
+      - 'scripts/validate-benchmark-result.mjs'
+      - '.github/workflows/benchmark.yml'
+  schedule:
+    - cron: '17 8 * * 1'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Benchmark size (extended is the manual 1M-row run)
+        required: true
+        default: primary
+        type: choice
+        options:
+          - primary
+          - extended
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pipeline-benchmark-${{ github.ref }}-${{ github.event_name }}
+  cancel-in-progress: false
+
+jobs:
+  benchmark:
+    name: ${{ github.event_name == 'workflow_dispatch' && inputs.mode || 'primary' }} benchmark
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      BENCHMARK_MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.mode || 'primary' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - uses: supabase/setup-cli@v1
+        with:
+          version: 2.109.1
+      - name: Install PostgreSQL client
+        run: sudo apt-get update && sudo apt-get install --yes postgresql-client
+      - name: Start isolated local database
+        run: supabase start --exclude studio,realtime,storage-api,imgproxy,kong,mailpit,postgrest,postgres-meta,gotrue,edge-runtime,logflare,vector,supavisor
+      - name: Apply migrations from scratch
+        run: supabase db reset --local --no-seed
+      - name: Run pgTAP contracts
+        run: supabase test db supabase/tests --local
+      - name: Run deterministic benchmark
+        run: node scripts/run-benchmark.mjs --mode "$BENCHMARK_MODE" --output "/tmp/nico-benchmark-$BENCHMARK_MODE.json"
+      - name: Validate benchmark result contract
+        run: node scripts/validate-benchmark-result.mjs "/tmp/nico-benchmark-$BENCHMARK_MODE.json"
+      - name: Upload benchmark evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nico-benchmark-${{ env.BENCHMARK_MODE }}-${{ github.run_id }}
+          path: /tmp/nico-benchmark-${{ env.BENCHMARK_MODE }}.json
+          if-no-files-found: warn
+          retention-days: 30
+      - name: Stop local database
+        if: always()
+        run: supabase stop --no-backup

@@ -1,0 +1,66 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  application:
+    name: Application checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm test
+      - run: npm run build
+
+  database:
+    name: Database contracts and 10K smoke
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - uses: supabase/setup-cli@v1
+        with:
+          version: 2.109.1
+      - name: Install PostgreSQL client
+        run: sudo apt-get update && sudo apt-get install --yes postgresql-client
+      - name: Start isolated local database
+        run: supabase start --exclude studio,realtime,storage-api,imgproxy,kong,mailpit,postgrest,postgres-meta,gotrue,edge-runtime,logflare,vector,supavisor
+      - name: Apply migrations from scratch
+        run: supabase db reset --local --no-seed
+      - name: Run pgTAP contracts
+        run: supabase test db supabase/tests --local
+      - name: Run deterministic 10K benchmark
+        run: node scripts/run-benchmark.mjs --mode smoke --output /tmp/nico-benchmark-smoke.json
+      - name: Validate benchmark result contract
+        run: node scripts/validate-benchmark-result.mjs /tmp/nico-benchmark-smoke.json
+      - name: Upload benchmark evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nico-benchmark-smoke-${{ github.run_id }}
+          path: /tmp/nico-benchmark-smoke.json
+          if-no-files-found: warn
+          retention-days: 14
+      - name: Stop local database
+        if: always()
+        run: supabase stop --no-backup

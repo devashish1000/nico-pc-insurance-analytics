@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "contractVersion": "1.0.0",
+  "schemas": {
+    "operations": "ops",
+    "private": "private",
+    "public": "public",
+    "staging": "staging"
+  },
+  "tables": {
+    "pipelineBatches": "ops.pipeline_batches",
+    "etlWatermarks": "ops.etl_watermarks",
+    "pipelineStageRuns": "ops.pipeline_stage_runs",
+    "quarantineRecords": "ops.quarantine_records",
+    "pipelineRuns": "public.pipeline_runs",
+    "dataQualityResults": "public.dq_results",
+    "premiumStage": "staging.raw_premium_txn",
+    "claimStage": "staging.raw_claim_txn",
+    "premiumFact": "public.fact_premium",
+    "lossFact": "public.fact_loss"
+  },
+  "functions": {
+    "legacyRun": "public.run_demo_pipeline()",
+    "actionRun": "public.run_demo_pipeline_action(text,uuid)",
+    "backfill": "public.run_demo_backfill(date,date)",
+    "loadDimensions": "private.sp_load_dimensions_v2(uuid,text,date,date,timestamp with time zone)",
+    "loadFacts": "private.sp_load_facts_v2(uuid,text,date,date,timestamp with time zone,date)",
+    "refreshEarnedPremium": "private.sp_refresh_earned_premium_v2(uuid,date)",
+    "runDataQuality": "private.sp_run_data_quality_v2(uuid)",
+    "runPipeline": "private.run_nico_pipeline_v2(text,text,date,date,text,uuid)",
+    "applyPolicyScd2": "private.v2_apply_policy_scd2(uuid,text,integer,integer,integer,date,date,text,date,timestamp with time zone)",
+    "rekeyPolicyFacts": "private.v2_rekey_policy_facts(text)"
+  },
+  "views": {
+    "stageRuns": "public.vw_pipeline_stage_runs",
+    "quarantineEvidence": "public.vw_quarantine_evidence",
+    "policyScd2Evidence": "public.vw_policy_scd2_evidence",
+    "pipelineRuns": "public.vw_pipeline_runs"
+  },
+  "actions": ["run", "simulate-failure", "recover"],
+  "stagingMetadataColumns": [
+    "landing_id",
+    "source_txn_id",
+    "source_updated_at",
+    "source_effective_date",
+    "batch_id",
+    "ingested_at"
+  ],
+  "factLineageColumns": [
+    "source_txn_id",
+    "source_updated_at",
+    "load_batch_id",
+    "loaded_at"
+  ]
+}

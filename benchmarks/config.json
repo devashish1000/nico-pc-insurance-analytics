@@ -1,0 +1,37 @@
+{
+  "$schema": "./results/benchmark-config.schema.json",
+  "schemaVersion": "1.0.0",
+  "seed": 20260713,
+  "databaseUrl": "postgresql://postgres:postgres@127.0.0.1:54322/postgres",
+  "window": {
+    "from": "2025-01-01",
+    "to": "2025-12-31",
+    "calculationAsOf": "2025-12-31"
+  },
+  "modes": {
+    "smoke": {
+      "premiumRows": 6500,
+      "claimRows": 3500,
+      "totalRows": 10000,
+      "querySamples": 7,
+      "maxTotalMs": 180000,
+      "ci": "pull-request"
+    },
+    "primary": {
+      "premiumRows": 100000,
+      "claimRows": 50000,
+      "totalRows": 150000,
+      "querySamples": 12,
+      "maxTotalMs": 600000,
+      "ci": "main-and-scheduled"
+    },
+    "extended": {
+      "premiumRows": 650000,
+      "claimRows": 350000,
+      "totalRows": 1000000,
+      "querySamples": 15,
+      "maxTotalMs": 1800000,
+      "ci": "manual-only"
+    }
+  }
+}
