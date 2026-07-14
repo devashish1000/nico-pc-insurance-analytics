@@ -85,7 +85,13 @@ export default function ProofStrip() {
           <div>
             <span>Latest verification</span>
             <strong>{snapshot ? formatVerifiedAt(snapshot.verifiedAt) : 'Verifying…'}</strong>
-            <small>{!snapshot ? 'Checking live evidence' : snapshot.degraded ? 'Some evidence is degraded' : 'Live checks completed'}</small>
+            <small>{!snapshot
+              ? 'Checking live evidence'
+              : snapshot.degraded
+                ? 'Some evidence is degraded'
+                : snapshot.pipelineRuns.recoveryVerified
+                  ? 'Live checks healthy; recovery verified'
+                  : 'Live checks completed'}</small>
           </div>
         </article>
       </div>

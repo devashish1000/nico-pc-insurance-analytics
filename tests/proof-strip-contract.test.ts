@@ -29,7 +29,9 @@ describe('dynamic hiring-manager proof strip', () => {
     expect(stripSource).toContain("snapshot?.degraded ? 'attention' : 'success'");
     expect(stripSource).toContain("key={id}");
     expect(stripSource).not.toContain('key={metric.label}');
-    expect(stripSource).toContain("!snapshot ? 'Checking live evidence'");
+    expect(stripSource).toMatch(/!snapshot\s*\?\s*'Checking live evidence'/);
+    expect(stripSource).toContain('Live checks healthy; recovery verified');
+    expect(proofSource).toContain('controlled failure${recoveredCount === 1');
     expect(proofSource).toContain("value: 'Unavailable'");
     expect(proofSource).toContain("metric.state !== 'success'");
   });

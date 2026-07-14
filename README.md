@@ -9,6 +9,7 @@ Built by **Dev (Devashish) Neupane**. This is a portfolio project—not a NICO s
 - **Release evidence manifest:** [artifacts/release/evidence-manifest.json](./artifacts/release/evidence-manifest.json)
 - **Pre-migration hosted baseline:** [artifacts/release/hosted-logical-backup-20260713T231304Z-manifest.json](./artifacts/release/hosted-logical-backup-20260713T231304Z-manifest.json)
 - **Post-run watermark remediation:** [artifacts/release/hosted-watermark-remediation-20260714.json](./artifacts/release/hosted-watermark-remediation-20260714.json)
+- **Controlled failure/recovery evidence:** [artifacts/release/hosted-controlled-recovery-20260714.json](./artifacts/release/hosted-controlled-recovery-20260714.json)
 - **Detailed architecture write-up:** [CASE_STUDY.md](./CASE_STUDY.md)
 
 ## What the work sample demonstrates

@@ -9,6 +9,23 @@ export type ProofMetric = {
   detail: string;
   state: ProofState;
   observedAt?: string;
+  recoveryVerified?: boolean;
+};
+
+export type PipelineProofRow = {
+  run_id: string;
+  status: string;
+  scenario: string | null;
+  recovered_from_run_id: string | null;
+  started_at: string | null;
+  finished_at: string | null;
+};
+
+export type QuarantineProofRow = {
+  run_id: string;
+  disposition: string;
+  recovered_by_run_id: string | null;
+  quarantined_at?: string | null;
 };
 
 export type ProofSnapshot = {
@@ -66,25 +83,63 @@ async function verifyDataQuality(): Promise<ProofMetric> {
   };
 }
 
-async function verifyPipelineRuns(): Promise<ProofMetric> {
-  const { data, error } = await supabase
-    .from('vw_pipeline_runs')
-    .select('status,started_at,finished_at')
-    .order('started_at', { ascending: false })
-    .limit(14);
-
-  if (error) throw new Error('Pipeline history could not be verified.');
-  const rows = data ?? [];
-  if (!rows.length) return unavailable('Successful recorded runs', 'No bounded run history');
-
+export function assessPipelineHistory(
+  rows: PipelineProofRow[],
+  quarantine: QuarantineProofRow[],
+): ProofMetric {
   const successful = rows.filter((row) => row.status === 'success').length;
+  const recoveredFailureIds = new Set(
+    rows
+      .filter((row) => row.status === 'success' && row.scenario === 'recovery' && row.recovered_from_run_id)
+      .filter((recovery) => quarantine.some((entry) =>
+        entry.run_id === recovery.recovered_from_run_id
+        && entry.disposition === 'replayed'
+        && entry.recovered_by_run_id === recovery.run_id))
+      .map((row) => row.recovered_from_run_id as string),
+  );
+  const recoveredFailures = rows.filter((row) =>
+    row.status !== 'success'
+    && row.scenario === 'controlled-failure'
+    && recoveredFailureIds.has(row.run_id));
+  const unresolved = rows.filter((row) =>
+    row.status !== 'success'
+    && !(row.scenario === 'controlled-failure' && recoveredFailureIds.has(row.run_id)));
+  const recoveredCount = recoveredFailures.length;
+
   return {
     label: 'Successful recorded runs',
     value: `${successful} of ${rows.length}`,
-    detail: 'Latest bounded public history',
-    state: successful === rows.length ? 'success' : 'attention',
+    detail: unresolved.length
+      ? `${unresolved.length} run${unresolved.length === 1 ? ' needs' : 's need'} attention`
+      : recoveredCount
+        ? `${recoveredCount} controlled failure${recoveredCount === 1 ? '' : 's'} recovered; history retained`
+        : 'Latest bounded public history',
+    state: unresolved.length ? 'attention' : 'success',
     observedAt: latestTimestamp(rows.flatMap((row) => [row.finished_at, row.started_at])),
+    recoveryVerified: recoveredCount > 0,
   };
+}
+
+async function verifyPipelineRuns(): Promise<ProofMetric> {
+  const [runsResult, quarantineResult] = await Promise.all([
+    supabase
+      .from('vw_pipeline_runs')
+      .select('run_id,status,scenario,recovered_from_run_id,started_at,finished_at')
+      .order('started_at', { ascending: false })
+      .limit(14),
+    supabase
+      .from('vw_quarantine_evidence')
+      .select('run_id,disposition,recovered_by_run_id,quarantined_at')
+      .order('quarantined_at', { ascending: false })
+      .limit(14),
+  ]);
+
+  if (runsResult.error || quarantineResult.error) {
+    throw new Error('Pipeline history could not be verified.');
+  }
+  const rows = (runsResult.data ?? []) as PipelineProofRow[];
+  if (!rows.length) return unavailable('Successful recorded runs', 'No bounded run history');
+  return assessPipelineHistory(rows, (quarantineResult.data ?? []) as QuarantineProofRow[]);
 }
 
 function metricFromResult(

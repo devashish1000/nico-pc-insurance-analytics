@@ -68,6 +68,11 @@
       "status": "verified",
       "scope": "Post-run synthetic cursor repair and strict-advance guard; published fact counts and checksums remained unchanged."
     },
+    "controlledRecovery": {
+      "evidencePath": "artifacts/release/hosted-controlled-recovery-20260714.json",
+      "status": "verified",
+      "scope": "One controlled synthetic failure and its single linked recovery; failure left facts and watermarks unchanged, recovery replayed the quarantine and passed 6/6 DQ."
+    },
     "foreignKeyIndexVerification": {
       "expected": 11,
       "observed": 11,

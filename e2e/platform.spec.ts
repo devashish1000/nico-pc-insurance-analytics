@@ -382,6 +382,22 @@ test('proof strip moves through loading, success, degraded, and successful retry
   await expect(proof.locator('article').filter({ hasText: 'Latest data quality' })).toContainText('6/6');
   await expect(proof.locator('article').filter({ hasText: 'Acceptance verification' })).toContainText('10/10');
   await expect(proof.locator('article').filter({ hasText: 'Latest verification' })).toContainText('Live checks completed');
+
+  const failedRunId = 'aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa';
+  const recoveryRunId = 'bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb';
+  state.pipelineRuns = [
+    { ...successfulRun(recoveryRunId), scenario: 'recovery', recovered_from_run_id: failedRunId },
+    { ...successfulRun(failedRunId), status: 'failed', scenario: 'controlled-failure' },
+  ];
+  state.quarantine = [{
+    run_id: failedRunId,
+    disposition: 'replayed',
+    recovered_by_run_id: recoveryRunId,
+  }];
+  await proof.getByRole('button', { name: 'Verify again' }).click();
+  await expect(proof.locator('article').filter({ hasText: 'Successful recorded runs' })).toContainText('1 of 2');
+  await expect(proof.locator('article').filter({ hasText: 'Successful recorded runs' })).toContainText('1 controlled failure recovered; history retained');
+  await expect(proof.locator('article').filter({ hasText: 'Latest verification' })).toContainText('Live checks healthy; recovery verified');
 });
 
 test('guided tour and compact navigation trap focus, close on Escape, and restore focus', async ({ page }, testInfo) => {
