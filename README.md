@@ -8,6 +8,7 @@ Built by **Dev (Devashish) Neupane**. This is a portfolio project—not a NICO s
 - **Hiring-manager walkthrough:** [docs/release/HIRING_MANAGER_WALKTHROUGH.md](./docs/release/HIRING_MANAGER_WALKTHROUGH.md)
 - **Release evidence manifest:** [artifacts/release/evidence-manifest.json](./artifacts/release/evidence-manifest.json)
 - **Pre-migration hosted baseline:** [artifacts/release/hosted-logical-backup-20260713T231304Z-manifest.json](./artifacts/release/hosted-logical-backup-20260713T231304Z-manifest.json)
+- **Post-run watermark remediation:** [artifacts/release/hosted-watermark-remediation-20260714.json](./artifacts/release/hosted-watermark-remediation-20260714.json)
 - **Detailed architecture write-up:** [CASE_STUDY.md](./CASE_STUDY.md)
 
 ## What the work sample demonstrates
@@ -32,7 +33,7 @@ The live proof strip is a point-in-time verification surface. Screenshot values 
 
 ## Hosted release state
 
-A 4,184-row synthetic logical baseline was captured at `2026-07-13T23:13:04.347568Z` before the warehouse-v2 release. Hosted migration history then recorded `warehouse_v2_foundation`, `warehouse_v2_loaders`, `warehouse_v2_orchestration_and_views`, and `release_fk_indexes`; all 11 expected foreign-key supporting indexes are present. See the [machine-readable evidence manifest](./artifacts/release/evidence-manifest.json) for the hosted versions and source references.
+A 4,184-row synthetic logical baseline was captured at `2026-07-13T23:13:04.347568Z` before the warehouse-v2 release. Hosted migration history then recorded `warehouse_v2_foundation`, `warehouse_v2_loaders`, `warehouse_v2_orchestration_and_views`, `release_fk_indexes`, and the post-run `monotonic_composite_watermarks` guard; all 11 expected foreign-key supporting indexes are present. The guard was added after release auditing caught and repaired a no-source run that could move a future-seeded synthetic cursor backward without changing published facts. See the [machine-readable evidence manifest](./artifacts/release/evidence-manifest.json) for hosted versions and source references.
 
 This proves the recorded deployment sequence and index presence only. It is not a production-scale, latency, throughput, production-readiness, stakeholder-approval, or UAT claim.
 

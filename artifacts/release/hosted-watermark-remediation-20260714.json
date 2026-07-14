@@ -1,0 +1,73 @@
+{
+  "format": "nico-hosted-watermark-remediation-v1",
+  "verifiedAtUtc": "2026-07-14T00:06:41.433478Z",
+  "projectRef": "uketehwjsvpnohxhdvxa",
+  "affectedRun": {
+    "runId": "81e0452a-9b63-49ad-97b6-2c69266c0f4b",
+    "startedAtUtc": "2026-07-13T23:48:53.016317Z",
+    "mode": "incremental",
+    "sourceRows": 0,
+    "insertedRows": 0,
+    "updatedRows": 0,
+    "recalculatedRows": 0,
+    "rejectedRows": 0,
+    "dq": "6/6 pass"
+  },
+  "finding": {
+    "summary": "A no-source incremental run selected the latest source composite at or before its cutoff and could overwrite a future-seeded synthetic watermark with an older composite.",
+    "publishedDataImpact": "None. Published fact counts and checksums remained unchanged, and the six public data-quality controls passed.",
+    "lineageImpact": "The no-change run was incorrectly recorded as watermark owner for both source ledgers."
+  },
+  "beforeRepair": {
+    "premium": {
+      "timestamp": "2026-06-10T00:00:00Z",
+      "sourceId": "premium:5ccb7456fa1d10912ea62e0853648d54",
+      "lastSuccessfulRunId": "81e0452a-9b63-49ad-97b6-2c69266c0f4b"
+    },
+    "claim": {
+      "timestamp": "2026-07-13T00:00:00Z",
+      "sourceId": "claim:b65bb2f4eca6f5667ba411817d902097",
+      "lastSuccessfulRunId": "81e0452a-9b63-49ad-97b6-2c69266c0f4b"
+    }
+  },
+  "afterRepair": {
+    "premium": {
+      "timestamp": "2026-06-10T00:00:00Z",
+      "sourceId": "premium:5ccb7456fa1d10912ea62e0853648d54",
+      "lastSuccessfulRunId": null
+    },
+    "claim": {
+      "timestamp": "2027-03-25T00:00:00Z",
+      "sourceId": "claim:55bb3d643e9605b34e3510aa8e142f7e",
+      "lastSuccessfulRunId": null
+    }
+  },
+  "migration": {
+    "hostedVersion": "20260714000641",
+    "name": "monotonic_composite_watermarks",
+    "source": "supabase/migrations/20260714000641_monotonic_composite_watermarks.sql",
+    "behavior": "Repairs from latest already-published fact composites, clears zero-change lineage ownership, and prevents regression or equal-composite lineage rewrites."
+  },
+  "verification": {
+    "trigger": "ops.etl_watermarks.enforce_monotonic_etl_watermark enabled",
+    "pgTap": "120/120 pass on a fresh database reset",
+    "smokeBenchmark": {
+      "rows": 10000,
+      "durationMs": 4894,
+      "throughputRowsPerSecond": 2271.69,
+      "resultContract": "pass"
+    },
+    "publishedFactsBeforeAndAfter": {
+      "premiumCount": 600,
+      "premiumChecksum": "723d4e169bfa40effcb717a3e949a27c",
+      "lossCount": 320,
+      "lossChecksum": "03c22b360ff30f3e70c238938973f0c"
+    },
+    "quarantineCount": 0
+  },
+  "boundaries": [
+    "All records are synthetic portfolio data.",
+    "The historical pipeline-run record is retained as observed evidence; only the current operational ledger was repaired.",
+    "This incident evidence is not a NICO production claim, approval, UAT result, or scale benchmark."
+  ]
+}

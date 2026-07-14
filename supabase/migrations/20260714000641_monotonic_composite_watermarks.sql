@@ -1,4 +1,4 @@
--- Keep the incremental composite cursor monotonic even when the landing tables
+-- Keep each incremental composite cursor monotonic even when the landing tables
 -- contain source timestamps beyond a run's cutoff. A successful no-op run must
 -- not rewind the cursor or claim lineage for a watermark it did not advance.
 

@@ -56,14 +56,24 @@
         "hostedVersion": "20260713232357",
         "hostedName": "release_fk_indexes",
         "sourcePath": "supabase/migrations/20260713232357_release_fk_indexes.sql"
+      },
+      {
+        "hostedVersion": "20260714000641",
+        "hostedName": "monotonic_composite_watermarks",
+        "sourcePath": "supabase/migrations/20260714000641_monotonic_composite_watermarks.sql"
       }
     ],
+    "watermarkRemediation": {
+      "evidencePath": "artifacts/release/hosted-watermark-remediation-20260714.json",
+      "status": "verified",
+      "scope": "Post-run synthetic cursor repair and strict-advance guard; published fact counts and checksums remained unchanged."
+    },
     "foreignKeyIndexVerification": {
       "expected": 11,
       "observed": 11,
       "status": "present"
     },
-    "verificationBasis": "Read-only hosted migration history and pg_indexes inspection.",
+    "verificationBasis": "Read-only hosted migration history, pg_indexes inspection, and post-run watermark remediation verification.",
     "claimBoundary": "This records deployment sequence and index presence only; it is not evidence of production scale, benchmark performance, production readiness, NICO stakeholder approval, or UAT acceptance."
   },
   "screenshots": [

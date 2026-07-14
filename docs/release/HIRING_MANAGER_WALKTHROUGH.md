@@ -52,8 +52,9 @@ A 4,184-row synthetic logical baseline was captured at `2026-07-13T23:13:04.3475
 2. `20260713232116` — `warehouse_v2_loaders`
 3. `20260713232126` — `warehouse_v2_orchestration_and_views`
 4. `20260713232357` — `release_fk_indexes`
+5. `20260714000641` — `monotonic_composite_watermarks`
 
-All 11 expected foreign-key supporting indexes are present. This is evidence of the recorded deployment sequence and index presence—not evidence of production scale, benchmark performance, production readiness, NICO stakeholder approval, or UAT acceptance.
+All 11 expected foreign-key supporting indexes are present. The fifth migration is a post-run remediation: a read-only audit found that a no-source incremental run could rewind a future-seeded synthetic cursor. Published facts and 6/6 DQ were unchanged; the migration restored each ledger from its latest already-published composite, removed zero-change lineage ownership, and installed a strict-advance trigger covered by 120 pgTAP assertions. This is evidence of the recorded deployment sequence and controls—not evidence of production scale, benchmark performance, production readiness, NICO stakeholder approval, or UAT acceptance.
 
 ## Evidence map
 
