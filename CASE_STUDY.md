@@ -1,6 +1,6 @@
 # P&C Insurance Analytics Platform — Case Study
 
-**Author:** Dev (Devashish) Neupane · **Built for:** National Indemnity Company (NICO) Data Warehouse team roles (Data Engineer & Business Analyst)
+**Author:** Dev (Devashish) Neupane · **Built for two NICO hiring contexts:** Data Engineer R14634 and IT Business Analyst
 
 A live, end-to-end work sample that mirrors what a P&C insurer's Data Warehouse team actually does—from source data through a dimensional warehouse to executive BI, controlled operations, and executable requirements. **All data is synthetic; no PII.**
 
@@ -12,7 +12,7 @@ A live, end-to-end work sample that mirrors what a P&C insurer's Data Warehouse 
 
 ## Why this exists
 
-NICO opened two roles on the same Data Warehouse team—a **Data Engineer** and a **Business Analyst**. Rather than only describe the skills on a resume, this project demonstrates them on realistic P&C insurance data. The entry experience can be viewed as either role, reordering the same evidence into a guided hiring-manager journey instead of duplicating or exaggerating work.
+This independent portfolio project is tailored to two NICO hiring contexts—**Data Engineer R14634** and **IT Business Analyst**. Rather than only describe the skills on a resume, it demonstrates them on realistic synthetic P&C insurance data. The entry experience can be viewed through either role, reordering the same evidence into a guided hiring-manager journey without claiming that the roles share a team or operating model.
 
 ## Architecture — source → published
 
@@ -34,7 +34,7 @@ public: dim_* + fact_*  →  vw_* published views  →  React BI dashboards
 - **SQL + stored procedures:** all ETL is PL/pgSQL — dimension upserts, fact loads, and a data-quality suite.
 - **Dimensional modeling:** star schema with facts/dimensions, surrogate keys, SCD Type 2, and role-playing date dimensions.
 - **Source-to-published pipeline:** a clear staging → published separation, reloadable and idempotent.
-- **Data integrity:** `sp_run_data_quality()` runs 6 checks after each load — source-vs-published reconciliation, referential integrity, completeness, and validity (e.g. incurred = paid + reserve). Currently **6/6 passing**.
+- **Data integrity:** `sp_run_data_quality()` runs 6 checks after each load — source-vs-published reconciliation, referential integrity, completeness, and validity (e.g. incurred = paid + reserve). The live proof surface reports the latest result; screenshots are point-in-time captures, not permanent pass claims.
 - **Controlled operations:** a same-origin Vercel Function invokes one service-role-only RPC. Advisory locking, a manual cooldown, and sanitized responses prevent the public browser from receiving privileged SQL access.
 - **Scheduled evidence:** Supabase Cron runs the same internal pipeline nightly at 06:15 UTC and a read-only view publishes the latest 14 durations, row counts, and DQ results.
 
@@ -42,21 +42,22 @@ public: dim_* + fact_*  →  vw_* published views  →  React BI dashboards
 
 - **Rating engine:** an interactive P&C premium calculator — base rate × territory × risk tier × limits, with deductible credits, endorsements, discounts, and a prior-claims surcharge, plus a transparent rating worksheet.
 - **Requirements:** INVEST user stories with **Given/When/Then** acceptance criteria, MoSCoW priority, and traceable test cases mapping to the engine and warehouse behavior.
-- **Executable traceability:** 10 tests run against the actual rating functions and hosted warehouse views, reporting expected-versus-actual evidence and linking rating cases into reproducible inputs.
+- **Executable traceability:** the live suite combines 6 deterministic rating cases with 4 read-only hosted warehouse checks, reporting expected-versus-actual evidence and linking rating cases into reproducible inputs. CI browser journeys use deterministic REST/API fixtures rather than claiming a live hosted result.
+- **Critical-control evidence:** AT-10 selects critical controls by structured category and severity—not display-name text—and requires every critical validity and reconciliation control to pass.
 - **Insight delivery:** the Overview surfaces a rate-adequacy alert when a line of business runs above a 100% loss ratio (in the synthetic book, Personal Auto and Homeowners) — the kind of finding a portfolio analyst escalates.
 
 ## Honest scope
 
 - Data is **synthetic**, generated in Postgres. No real policyholder data.
-- The warehouse runs on **Supabase Postgres** rather than NICO's Microsoft/Azure stack — the *techniques* (dimensional modeling, stored-procedure ETL, source-to-published loads, data-quality controls) transfer directly; the specific tooling (Azure Data Factory, SSIS, SQL Server) would be a fast ramp.
+- The warehouse runs on **Supabase Postgres** rather than NICO's Microsoft/Azure stack. The demonstrated dimensional modeling, stored-procedure ETL, source-to-published loads, and data-quality controls inform a design-only transfer map for Azure SQL, Synapse, Azure Data Factory, ADLS, Entra, and Power BI; those services are not deployed by this project.
 - The rating engine is a simplified illustrative model, not a filed rating plan.
 - The Azure Stack Mapping page names the closest Microsoft equivalents and the implementation ramp. It does not claim access to NICO systems or production Azure delivery.
 
 ## Verification
 
 - `npm run typecheck`, `npm run lint`, `npm run test`, and `npm run build` are required release gates.
-- Playwright covers 1440×1000 desktop and 390×844 mobile journeys, including persona persistence, the acceptance suite, guided tours, and page-level overflow.
-- Database release validation includes one real manual run, six passing controls, cron job/run evidence, and Supabase security/performance advisors.
+- Playwright covers 1440×1000 desktop, 1024×768 laptop, 390×844 mobile, and 320×720 narrow-mobile journeys, including exact role framing, Delivery Hub behavior, requirements, controlled recovery, proof states, focus handling, and page-level overflow.
+- A 4,184-row synthetic logical baseline was captured at `2026-07-13T23:13:04.347568Z` before warehouse-v2. Hosted migration history then recorded `warehouse_v2_foundation`, `warehouse_v2_loaders`, `warehouse_v2_orchestration_and_views`, `release_fk_indexes`, `monotonic_composite_watermarks`, and `controlled_recovery_guard`; all 11 expected foreign-key supporting indexes are present. Post-run audits caught and repaired a future-seeded cursor regression and constrained recovery to the exact failed controlled-demo lineage. Published facts and 6/6 DQ remained intact; 125 fresh-reset pgTAP assertions now cover the database contracts. This is deployment evidence, not a benchmark-performance, production-readiness, NICO approval, or UAT claim.
 
 ## Run locally
 

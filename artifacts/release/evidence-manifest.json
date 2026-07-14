@@ -1,0 +1,187 @@
+{
+  "schemaVersion": "1.0.0",
+  "releaseId": "nico-dual-role-hiring-evidence-2026-07-13",
+  "generatedOn": "2026-07-13",
+  "project": {
+    "name": "P&C Insurance Analytics Platform",
+    "liveUrl": "https://nico-pc-insurance-analytics.vercel.app/",
+    "repositoryUrl": "https://github.com/devashish1000/nico-pc-insurance-analytics",
+    "author": "Dev (Devashish) Neupane",
+    "framing": "Independent synthetic-data portfolio work sample tailored to two NICO hiring contexts.",
+    "targetRoles": [
+      {
+        "organization": "National Indemnity Company (NICO)",
+        "title": "Data Engineer",
+        "requisition": "R14634"
+      },
+      {
+        "organization": "National Indemnity Company (NICO)",
+        "title": "IT Business Analyst",
+        "requisition": null
+      }
+    ]
+  },
+  "boundaries": {
+    "data": "Synthetic portfolio data only; no PII, NICO data, or proprietary data.",
+    "organizationalContext": "Illustrative roles, workflows, RACI assignments, decisions, and backlog items; not a representation of NICO operations or commitments.",
+    "azure": "Azure SQL, Synapse, Azure Data Factory, ADLS, Entra, and Power BI are design-only transfer mappings and are not deployed by this project.",
+    "uat": "Author self-review only. No NICO stakeholder validation, approval, production UAT, or production-readiness assessment was performed.",
+    "performance": "Configured workload sizes are not performance results. Timing, latency, throughput, and pass claims require a retained schema-validated CI artifact.",
+    "affiliation": "This portfolio project is not a NICO system, engagement, endorsement, or production implementation."
+  },
+  "hostedRelease": {
+    "baselineBackup": {
+      "manifestPath": "artifacts/release/hosted-logical-backup-20260713T231304Z-manifest.json",
+      "capturedAtUtc": "2026-07-13T23:13:04.347568Z",
+      "totalRows": 4184,
+      "scope": "Synthetic logical baseline captured before the warehouse-v2 release migrations."
+    },
+    "appliedMigrations": [
+      {
+        "hostedVersion": "20260713232107",
+        "hostedName": "warehouse_v2_foundation",
+        "sourcePath": "supabase/migrations/20260713232107_warehouse_v2_foundation.sql"
+      },
+      {
+        "hostedVersion": "20260713232116",
+        "hostedName": "warehouse_v2_loaders",
+        "sourcePath": "supabase/migrations/20260713232116_warehouse_v2_loaders.sql"
+      },
+      {
+        "hostedVersion": "20260713232126",
+        "hostedName": "warehouse_v2_orchestration_and_views",
+        "sourcePath": "supabase/migrations/20260713232126_warehouse_v2_orchestration_and_views.sql"
+      },
+      {
+        "hostedVersion": "20260713232357",
+        "hostedName": "release_fk_indexes",
+        "sourcePath": "supabase/migrations/20260713232357_release_fk_indexes.sql"
+      },
+      {
+        "hostedVersion": "20260714000641",
+        "hostedName": "monotonic_composite_watermarks",
+        "sourcePath": "supabase/migrations/20260714000641_monotonic_composite_watermarks.sql"
+      },
+      {
+        "hostedVersion": "20260714002608",
+        "hostedName": "controlled_recovery_guard",
+        "sourcePath": "supabase/migrations/20260714002608_controlled_recovery_guard.sql"
+      }
+    ],
+    "watermarkRemediation": {
+      "evidencePath": "artifacts/release/hosted-watermark-remediation-20260714.json",
+      "status": "verified",
+      "scope": "Post-run synthetic cursor repair and strict-advance guard; published fact counts and checksums remained unchanged."
+    },
+    "controlledRecovery": {
+      "evidencePath": "artifacts/release/hosted-controlled-recovery-20260714.json",
+      "status": "verified",
+      "scope": "One controlled synthetic failure and its single linked recovery; failure left facts and watermarks unchanged, recovery replayed the quarantine and passed 6/6 DQ."
+    },
+    "controlledRecoveryGuard": {
+      "evidencePath": "artifacts/release/hosted-controlled-recovery-guard-20260714.json",
+      "status": "verified",
+      "scope": "Authoritative recovery-target validation, sanitized recoverable evidence, execution-denial checks, and 125/125 fresh-reset pgTAP assertions."
+    },
+    "foreignKeyIndexVerification": {
+      "expected": 11,
+      "observed": 11,
+      "status": "present"
+    },
+    "verificationBasis": "Read-only hosted migration history, pg_indexes inspection, post-run watermark remediation verification, and controlled-recovery guard inspection.",
+    "claimBoundary": "This records deployment sequence and index presence only; it is not evidence of production scale, benchmark performance, production readiness, NICO stakeholder approval, or UAT acceptance."
+  },
+  "screenshots": [
+    {
+      "id": "desktop-delivery-hub",
+      "path": "artifacts/screenshots/goal2-desktop-delivery-hub.png",
+      "sha256": "e60ca243fbc12dcfd19f4917440162838c70ddd36f2ffd7c750ba64c6b24d5a8",
+      "width": 1440,
+      "height": 1000,
+      "purpose": "Desktop IT Business Analyst Delivery Hub traceability and scope-boundary review."
+    },
+    {
+      "id": "desktop-overview",
+      "path": "artifacts/screenshots/goal2-desktop-overview.png",
+      "sha256": "7b3785ef0b924ca3bfb19c363d33fa30ea43b7e51d881721a85ed162fd3f66da",
+      "width": 1440,
+      "height": 1000,
+      "purpose": "Desktop dual-role landing, proof strip, navigation, and portfolio overview."
+    },
+    {
+      "id": "mobile-320-pipeline",
+      "path": "artifacts/screenshots/goal2-mobile-320-pipeline.png",
+      "sha256": "f6c1fd473bc58c8c35f97d7ab8a450d4c0dc3a7a7a541df1f8eaba29eb201a35",
+      "width": 320,
+      "height": 844,
+      "purpose": "Narrow mobile pipeline controls and compact proof/navigation layout."
+    },
+    {
+      "id": "mobile-390-delivery-content",
+      "path": "artifacts/screenshots/goal2-mobile-390-delivery-content.png",
+      "sha256": "c948d120d18e19de5824f1e767ec34ca74b17bdd70794860363b631e91bb868e",
+      "width": 390,
+      "height": 844,
+      "purpose": "Mobile Delivery Hub traceability content and synthetic-scope notice."
+    },
+    {
+      "id": "mobile-390-delivery-hub",
+      "path": "artifacts/screenshots/goal2-mobile-390-delivery-hub.png",
+      "sha256": "214a6f8d9d5e5547e5ac6f573f60af1e9ba8e67f7e3a81e844bafd343c569032",
+      "width": 390,
+      "height": 844,
+      "purpose": "Mobile dual-role entry point and point-in-time proof strip."
+    }
+  ],
+  "automationArtifacts": [
+    {
+      "id": "playwright-diagnostics",
+      "workflowPath": ".github/workflows/ci.yml",
+      "artifactNamePattern": "playwright-chromium-${run_id}-${run_attempt}",
+      "availability": "GitHub Actions run artifact on browser-gate failure",
+      "contents": [
+        "playwright-report/",
+        "test-results/"
+      ],
+      "retainedResultInRepository": false,
+      "resultClaim": null
+    },
+    {
+      "id": "pull-request-smoke-benchmark",
+      "workflowPath": ".github/workflows/ci.yml",
+      "artifactNamePattern": "nico-benchmark-smoke-${run_id}",
+      "availability": "GitHub Actions run artifact",
+      "configurationPath": "benchmarks/config.json",
+      "resultSchemaPath": "benchmarks/results/benchmark-result.schema.json",
+      "configuredMode": "smoke",
+      "configuredRows": 10000,
+      "retainedResultInRepository": false,
+      "resultClaim": null
+    },
+    {
+      "id": "scheduled-or-manual-benchmark",
+      "workflowPath": ".github/workflows/benchmark.yml",
+      "artifactNamePattern": "nico-benchmark-${mode}-${run_id}",
+      "availability": "GitHub Actions run artifact",
+      "configurationPath": "benchmarks/config.json",
+      "resultSchemaPath": "benchmarks/results/benchmark-result.schema.json",
+      "configuredModes": {
+        "primary": {
+          "configuredRows": 150000,
+          "trigger": "main branch or scheduled"
+        },
+        "extended": {
+          "configuredRows": 1000000,
+          "trigger": "manual only"
+        }
+      },
+      "retainedResultInRepository": false,
+      "resultClaim": null
+    }
+  ],
+  "evidenceNotes": [
+    "Screenshot values are point-in-time UI observations, not production or benchmark metrics.",
+    "Artifact name patterns identify where CI evidence is produced; they do not assert that a specific run passed.",
+    "No benchmark timing, latency, throughput, NICO approval, or production-readiness value is encoded in this manifest."
+  ]
+}

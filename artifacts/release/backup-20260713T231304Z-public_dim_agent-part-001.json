@@ -1,0 +1,97 @@
+{
+  "format": "nico-logical-table-part-v1",
+  "capturedAtUtc": "2026-07-13T23:13:04.347568Z",
+  "projectRef": "uketehwjsvpnohxhdvxa",
+  "schema": "public",
+  "table": "dim_agent",
+  "orderBy": "agent_key",
+  "part": 1,
+  "offset": 0,
+  "rowCount": 12,
+  "rows": [
+    {
+      "agency": "Great Plains Brokers",
+      "region": "Mountain",
+      "agent_id": "AG-002",
+      "agent_key": 1,
+      "agent_name": "Agent 2"
+    },
+    {
+      "agency": "Great Plains Brokers",
+      "region": "Mountain",
+      "agent_id": "AG-006",
+      "agent_key": 2,
+      "agent_name": "Agent 6"
+    },
+    {
+      "agency": "Great Plains Brokers",
+      "region": "Mountain",
+      "agent_id": "AG-010",
+      "agent_key": 3,
+      "agent_name": "Agent 10"
+    },
+    {
+      "agency": "Cornhusker Ins Group",
+      "region": "Midwest",
+      "agent_id": "AG-012",
+      "agent_key": 4,
+      "agent_name": "Agent 12"
+    },
+    {
+      "agency": "Heartland Risk Partners",
+      "region": "Great Plains",
+      "agent_id": "AG-003",
+      "agent_key": 5,
+      "agent_name": "Agent 3"
+    },
+    {
+      "agency": "Heartland Risk Partners",
+      "region": "Great Plains",
+      "agent_id": "AG-007",
+      "agent_key": 6,
+      "agent_name": "Agent 7"
+    },
+    {
+      "agency": "Cornhusker Ins Group",
+      "region": "Midwest",
+      "agent_id": "AG-004",
+      "agent_key": 7,
+      "agent_name": "Agent 4"
+    },
+    {
+      "agency": "Cornhusker Ins Group",
+      "region": "Midwest",
+      "agent_id": "AG-008",
+      "agent_key": 8,
+      "agent_name": "Agent 8"
+    },
+    {
+      "agency": "Missouri Valley Agency",
+      "region": "Central",
+      "agent_id": "AG-009",
+      "agent_key": 9,
+      "agent_name": "Agent 9"
+    },
+    {
+      "agency": "Heartland Risk Partners",
+      "region": "Great Plains",
+      "agent_id": "AG-011",
+      "agent_key": 10,
+      "agent_name": "Agent 11"
+    },
+    {
+      "agency": "Missouri Valley Agency",
+      "region": "Central",
+      "agent_id": "AG-005",
+      "agent_key": 11,
+      "agent_name": "Agent 5"
+    },
+    {
+      "agency": "Missouri Valley Agency",
+      "region": "Central",
+      "agent_id": "AG-001",
+      "agent_key": 12,
+      "agent_name": "Agent 1"
+    }
+  ]
+}

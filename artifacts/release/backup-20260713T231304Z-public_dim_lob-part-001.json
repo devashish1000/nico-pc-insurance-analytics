@@ -1,0 +1,38 @@
+{
+  "format": "nico-logical-table-part-v1",
+  "capturedAtUtc": "2026-07-13T23:13:04.347568Z",
+  "projectRef": "uketehwjsvpnohxhdvxa",
+  "schema": "public",
+  "table": "dim_lob",
+  "orderBy": "lob_key",
+  "part": 1,
+  "offset": 0,
+  "rowCount": 5,
+  "rows": [
+    {
+      "lob_key": 1,
+      "lob_code": "PAUTO",
+      "lob_name": "Personal Auto"
+    },
+    {
+      "lob_key": 2,
+      "lob_code": "GL",
+      "lob_name": "General Liability"
+    },
+    {
+      "lob_key": 3,
+      "lob_code": "WC",
+      "lob_name": "Workers Comp"
+    },
+    {
+      "lob_key": 4,
+      "lob_code": "CAUTO",
+      "lob_name": "Commercial Auto"
+    },
+    {
+      "lob_key": 5,
+      "lob_code": "HOME",
+      "lob_name": "Homeowners"
+    }
+  ]
+}

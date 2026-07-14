@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nico-pc-insurance-analytics.example/schemas/benchmark-config-1.0.0.json",
+  "title": "NICO P&C pipeline benchmark configuration",
+  "type": "object",
+  "required": ["schemaVersion", "seed", "databaseUrl", "window", "modes"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "seed": { "type": "integer" },
+    "databaseUrl": { "type": "string" },
+    "window": {
+      "type": "object",
+      "required": ["from", "to", "calculationAsOf"],
+      "properties": {
+        "from": { "type": "string", "format": "date" },
+        "to": { "type": "string", "format": "date" },
+        "calculationAsOf": { "type": "string", "format": "date" }
+      }
+    },
+    "modes": {
+      "type": "object",
+      "required": ["smoke", "primary", "extended"],
+      "additionalProperties": false,
+      "properties": {
+        "smoke": { "$ref": "#/$defs/mode" },
+        "primary": { "$ref": "#/$defs/mode" },
+        "extended": { "$ref": "#/$defs/mode" }
+      }
+    }
+  },
+  "$defs": {
+    "mode": {
+      "type": "object",
+      "required": ["premiumRows", "claimRows", "totalRows", "querySamples", "maxTotalMs", "ci"],
+      "properties": {
+        "premiumRows": { "type": "integer", "minimum": 1 },
+        "claimRows": { "type": "integer", "minimum": 1 },
+        "totalRows": { "type": "integer", "minimum": 2 },
+        "querySamples": { "type": "integer", "minimum": 5 },
+        "maxTotalMs": { "type": "integer", "minimum": 1 },
+        "ci": { "enum": ["pull-request", "main-and-scheduled", "manual-only"] }
+      }
+    }
+  }
+}

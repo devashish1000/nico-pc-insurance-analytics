@@ -13,15 +13,16 @@ export default function LandingHero({ persona, onSelect }: { persona: Persona | 
   return (
     <section className="landing-hero" aria-labelledby="landing-title">
       <div className="landing-copy">
-        <h1 id="landing-title">Built for the NICO<br />Data Warehouse team.</h1>
+        <span className="target-role">Data Engineer R14634 · IT Business Analyst</span>
+        <h1 id="landing-title">Built for NICO data and cross-functional IT teams.</h1>
         <div className="editorial-rule" />
-        <p>A live, synthetic-data work sample spanning warehouse engineering, quality controls, rating logic, and testable requirements.</p>
+        <p>A live synthetic-data work sample connecting warehouse engineering, controlled recovery, quality evidence, traceable requirements, and testable business outcomes.</p>
         <div className="persona-actions" aria-label="Choose a hiring perspective">
           <button className={persona !== 'business-analyst' ? 'persona-action active' : 'persona-action'} onClick={() => onSelect('data-engineer')}>
-            <Database size={19} /> Explore as a Data Engineer
+            <Database size={19} /> Explore Data Engineer R14634
           </button>
           <button className={persona === 'business-analyst' ? 'persona-action active' : 'persona-action'} onClick={() => onSelect('business-analyst')}>
-            <BarChart3 size={19} /> Explore as a Business Analyst
+            <BarChart3 size={19} /> Explore IT Business Analyst
           </button>
         </div>
       </div>

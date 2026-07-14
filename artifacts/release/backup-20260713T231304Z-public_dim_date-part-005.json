@@ -1,0 +1,598 @@
+{
+  "format": "nico-logical-table-part-v1",
+  "capturedAtUtc": "2026-07-13T23:13:04.347568Z",
+  "projectRef": "uketehwjsvpnohxhdvxa",
+  "schema": "public",
+  "table": "dim_date",
+  "orderBy": "date_key",
+  "part": 5,
+  "offset": 1000,
+  "rowCount": 65,
+  "rows": [
+    {
+      "day": 7,
+      "year": 2027,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20270407,
+      "full_date": "2027-04-07",
+      "month_name": "Apr"
+    },
+    {
+      "day": 8,
+      "year": 2027,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20270408,
+      "full_date": "2027-04-08",
+      "month_name": "Apr"
+    },
+    {
+      "day": 9,
+      "year": 2027,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20270409,
+      "full_date": "2027-04-09",
+      "month_name": "Apr"
+    },
+    {
+      "day": 10,
+      "year": 2027,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20270410,
+      "full_date": "2027-04-10",
+      "month_name": "Apr"
+    },
+    {
+      "day": 11,
+      "year": 2027,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20270411,
+      "full_date": "2027-04-11",
+      "month_name": "Apr"
+    },
+    {
+      "day": 12,
+      "year": 2027,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20270412,
+      "full_date": "2027-04-12",
+      "month_name": "Apr"
+    },
+    {
+      "day": 13,
+      "year": 2027,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20270413,
+      "full_date": "2027-04-13",
+      "month_name": "Apr"
+    },
+    {
+      "day": 14,
+      "year": 2027,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20270414,
+      "full_date": "2027-04-14",
+      "month_name": "Apr"
+    },
+    {
+      "day": 15,
+      "year": 2027,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20270415,
+      "full_date": "2027-04-15",
+      "month_name": "Apr"
+    },
+    {
+      "day": 16,
+      "year": 2027,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20270416,
+      "full_date": "2027-04-16",
+      "month_name": "Apr"
+    },
+    {
+      "day": 17,
+      "year": 2027,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20270417,
+      "full_date": "2027-04-17",
+      "month_name": "Apr"
+    },
+    {
+      "day": 18,
+      "year": 2027,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20270418,
+      "full_date": "2027-04-18",
+      "month_name": "Apr"
+    },
+    {
+      "day": 19,
+      "year": 2027,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20270419,
+      "full_date": "2027-04-19",
+      "month_name": "Apr"
+    },
+    {
+      "day": 20,
+      "year": 2027,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20270420,
+      "full_date": "2027-04-20",
+      "month_name": "Apr"
+    },
+    {
+      "day": 21,
+      "year": 2027,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20270421,
+      "full_date": "2027-04-21",
+      "month_name": "Apr"
+    },
+    {
+      "day": 22,
+      "year": 2027,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20270422,
+      "full_date": "2027-04-22",
+      "month_name": "Apr"
+    },
+    {
+      "day": 23,
+      "year": 2027,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20270423,
+      "full_date": "2027-04-23",
+      "month_name": "Apr"
+    },
+    {
+      "day": 24,
+      "year": 2027,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20270424,
+      "full_date": "2027-04-24",
+      "month_name": "Apr"
+    },
+    {
+      "day": 25,
+      "year": 2027,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20270425,
+      "full_date": "2027-04-25",
+      "month_name": "Apr"
+    },
+    {
+      "day": 26,
+      "year": 2027,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20270426,
+      "full_date": "2027-04-26",
+      "month_name": "Apr"
+    },
+    {
+      "day": 27,
+      "year": 2027,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20270427,
+      "full_date": "2027-04-27",
+      "month_name": "Apr"
+    },
+    {
+      "day": 28,
+      "year": 2027,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20270428,
+      "full_date": "2027-04-28",
+      "month_name": "Apr"
+    },
+    {
+      "day": 29,
+      "year": 2027,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20270429,
+      "full_date": "2027-04-29",
+      "month_name": "Apr"
+    },
+    {
+      "day": 30,
+      "year": 2027,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20270430,
+      "full_date": "2027-04-30",
+      "month_name": "Apr"
+    },
+    {
+      "day": 1,
+      "year": 2027,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20270501,
+      "full_date": "2027-05-01",
+      "month_name": "May"
+    },
+    {
+      "day": 2,
+      "year": 2027,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20270502,
+      "full_date": "2027-05-02",
+      "month_name": "May"
+    },
+    {
+      "day": 3,
+      "year": 2027,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20270503,
+      "full_date": "2027-05-03",
+      "month_name": "May"
+    },
+    {
+      "day": 4,
+      "year": 2027,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20270504,
+      "full_date": "2027-05-04",
+      "month_name": "May"
+    },
+    {
+      "day": 5,
+      "year": 2027,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20270505,
+      "full_date": "2027-05-05",
+      "month_name": "May"
+    },
+    {
+      "day": 6,
+      "year": 2027,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20270506,
+      "full_date": "2027-05-06",
+      "month_name": "May"
+    },
+    {
+      "day": 7,
+      "year": 2027,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20270507,
+      "full_date": "2027-05-07",
+      "month_name": "May"
+    },
+    {
+      "day": 8,
+      "year": 2027,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20270508,
+      "full_date": "2027-05-08",
+      "month_name": "May"
+    },
+    {
+      "day": 9,
+      "year": 2027,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20270509,
+      "full_date": "2027-05-09",
+      "month_name": "May"
+    },
+    {
+      "day": 10,
+      "year": 2027,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20270510,
+      "full_date": "2027-05-10",
+      "month_name": "May"
+    },
+    {
+      "day": 11,
+      "year": 2027,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20270511,
+      "full_date": "2027-05-11",
+      "month_name": "May"
+    },
+    {
+      "day": 12,
+      "year": 2027,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20270512,
+      "full_date": "2027-05-12",
+      "month_name": "May"
+    },
+    {
+      "day": 13,
+      "year": 2027,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20270513,
+      "full_date": "2027-05-13",
+      "month_name": "May"
+    },
+    {
+      "day": 14,
+      "year": 2027,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20270514,
+      "full_date": "2027-05-14",
+      "month_name": "May"
+    },
+    {
+      "day": 15,
+      "year": 2027,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20270515,
+      "full_date": "2027-05-15",
+      "month_name": "May"
+    },
+    {
+      "day": 16,
+      "year": 2027,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20270516,
+      "full_date": "2027-05-16",
+      "month_name": "May"
+    },
+    {
+      "day": 17,
+      "year": 2027,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20270517,
+      "full_date": "2027-05-17",
+      "month_name": "May"
+    },
+    {
+      "day": 18,
+      "year": 2027,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20270518,
+      "full_date": "2027-05-18",
+      "month_name": "May"
+    },
+    {
+      "day": 19,
+      "year": 2027,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20270519,
+      "full_date": "2027-05-19",
+      "month_name": "May"
+    },
+    {
+      "day": 20,
+      "year": 2027,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20270520,
+      "full_date": "2027-05-20",
+      "month_name": "May"
+    },
+    {
+      "day": 21,
+      "year": 2027,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20270521,
+      "full_date": "2027-05-21",
+      "month_name": "May"
+    },
+    {
+      "day": 22,
+      "year": 2027,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20270522,
+      "full_date": "2027-05-22",
+      "month_name": "May"
+    },
+    {
+      "day": 23,
+      "year": 2027,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20270523,
+      "full_date": "2027-05-23",
+      "month_name": "May"
+    },
+    {
+      "day": 24,
+      "year": 2027,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20270524,
+      "full_date": "2027-05-24",
+      "month_name": "May"
+    },
+    {
+      "day": 25,
+      "year": 2027,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20270525,
+      "full_date": "2027-05-25",
+      "month_name": "May"
+    },
+    {
+      "day": 26,
+      "year": 2027,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20270526,
+      "full_date": "2027-05-26",
+      "month_name": "May"
+    },
+    {
+      "day": 27,
+      "year": 2027,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20270527,
+      "full_date": "2027-05-27",
+      "month_name": "May"
+    },
+    {
+      "day": 28,
+      "year": 2027,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20270528,
+      "full_date": "2027-05-28",
+      "month_name": "May"
+    },
+    {
+      "day": 29,
+      "year": 2027,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20270529,
+      "full_date": "2027-05-29",
+      "month_name": "May"
+    },
+    {
+      "day": 30,
+      "year": 2027,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20270530,
+      "full_date": "2027-05-30",
+      "month_name": "May"
+    },
+    {
+      "day": 31,
+      "year": 2027,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20270531,
+      "full_date": "2027-05-31",
+      "month_name": "May"
+    },
+    {
+      "day": 1,
+      "year": 2027,
+      "month": 6,
+      "quarter": 2,
+      "date_key": 20270601,
+      "full_date": "2027-06-01",
+      "month_name": "Jun"
+    },
+    {
+      "day": 2,
+      "year": 2027,
+      "month": 6,
+      "quarter": 2,
+      "date_key": 20270602,
+      "full_date": "2027-06-02",
+      "month_name": "Jun"
+    },
+    {
+      "day": 3,
+      "year": 2027,
+      "month": 6,
+      "quarter": 2,
+      "date_key": 20270603,
+      "full_date": "2027-06-03",
+      "month_name": "Jun"
+    },
+    {
+      "day": 4,
+      "year": 2027,
+      "month": 6,
+      "quarter": 2,
+      "date_key": 20270604,
+      "full_date": "2027-06-04",
+      "month_name": "Jun"
+    },
+    {
+      "day": 5,
+      "year": 2027,
+      "month": 6,
+      "quarter": 2,
+      "date_key": 20270605,
+      "full_date": "2027-06-05",
+      "month_name": "Jun"
+    },
+    {
+      "day": 6,
+      "year": 2027,
+      "month": 6,
+      "quarter": 2,
+      "date_key": 20270606,
+      "full_date": "2027-06-06",
+      "month_name": "Jun"
+    },
+    {
+      "day": 7,
+      "year": 2027,
+      "month": 6,
+      "quarter": 2,
+      "date_key": 20270607,
+      "full_date": "2027-06-07",
+      "month_name": "Jun"
+    },
+    {
+      "day": 8,
+      "year": 2027,
+      "month": 6,
+      "quarter": 2,
+      "date_key": 20270608,
+      "full_date": "2027-06-08",
+      "month_name": "Jun"
+    },
+    {
+      "day": 9,
+      "year": 2027,
+      "month": 6,
+      "quarter": 2,
+      "date_key": 20270609,
+      "full_date": "2027-06-09",
+      "month_name": "Jun"
+    },
+    {
+      "day": 10,
+      "year": 2027,
+      "month": 6,
+      "quarter": 2,
+      "date_key": 20270610,
+      "full_date": "2027-06-10",
+      "month_name": "Jun"
+    }
+  ]
+}

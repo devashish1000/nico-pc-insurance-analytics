@@ -1,0 +1,2263 @@
+{
+  "format": "nico-logical-table-part-v1",
+  "capturedAtUtc": "2026-07-13T23:13:04.347568Z",
+  "projectRef": "uketehwjsvpnohxhdvxa",
+  "schema": "public",
+  "table": "dim_date",
+  "orderBy": "date_key",
+  "part": 3,
+  "offset": 500,
+  "rowCount": 250,
+  "rows": [
+    {
+      "day": 23,
+      "year": 2025,
+      "month": 11,
+      "quarter": 4,
+      "date_key": 20251123,
+      "full_date": "2025-11-23",
+      "month_name": "Nov"
+    },
+    {
+      "day": 24,
+      "year": 2025,
+      "month": 11,
+      "quarter": 4,
+      "date_key": 20251124,
+      "full_date": "2025-11-24",
+      "month_name": "Nov"
+    },
+    {
+      "day": 25,
+      "year": 2025,
+      "month": 11,
+      "quarter": 4,
+      "date_key": 20251125,
+      "full_date": "2025-11-25",
+      "month_name": "Nov"
+    },
+    {
+      "day": 26,
+      "year": 2025,
+      "month": 11,
+      "quarter": 4,
+      "date_key": 20251126,
+      "full_date": "2025-11-26",
+      "month_name": "Nov"
+    },
+    {
+      "day": 27,
+      "year": 2025,
+      "month": 11,
+      "quarter": 4,
+      "date_key": 20251127,
+      "full_date": "2025-11-27",
+      "month_name": "Nov"
+    },
+    {
+      "day": 28,
+      "year": 2025,
+      "month": 11,
+      "quarter": 4,
+      "date_key": 20251128,
+      "full_date": "2025-11-28",
+      "month_name": "Nov"
+    },
+    {
+      "day": 29,
+      "year": 2025,
+      "month": 11,
+      "quarter": 4,
+      "date_key": 20251129,
+      "full_date": "2025-11-29",
+      "month_name": "Nov"
+    },
+    {
+      "day": 30,
+      "year": 2025,
+      "month": 11,
+      "quarter": 4,
+      "date_key": 20251130,
+      "full_date": "2025-11-30",
+      "month_name": "Nov"
+    },
+    {
+      "day": 1,
+      "year": 2025,
+      "month": 12,
+      "quarter": 4,
+      "date_key": 20251201,
+      "full_date": "2025-12-01",
+      "month_name": "Dec"
+    },
+    {
+      "day": 2,
+      "year": 2025,
+      "month": 12,
+      "quarter": 4,
+      "date_key": 20251202,
+      "full_date": "2025-12-02",
+      "month_name": "Dec"
+    },
+    {
+      "day": 3,
+      "year": 2025,
+      "month": 12,
+      "quarter": 4,
+      "date_key": 20251203,
+      "full_date": "2025-12-03",
+      "month_name": "Dec"
+    },
+    {
+      "day": 4,
+      "year": 2025,
+      "month": 12,
+      "quarter": 4,
+      "date_key": 20251204,
+      "full_date": "2025-12-04",
+      "month_name": "Dec"
+    },
+    {
+      "day": 5,
+      "year": 2025,
+      "month": 12,
+      "quarter": 4,
+      "date_key": 20251205,
+      "full_date": "2025-12-05",
+      "month_name": "Dec"
+    },
+    {
+      "day": 6,
+      "year": 2025,
+      "month": 12,
+      "quarter": 4,
+      "date_key": 20251206,
+      "full_date": "2025-12-06",
+      "month_name": "Dec"
+    },
+    {
+      "day": 7,
+      "year": 2025,
+      "month": 12,
+      "quarter": 4,
+      "date_key": 20251207,
+      "full_date": "2025-12-07",
+      "month_name": "Dec"
+    },
+    {
+      "day": 8,
+      "year": 2025,
+      "month": 12,
+      "quarter": 4,
+      "date_key": 20251208,
+      "full_date": "2025-12-08",
+      "month_name": "Dec"
+    },
+    {
+      "day": 9,
+      "year": 2025,
+      "month": 12,
+      "quarter": 4,
+      "date_key": 20251209,
+      "full_date": "2025-12-09",
+      "month_name": "Dec"
+    },
+    {
+      "day": 10,
+      "year": 2025,
+      "month": 12,
+      "quarter": 4,
+      "date_key": 20251210,
+      "full_date": "2025-12-10",
+      "month_name": "Dec"
+    },
+    {
+      "day": 11,
+      "year": 2025,
+      "month": 12,
+      "quarter": 4,
+      "date_key": 20251211,
+      "full_date": "2025-12-11",
+      "month_name": "Dec"
+    },
+    {
+      "day": 12,
+      "year": 2025,
+      "month": 12,
+      "quarter": 4,
+      "date_key": 20251212,
+      "full_date": "2025-12-12",
+      "month_name": "Dec"
+    },
+    {
+      "day": 13,
+      "year": 2025,
+      "month": 12,
+      "quarter": 4,
+      "date_key": 20251213,
+      "full_date": "2025-12-13",
+      "month_name": "Dec"
+    },
+    {
+      "day": 14,
+      "year": 2025,
+      "month": 12,
+      "quarter": 4,
+      "date_key": 20251214,
+      "full_date": "2025-12-14",
+      "month_name": "Dec"
+    },
+    {
+      "day": 15,
+      "year": 2025,
+      "month": 12,
+      "quarter": 4,
+      "date_key": 20251215,
+      "full_date": "2025-12-15",
+      "month_name": "Dec"
+    },
+    {
+      "day": 16,
+      "year": 2025,
+      "month": 12,
+      "quarter": 4,
+      "date_key": 20251216,
+      "full_date": "2025-12-16",
+      "month_name": "Dec"
+    },
+    {
+      "day": 17,
+      "year": 2025,
+      "month": 12,
+      "quarter": 4,
+      "date_key": 20251217,
+      "full_date": "2025-12-17",
+      "month_name": "Dec"
+    },
+    {
+      "day": 18,
+      "year": 2025,
+      "month": 12,
+      "quarter": 4,
+      "date_key": 20251218,
+      "full_date": "2025-12-18",
+      "month_name": "Dec"
+    },
+    {
+      "day": 19,
+      "year": 2025,
+      "month": 12,
+      "quarter": 4,
+      "date_key": 20251219,
+      "full_date": "2025-12-19",
+      "month_name": "Dec"
+    },
+    {
+      "day": 20,
+      "year": 2025,
+      "month": 12,
+      "quarter": 4,
+      "date_key": 20251220,
+      "full_date": "2025-12-20",
+      "month_name": "Dec"
+    },
+    {
+      "day": 21,
+      "year": 2025,
+      "month": 12,
+      "quarter": 4,
+      "date_key": 20251221,
+      "full_date": "2025-12-21",
+      "month_name": "Dec"
+    },
+    {
+      "day": 22,
+      "year": 2025,
+      "month": 12,
+      "quarter": 4,
+      "date_key": 20251222,
+      "full_date": "2025-12-22",
+      "month_name": "Dec"
+    },
+    {
+      "day": 23,
+      "year": 2025,
+      "month": 12,
+      "quarter": 4,
+      "date_key": 20251223,
+      "full_date": "2025-12-23",
+      "month_name": "Dec"
+    },
+    {
+      "day": 24,
+      "year": 2025,
+      "month": 12,
+      "quarter": 4,
+      "date_key": 20251224,
+      "full_date": "2025-12-24",
+      "month_name": "Dec"
+    },
+    {
+      "day": 25,
+      "year": 2025,
+      "month": 12,
+      "quarter": 4,
+      "date_key": 20251225,
+      "full_date": "2025-12-25",
+      "month_name": "Dec"
+    },
+    {
+      "day": 26,
+      "year": 2025,
+      "month": 12,
+      "quarter": 4,
+      "date_key": 20251226,
+      "full_date": "2025-12-26",
+      "month_name": "Dec"
+    },
+    {
+      "day": 27,
+      "year": 2025,
+      "month": 12,
+      "quarter": 4,
+      "date_key": 20251227,
+      "full_date": "2025-12-27",
+      "month_name": "Dec"
+    },
+    {
+      "day": 28,
+      "year": 2025,
+      "month": 12,
+      "quarter": 4,
+      "date_key": 20251228,
+      "full_date": "2025-12-28",
+      "month_name": "Dec"
+    },
+    {
+      "day": 29,
+      "year": 2025,
+      "month": 12,
+      "quarter": 4,
+      "date_key": 20251229,
+      "full_date": "2025-12-29",
+      "month_name": "Dec"
+    },
+    {
+      "day": 30,
+      "year": 2025,
+      "month": 12,
+      "quarter": 4,
+      "date_key": 20251230,
+      "full_date": "2025-12-30",
+      "month_name": "Dec"
+    },
+    {
+      "day": 31,
+      "year": 2025,
+      "month": 12,
+      "quarter": 4,
+      "date_key": 20251231,
+      "full_date": "2025-12-31",
+      "month_name": "Dec"
+    },
+    {
+      "day": 1,
+      "year": 2026,
+      "month": 1,
+      "quarter": 1,
+      "date_key": 20260101,
+      "full_date": "2026-01-01",
+      "month_name": "Jan"
+    },
+    {
+      "day": 2,
+      "year": 2026,
+      "month": 1,
+      "quarter": 1,
+      "date_key": 20260102,
+      "full_date": "2026-01-02",
+      "month_name": "Jan"
+    },
+    {
+      "day": 3,
+      "year": 2026,
+      "month": 1,
+      "quarter": 1,
+      "date_key": 20260103,
+      "full_date": "2026-01-03",
+      "month_name": "Jan"
+    },
+    {
+      "day": 4,
+      "year": 2026,
+      "month": 1,
+      "quarter": 1,
+      "date_key": 20260104,
+      "full_date": "2026-01-04",
+      "month_name": "Jan"
+    },
+    {
+      "day": 5,
+      "year": 2026,
+      "month": 1,
+      "quarter": 1,
+      "date_key": 20260105,
+      "full_date": "2026-01-05",
+      "month_name": "Jan"
+    },
+    {
+      "day": 6,
+      "year": 2026,
+      "month": 1,
+      "quarter": 1,
+      "date_key": 20260106,
+      "full_date": "2026-01-06",
+      "month_name": "Jan"
+    },
+    {
+      "day": 7,
+      "year": 2026,
+      "month": 1,
+      "quarter": 1,
+      "date_key": 20260107,
+      "full_date": "2026-01-07",
+      "month_name": "Jan"
+    },
+    {
+      "day": 8,
+      "year": 2026,
+      "month": 1,
+      "quarter": 1,
+      "date_key": 20260108,
+      "full_date": "2026-01-08",
+      "month_name": "Jan"
+    },
+    {
+      "day": 9,
+      "year": 2026,
+      "month": 1,
+      "quarter": 1,
+      "date_key": 20260109,
+      "full_date": "2026-01-09",
+      "month_name": "Jan"
+    },
+    {
+      "day": 10,
+      "year": 2026,
+      "month": 1,
+      "quarter": 1,
+      "date_key": 20260110,
+      "full_date": "2026-01-10",
+      "month_name": "Jan"
+    },
+    {
+      "day": 11,
+      "year": 2026,
+      "month": 1,
+      "quarter": 1,
+      "date_key": 20260111,
+      "full_date": "2026-01-11",
+      "month_name": "Jan"
+    },
+    {
+      "day": 12,
+      "year": 2026,
+      "month": 1,
+      "quarter": 1,
+      "date_key": 20260112,
+      "full_date": "2026-01-12",
+      "month_name": "Jan"
+    },
+    {
+      "day": 13,
+      "year": 2026,
+      "month": 1,
+      "quarter": 1,
+      "date_key": 20260113,
+      "full_date": "2026-01-13",
+      "month_name": "Jan"
+    },
+    {
+      "day": 14,
+      "year": 2026,
+      "month": 1,
+      "quarter": 1,
+      "date_key": 20260114,
+      "full_date": "2026-01-14",
+      "month_name": "Jan"
+    },
+    {
+      "day": 15,
+      "year": 2026,
+      "month": 1,
+      "quarter": 1,
+      "date_key": 20260115,
+      "full_date": "2026-01-15",
+      "month_name": "Jan"
+    },
+    {
+      "day": 16,
+      "year": 2026,
+      "month": 1,
+      "quarter": 1,
+      "date_key": 20260116,
+      "full_date": "2026-01-16",
+      "month_name": "Jan"
+    },
+    {
+      "day": 17,
+      "year": 2026,
+      "month": 1,
+      "quarter": 1,
+      "date_key": 20260117,
+      "full_date": "2026-01-17",
+      "month_name": "Jan"
+    },
+    {
+      "day": 18,
+      "year": 2026,
+      "month": 1,
+      "quarter": 1,
+      "date_key": 20260118,
+      "full_date": "2026-01-18",
+      "month_name": "Jan"
+    },
+    {
+      "day": 19,
+      "year": 2026,
+      "month": 1,
+      "quarter": 1,
+      "date_key": 20260119,
+      "full_date": "2026-01-19",
+      "month_name": "Jan"
+    },
+    {
+      "day": 20,
+      "year": 2026,
+      "month": 1,
+      "quarter": 1,
+      "date_key": 20260120,
+      "full_date": "2026-01-20",
+      "month_name": "Jan"
+    },
+    {
+      "day": 21,
+      "year": 2026,
+      "month": 1,
+      "quarter": 1,
+      "date_key": 20260121,
+      "full_date": "2026-01-21",
+      "month_name": "Jan"
+    },
+    {
+      "day": 22,
+      "year": 2026,
+      "month": 1,
+      "quarter": 1,
+      "date_key": 20260122,
+      "full_date": "2026-01-22",
+      "month_name": "Jan"
+    },
+    {
+      "day": 23,
+      "year": 2026,
+      "month": 1,
+      "quarter": 1,
+      "date_key": 20260123,
+      "full_date": "2026-01-23",
+      "month_name": "Jan"
+    },
+    {
+      "day": 24,
+      "year": 2026,
+      "month": 1,
+      "quarter": 1,
+      "date_key": 20260124,
+      "full_date": "2026-01-24",
+      "month_name": "Jan"
+    },
+    {
+      "day": 25,
+      "year": 2026,
+      "month": 1,
+      "quarter": 1,
+      "date_key": 20260125,
+      "full_date": "2026-01-25",
+      "month_name": "Jan"
+    },
+    {
+      "day": 26,
+      "year": 2026,
+      "month": 1,
+      "quarter": 1,
+      "date_key": 20260126,
+      "full_date": "2026-01-26",
+      "month_name": "Jan"
+    },
+    {
+      "day": 27,
+      "year": 2026,
+      "month": 1,
+      "quarter": 1,
+      "date_key": 20260127,
+      "full_date": "2026-01-27",
+      "month_name": "Jan"
+    },
+    {
+      "day": 28,
+      "year": 2026,
+      "month": 1,
+      "quarter": 1,
+      "date_key": 20260128,
+      "full_date": "2026-01-28",
+      "month_name": "Jan"
+    },
+    {
+      "day": 29,
+      "year": 2026,
+      "month": 1,
+      "quarter": 1,
+      "date_key": 20260129,
+      "full_date": "2026-01-29",
+      "month_name": "Jan"
+    },
+    {
+      "day": 30,
+      "year": 2026,
+      "month": 1,
+      "quarter": 1,
+      "date_key": 20260130,
+      "full_date": "2026-01-30",
+      "month_name": "Jan"
+    },
+    {
+      "day": 31,
+      "year": 2026,
+      "month": 1,
+      "quarter": 1,
+      "date_key": 20260131,
+      "full_date": "2026-01-31",
+      "month_name": "Jan"
+    },
+    {
+      "day": 1,
+      "year": 2026,
+      "month": 2,
+      "quarter": 1,
+      "date_key": 20260201,
+      "full_date": "2026-02-01",
+      "month_name": "Feb"
+    },
+    {
+      "day": 2,
+      "year": 2026,
+      "month": 2,
+      "quarter": 1,
+      "date_key": 20260202,
+      "full_date": "2026-02-02",
+      "month_name": "Feb"
+    },
+    {
+      "day": 3,
+      "year": 2026,
+      "month": 2,
+      "quarter": 1,
+      "date_key": 20260203,
+      "full_date": "2026-02-03",
+      "month_name": "Feb"
+    },
+    {
+      "day": 4,
+      "year": 2026,
+      "month": 2,
+      "quarter": 1,
+      "date_key": 20260204,
+      "full_date": "2026-02-04",
+      "month_name": "Feb"
+    },
+    {
+      "day": 5,
+      "year": 2026,
+      "month": 2,
+      "quarter": 1,
+      "date_key": 20260205,
+      "full_date": "2026-02-05",
+      "month_name": "Feb"
+    },
+    {
+      "day": 6,
+      "year": 2026,
+      "month": 2,
+      "quarter": 1,
+      "date_key": 20260206,
+      "full_date": "2026-02-06",
+      "month_name": "Feb"
+    },
+    {
+      "day": 7,
+      "year": 2026,
+      "month": 2,
+      "quarter": 1,
+      "date_key": 20260207,
+      "full_date": "2026-02-07",
+      "month_name": "Feb"
+    },
+    {
+      "day": 8,
+      "year": 2026,
+      "month": 2,
+      "quarter": 1,
+      "date_key": 20260208,
+      "full_date": "2026-02-08",
+      "month_name": "Feb"
+    },
+    {
+      "day": 9,
+      "year": 2026,
+      "month": 2,
+      "quarter": 1,
+      "date_key": 20260209,
+      "full_date": "2026-02-09",
+      "month_name": "Feb"
+    },
+    {
+      "day": 10,
+      "year": 2026,
+      "month": 2,
+      "quarter": 1,
+      "date_key": 20260210,
+      "full_date": "2026-02-10",
+      "month_name": "Feb"
+    },
+    {
+      "day": 11,
+      "year": 2026,
+      "month": 2,
+      "quarter": 1,
+      "date_key": 20260211,
+      "full_date": "2026-02-11",
+      "month_name": "Feb"
+    },
+    {
+      "day": 12,
+      "year": 2026,
+      "month": 2,
+      "quarter": 1,
+      "date_key": 20260212,
+      "full_date": "2026-02-12",
+      "month_name": "Feb"
+    },
+    {
+      "day": 13,
+      "year": 2026,
+      "month": 2,
+      "quarter": 1,
+      "date_key": 20260213,
+      "full_date": "2026-02-13",
+      "month_name": "Feb"
+    },
+    {
+      "day": 14,
+      "year": 2026,
+      "month": 2,
+      "quarter": 1,
+      "date_key": 20260214,
+      "full_date": "2026-02-14",
+      "month_name": "Feb"
+    },
+    {
+      "day": 15,
+      "year": 2026,
+      "month": 2,
+      "quarter": 1,
+      "date_key": 20260215,
+      "full_date": "2026-02-15",
+      "month_name": "Feb"
+    },
+    {
+      "day": 16,
+      "year": 2026,
+      "month": 2,
+      "quarter": 1,
+      "date_key": 20260216,
+      "full_date": "2026-02-16",
+      "month_name": "Feb"
+    },
+    {
+      "day": 17,
+      "year": 2026,
+      "month": 2,
+      "quarter": 1,
+      "date_key": 20260217,
+      "full_date": "2026-02-17",
+      "month_name": "Feb"
+    },
+    {
+      "day": 18,
+      "year": 2026,
+      "month": 2,
+      "quarter": 1,
+      "date_key": 20260218,
+      "full_date": "2026-02-18",
+      "month_name": "Feb"
+    },
+    {
+      "day": 19,
+      "year": 2026,
+      "month": 2,
+      "quarter": 1,
+      "date_key": 20260219,
+      "full_date": "2026-02-19",
+      "month_name": "Feb"
+    },
+    {
+      "day": 20,
+      "year": 2026,
+      "month": 2,
+      "quarter": 1,
+      "date_key": 20260220,
+      "full_date": "2026-02-20",
+      "month_name": "Feb"
+    },
+    {
+      "day": 21,
+      "year": 2026,
+      "month": 2,
+      "quarter": 1,
+      "date_key": 20260221,
+      "full_date": "2026-02-21",
+      "month_name": "Feb"
+    },
+    {
+      "day": 22,
+      "year": 2026,
+      "month": 2,
+      "quarter": 1,
+      "date_key": 20260222,
+      "full_date": "2026-02-22",
+      "month_name": "Feb"
+    },
+    {
+      "day": 23,
+      "year": 2026,
+      "month": 2,
+      "quarter": 1,
+      "date_key": 20260223,
+      "full_date": "2026-02-23",
+      "month_name": "Feb"
+    },
+    {
+      "day": 24,
+      "year": 2026,
+      "month": 2,
+      "quarter": 1,
+      "date_key": 20260224,
+      "full_date": "2026-02-24",
+      "month_name": "Feb"
+    },
+    {
+      "day": 25,
+      "year": 2026,
+      "month": 2,
+      "quarter": 1,
+      "date_key": 20260225,
+      "full_date": "2026-02-25",
+      "month_name": "Feb"
+    },
+    {
+      "day": 26,
+      "year": 2026,
+      "month": 2,
+      "quarter": 1,
+      "date_key": 20260226,
+      "full_date": "2026-02-26",
+      "month_name": "Feb"
+    },
+    {
+      "day": 27,
+      "year": 2026,
+      "month": 2,
+      "quarter": 1,
+      "date_key": 20260227,
+      "full_date": "2026-02-27",
+      "month_name": "Feb"
+    },
+    {
+      "day": 28,
+      "year": 2026,
+      "month": 2,
+      "quarter": 1,
+      "date_key": 20260228,
+      "full_date": "2026-02-28",
+      "month_name": "Feb"
+    },
+    {
+      "day": 1,
+      "year": 2026,
+      "month": 3,
+      "quarter": 1,
+      "date_key": 20260301,
+      "full_date": "2026-03-01",
+      "month_name": "Mar"
+    },
+    {
+      "day": 2,
+      "year": 2026,
+      "month": 3,
+      "quarter": 1,
+      "date_key": 20260302,
+      "full_date": "2026-03-02",
+      "month_name": "Mar"
+    },
+    {
+      "day": 3,
+      "year": 2026,
+      "month": 3,
+      "quarter": 1,
+      "date_key": 20260303,
+      "full_date": "2026-03-03",
+      "month_name": "Mar"
+    },
+    {
+      "day": 4,
+      "year": 2026,
+      "month": 3,
+      "quarter": 1,
+      "date_key": 20260304,
+      "full_date": "2026-03-04",
+      "month_name": "Mar"
+    },
+    {
+      "day": 5,
+      "year": 2026,
+      "month": 3,
+      "quarter": 1,
+      "date_key": 20260305,
+      "full_date": "2026-03-05",
+      "month_name": "Mar"
+    },
+    {
+      "day": 6,
+      "year": 2026,
+      "month": 3,
+      "quarter": 1,
+      "date_key": 20260306,
+      "full_date": "2026-03-06",
+      "month_name": "Mar"
+    },
+    {
+      "day": 7,
+      "year": 2026,
+      "month": 3,
+      "quarter": 1,
+      "date_key": 20260307,
+      "full_date": "2026-03-07",
+      "month_name": "Mar"
+    },
+    {
+      "day": 8,
+      "year": 2026,
+      "month": 3,
+      "quarter": 1,
+      "date_key": 20260308,
+      "full_date": "2026-03-08",
+      "month_name": "Mar"
+    },
+    {
+      "day": 9,
+      "year": 2026,
+      "month": 3,
+      "quarter": 1,
+      "date_key": 20260309,
+      "full_date": "2026-03-09",
+      "month_name": "Mar"
+    },
+    {
+      "day": 10,
+      "year": 2026,
+      "month": 3,
+      "quarter": 1,
+      "date_key": 20260310,
+      "full_date": "2026-03-10",
+      "month_name": "Mar"
+    },
+    {
+      "day": 11,
+      "year": 2026,
+      "month": 3,
+      "quarter": 1,
+      "date_key": 20260311,
+      "full_date": "2026-03-11",
+      "month_name": "Mar"
+    },
+    {
+      "day": 12,
+      "year": 2026,
+      "month": 3,
+      "quarter": 1,
+      "date_key": 20260312,
+      "full_date": "2026-03-12",
+      "month_name": "Mar"
+    },
+    {
+      "day": 13,
+      "year": 2026,
+      "month": 3,
+      "quarter": 1,
+      "date_key": 20260313,
+      "full_date": "2026-03-13",
+      "month_name": "Mar"
+    },
+    {
+      "day": 14,
+      "year": 2026,
+      "month": 3,
+      "quarter": 1,
+      "date_key": 20260314,
+      "full_date": "2026-03-14",
+      "month_name": "Mar"
+    },
+    {
+      "day": 15,
+      "year": 2026,
+      "month": 3,
+      "quarter": 1,
+      "date_key": 20260315,
+      "full_date": "2026-03-15",
+      "month_name": "Mar"
+    },
+    {
+      "day": 16,
+      "year": 2026,
+      "month": 3,
+      "quarter": 1,
+      "date_key": 20260316,
+      "full_date": "2026-03-16",
+      "month_name": "Mar"
+    },
+    {
+      "day": 17,
+      "year": 2026,
+      "month": 3,
+      "quarter": 1,
+      "date_key": 20260317,
+      "full_date": "2026-03-17",
+      "month_name": "Mar"
+    },
+    {
+      "day": 18,
+      "year": 2026,
+      "month": 3,
+      "quarter": 1,
+      "date_key": 20260318,
+      "full_date": "2026-03-18",
+      "month_name": "Mar"
+    },
+    {
+      "day": 19,
+      "year": 2026,
+      "month": 3,
+      "quarter": 1,
+      "date_key": 20260319,
+      "full_date": "2026-03-19",
+      "month_name": "Mar"
+    },
+    {
+      "day": 20,
+      "year": 2026,
+      "month": 3,
+      "quarter": 1,
+      "date_key": 20260320,
+      "full_date": "2026-03-20",
+      "month_name": "Mar"
+    },
+    {
+      "day": 21,
+      "year": 2026,
+      "month": 3,
+      "quarter": 1,
+      "date_key": 20260321,
+      "full_date": "2026-03-21",
+      "month_name": "Mar"
+    },
+    {
+      "day": 22,
+      "year": 2026,
+      "month": 3,
+      "quarter": 1,
+      "date_key": 20260322,
+      "full_date": "2026-03-22",
+      "month_name": "Mar"
+    },
+    {
+      "day": 23,
+      "year": 2026,
+      "month": 3,
+      "quarter": 1,
+      "date_key": 20260323,
+      "full_date": "2026-03-23",
+      "month_name": "Mar"
+    },
+    {
+      "day": 24,
+      "year": 2026,
+      "month": 3,
+      "quarter": 1,
+      "date_key": 20260324,
+      "full_date": "2026-03-24",
+      "month_name": "Mar"
+    },
+    {
+      "day": 25,
+      "year": 2026,
+      "month": 3,
+      "quarter": 1,
+      "date_key": 20260325,
+      "full_date": "2026-03-25",
+      "month_name": "Mar"
+    },
+    {
+      "day": 26,
+      "year": 2026,
+      "month": 3,
+      "quarter": 1,
+      "date_key": 20260326,
+      "full_date": "2026-03-26",
+      "month_name": "Mar"
+    },
+    {
+      "day": 27,
+      "year": 2026,
+      "month": 3,
+      "quarter": 1,
+      "date_key": 20260327,
+      "full_date": "2026-03-27",
+      "month_name": "Mar"
+    },
+    {
+      "day": 28,
+      "year": 2026,
+      "month": 3,
+      "quarter": 1,
+      "date_key": 20260328,
+      "full_date": "2026-03-28",
+      "month_name": "Mar"
+    },
+    {
+      "day": 29,
+      "year": 2026,
+      "month": 3,
+      "quarter": 1,
+      "date_key": 20260329,
+      "full_date": "2026-03-29",
+      "month_name": "Mar"
+    },
+    {
+      "day": 30,
+      "year": 2026,
+      "month": 3,
+      "quarter": 1,
+      "date_key": 20260330,
+      "full_date": "2026-03-30",
+      "month_name": "Mar"
+    },
+    {
+      "day": 31,
+      "year": 2026,
+      "month": 3,
+      "quarter": 1,
+      "date_key": 20260331,
+      "full_date": "2026-03-31",
+      "month_name": "Mar"
+    },
+    {
+      "day": 1,
+      "year": 2026,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20260401,
+      "full_date": "2026-04-01",
+      "month_name": "Apr"
+    },
+    {
+      "day": 2,
+      "year": 2026,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20260402,
+      "full_date": "2026-04-02",
+      "month_name": "Apr"
+    },
+    {
+      "day": 3,
+      "year": 2026,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20260403,
+      "full_date": "2026-04-03",
+      "month_name": "Apr"
+    },
+    {
+      "day": 4,
+      "year": 2026,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20260404,
+      "full_date": "2026-04-04",
+      "month_name": "Apr"
+    },
+    {
+      "day": 5,
+      "year": 2026,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20260405,
+      "full_date": "2026-04-05",
+      "month_name": "Apr"
+    },
+    {
+      "day": 6,
+      "year": 2026,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20260406,
+      "full_date": "2026-04-06",
+      "month_name": "Apr"
+    },
+    {
+      "day": 7,
+      "year": 2026,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20260407,
+      "full_date": "2026-04-07",
+      "month_name": "Apr"
+    },
+    {
+      "day": 8,
+      "year": 2026,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20260408,
+      "full_date": "2026-04-08",
+      "month_name": "Apr"
+    },
+    {
+      "day": 9,
+      "year": 2026,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20260409,
+      "full_date": "2026-04-09",
+      "month_name": "Apr"
+    },
+    {
+      "day": 10,
+      "year": 2026,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20260410,
+      "full_date": "2026-04-10",
+      "month_name": "Apr"
+    },
+    {
+      "day": 11,
+      "year": 2026,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20260411,
+      "full_date": "2026-04-11",
+      "month_name": "Apr"
+    },
+    {
+      "day": 12,
+      "year": 2026,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20260412,
+      "full_date": "2026-04-12",
+      "month_name": "Apr"
+    },
+    {
+      "day": 13,
+      "year": 2026,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20260413,
+      "full_date": "2026-04-13",
+      "month_name": "Apr"
+    },
+    {
+      "day": 14,
+      "year": 2026,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20260414,
+      "full_date": "2026-04-14",
+      "month_name": "Apr"
+    },
+    {
+      "day": 15,
+      "year": 2026,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20260415,
+      "full_date": "2026-04-15",
+      "month_name": "Apr"
+    },
+    {
+      "day": 16,
+      "year": 2026,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20260416,
+      "full_date": "2026-04-16",
+      "month_name": "Apr"
+    },
+    {
+      "day": 17,
+      "year": 2026,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20260417,
+      "full_date": "2026-04-17",
+      "month_name": "Apr"
+    },
+    {
+      "day": 18,
+      "year": 2026,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20260418,
+      "full_date": "2026-04-18",
+      "month_name": "Apr"
+    },
+    {
+      "day": 19,
+      "year": 2026,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20260419,
+      "full_date": "2026-04-19",
+      "month_name": "Apr"
+    },
+    {
+      "day": 20,
+      "year": 2026,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20260420,
+      "full_date": "2026-04-20",
+      "month_name": "Apr"
+    },
+    {
+      "day": 21,
+      "year": 2026,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20260421,
+      "full_date": "2026-04-21",
+      "month_name": "Apr"
+    },
+    {
+      "day": 22,
+      "year": 2026,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20260422,
+      "full_date": "2026-04-22",
+      "month_name": "Apr"
+    },
+    {
+      "day": 23,
+      "year": 2026,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20260423,
+      "full_date": "2026-04-23",
+      "month_name": "Apr"
+    },
+    {
+      "day": 24,
+      "year": 2026,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20260424,
+      "full_date": "2026-04-24",
+      "month_name": "Apr"
+    },
+    {
+      "day": 25,
+      "year": 2026,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20260425,
+      "full_date": "2026-04-25",
+      "month_name": "Apr"
+    },
+    {
+      "day": 26,
+      "year": 2026,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20260426,
+      "full_date": "2026-04-26",
+      "month_name": "Apr"
+    },
+    {
+      "day": 27,
+      "year": 2026,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20260427,
+      "full_date": "2026-04-27",
+      "month_name": "Apr"
+    },
+    {
+      "day": 28,
+      "year": 2026,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20260428,
+      "full_date": "2026-04-28",
+      "month_name": "Apr"
+    },
+    {
+      "day": 29,
+      "year": 2026,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20260429,
+      "full_date": "2026-04-29",
+      "month_name": "Apr"
+    },
+    {
+      "day": 30,
+      "year": 2026,
+      "month": 4,
+      "quarter": 2,
+      "date_key": 20260430,
+      "full_date": "2026-04-30",
+      "month_name": "Apr"
+    },
+    {
+      "day": 1,
+      "year": 2026,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20260501,
+      "full_date": "2026-05-01",
+      "month_name": "May"
+    },
+    {
+      "day": 2,
+      "year": 2026,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20260502,
+      "full_date": "2026-05-02",
+      "month_name": "May"
+    },
+    {
+      "day": 3,
+      "year": 2026,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20260503,
+      "full_date": "2026-05-03",
+      "month_name": "May"
+    },
+    {
+      "day": 4,
+      "year": 2026,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20260504,
+      "full_date": "2026-05-04",
+      "month_name": "May"
+    },
+    {
+      "day": 5,
+      "year": 2026,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20260505,
+      "full_date": "2026-05-05",
+      "month_name": "May"
+    },
+    {
+      "day": 6,
+      "year": 2026,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20260506,
+      "full_date": "2026-05-06",
+      "month_name": "May"
+    },
+    {
+      "day": 7,
+      "year": 2026,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20260507,
+      "full_date": "2026-05-07",
+      "month_name": "May"
+    },
+    {
+      "day": 8,
+      "year": 2026,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20260508,
+      "full_date": "2026-05-08",
+      "month_name": "May"
+    },
+    {
+      "day": 9,
+      "year": 2026,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20260509,
+      "full_date": "2026-05-09",
+      "month_name": "May"
+    },
+    {
+      "day": 10,
+      "year": 2026,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20260510,
+      "full_date": "2026-05-10",
+      "month_name": "May"
+    },
+    {
+      "day": 11,
+      "year": 2026,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20260511,
+      "full_date": "2026-05-11",
+      "month_name": "May"
+    },
+    {
+      "day": 12,
+      "year": 2026,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20260512,
+      "full_date": "2026-05-12",
+      "month_name": "May"
+    },
+    {
+      "day": 13,
+      "year": 2026,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20260513,
+      "full_date": "2026-05-13",
+      "month_name": "May"
+    },
+    {
+      "day": 14,
+      "year": 2026,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20260514,
+      "full_date": "2026-05-14",
+      "month_name": "May"
+    },
+    {
+      "day": 15,
+      "year": 2026,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20260515,
+      "full_date": "2026-05-15",
+      "month_name": "May"
+    },
+    {
+      "day": 16,
+      "year": 2026,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20260516,
+      "full_date": "2026-05-16",
+      "month_name": "May"
+    },
+    {
+      "day": 17,
+      "year": 2026,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20260517,
+      "full_date": "2026-05-17",
+      "month_name": "May"
+    },
+    {
+      "day": 18,
+      "year": 2026,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20260518,
+      "full_date": "2026-05-18",
+      "month_name": "May"
+    },
+    {
+      "day": 19,
+      "year": 2026,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20260519,
+      "full_date": "2026-05-19",
+      "month_name": "May"
+    },
+    {
+      "day": 20,
+      "year": 2026,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20260520,
+      "full_date": "2026-05-20",
+      "month_name": "May"
+    },
+    {
+      "day": 21,
+      "year": 2026,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20260521,
+      "full_date": "2026-05-21",
+      "month_name": "May"
+    },
+    {
+      "day": 22,
+      "year": 2026,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20260522,
+      "full_date": "2026-05-22",
+      "month_name": "May"
+    },
+    {
+      "day": 23,
+      "year": 2026,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20260523,
+      "full_date": "2026-05-23",
+      "month_name": "May"
+    },
+    {
+      "day": 24,
+      "year": 2026,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20260524,
+      "full_date": "2026-05-24",
+      "month_name": "May"
+    },
+    {
+      "day": 25,
+      "year": 2026,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20260525,
+      "full_date": "2026-05-25",
+      "month_name": "May"
+    },
+    {
+      "day": 26,
+      "year": 2026,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20260526,
+      "full_date": "2026-05-26",
+      "month_name": "May"
+    },
+    {
+      "day": 27,
+      "year": 2026,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20260527,
+      "full_date": "2026-05-27",
+      "month_name": "May"
+    },
+    {
+      "day": 28,
+      "year": 2026,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20260528,
+      "full_date": "2026-05-28",
+      "month_name": "May"
+    },
+    {
+      "day": 29,
+      "year": 2026,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20260529,
+      "full_date": "2026-05-29",
+      "month_name": "May"
+    },
+    {
+      "day": 30,
+      "year": 2026,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20260530,
+      "full_date": "2026-05-30",
+      "month_name": "May"
+    },
+    {
+      "day": 31,
+      "year": 2026,
+      "month": 5,
+      "quarter": 2,
+      "date_key": 20260531,
+      "full_date": "2026-05-31",
+      "month_name": "May"
+    },
+    {
+      "day": 1,
+      "year": 2026,
+      "month": 6,
+      "quarter": 2,
+      "date_key": 20260601,
+      "full_date": "2026-06-01",
+      "month_name": "Jun"
+    },
+    {
+      "day": 2,
+      "year": 2026,
+      "month": 6,
+      "quarter": 2,
+      "date_key": 20260602,
+      "full_date": "2026-06-02",
+      "month_name": "Jun"
+    },
+    {
+      "day": 3,
+      "year": 2026,
+      "month": 6,
+      "quarter": 2,
+      "date_key": 20260603,
+      "full_date": "2026-06-03",
+      "month_name": "Jun"
+    },
+    {
+      "day": 4,
+      "year": 2026,
+      "month": 6,
+      "quarter": 2,
+      "date_key": 20260604,
+      "full_date": "2026-06-04",
+      "month_name": "Jun"
+    },
+    {
+      "day": 5,
+      "year": 2026,
+      "month": 6,
+      "quarter": 2,
+      "date_key": 20260605,
+      "full_date": "2026-06-05",
+      "month_name": "Jun"
+    },
+    {
+      "day": 6,
+      "year": 2026,
+      "month": 6,
+      "quarter": 2,
+      "date_key": 20260606,
+      "full_date": "2026-06-06",
+      "month_name": "Jun"
+    },
+    {
+      "day": 7,
+      "year": 2026,
+      "month": 6,
+      "quarter": 2,
+      "date_key": 20260607,
+      "full_date": "2026-06-07",
+      "month_name": "Jun"
+    },
+    {
+      "day": 8,
+      "year": 2026,
+      "month": 6,
+      "quarter": 2,
+      "date_key": 20260608,
+      "full_date": "2026-06-08",
+      "month_name": "Jun"
+    },
+    {
+      "day": 9,
+      "year": 2026,
+      "month": 6,
+      "quarter": 2,
+      "date_key": 20260609,
+      "full_date": "2026-06-09",
+      "month_name": "Jun"
+    },
+    {
+      "day": 10,
+      "year": 2026,
+      "month": 6,
+      "quarter": 2,
+      "date_key": 20260610,
+      "full_date": "2026-06-10",
+      "month_name": "Jun"
+    },
+    {
+      "day": 11,
+      "year": 2026,
+      "month": 6,
+      "quarter": 2,
+      "date_key": 20260611,
+      "full_date": "2026-06-11",
+      "month_name": "Jun"
+    },
+    {
+      "day": 12,
+      "year": 2026,
+      "month": 6,
+      "quarter": 2,
+      "date_key": 20260612,
+      "full_date": "2026-06-12",
+      "month_name": "Jun"
+    },
+    {
+      "day": 13,
+      "year": 2026,
+      "month": 6,
+      "quarter": 2,
+      "date_key": 20260613,
+      "full_date": "2026-06-13",
+      "month_name": "Jun"
+    },
+    {
+      "day": 14,
+      "year": 2026,
+      "month": 6,
+      "quarter": 2,
+      "date_key": 20260614,
+      "full_date": "2026-06-14",
+      "month_name": "Jun"
+    },
+    {
+      "day": 15,
+      "year": 2026,
+      "month": 6,
+      "quarter": 2,
+      "date_key": 20260615,
+      "full_date": "2026-06-15",
+      "month_name": "Jun"
+    },
+    {
+      "day": 16,
+      "year": 2026,
+      "month": 6,
+      "quarter": 2,
+      "date_key": 20260616,
+      "full_date": "2026-06-16",
+      "month_name": "Jun"
+    },
+    {
+      "day": 17,
+      "year": 2026,
+      "month": 6,
+      "quarter": 2,
+      "date_key": 20260617,
+      "full_date": "2026-06-17",
+      "month_name": "Jun"
+    },
+    {
+      "day": 18,
+      "year": 2026,
+      "month": 6,
+      "quarter": 2,
+      "date_key": 20260618,
+      "full_date": "2026-06-18",
+      "month_name": "Jun"
+    },
+    {
+      "day": 19,
+      "year": 2026,
+      "month": 6,
+      "quarter": 2,
+      "date_key": 20260619,
+      "full_date": "2026-06-19",
+      "month_name": "Jun"
+    },
+    {
+      "day": 20,
+      "year": 2026,
+      "month": 6,
+      "quarter": 2,
+      "date_key": 20260620,
+      "full_date": "2026-06-20",
+      "month_name": "Jun"
+    },
+    {
+      "day": 21,
+      "year": 2026,
+      "month": 6,
+      "quarter": 2,
+      "date_key": 20260621,
+      "full_date": "2026-06-21",
+      "month_name": "Jun"
+    },
+    {
+      "day": 22,
+      "year": 2026,
+      "month": 6,
+      "quarter": 2,
+      "date_key": 20260622,
+      "full_date": "2026-06-22",
+      "month_name": "Jun"
+    },
+    {
+      "day": 23,
+      "year": 2026,
+      "month": 6,
+      "quarter": 2,
+      "date_key": 20260623,
+      "full_date": "2026-06-23",
+      "month_name": "Jun"
+    },
+    {
+      "day": 24,
+      "year": 2026,
+      "month": 6,
+      "quarter": 2,
+      "date_key": 20260624,
+      "full_date": "2026-06-24",
+      "month_name": "Jun"
+    },
+    {
+      "day": 25,
+      "year": 2026,
+      "month": 6,
+      "quarter": 2,
+      "date_key": 20260625,
+      "full_date": "2026-06-25",
+      "month_name": "Jun"
+    },
+    {
+      "day": 26,
+      "year": 2026,
+      "month": 6,
+      "quarter": 2,
+      "date_key": 20260626,
+      "full_date": "2026-06-26",
+      "month_name": "Jun"
+    },
+    {
+      "day": 27,
+      "year": 2026,
+      "month": 6,
+      "quarter": 2,
+      "date_key": 20260627,
+      "full_date": "2026-06-27",
+      "month_name": "Jun"
+    },
+    {
+      "day": 28,
+      "year": 2026,
+      "month": 6,
+      "quarter": 2,
+      "date_key": 20260628,
+      "full_date": "2026-06-28",
+      "month_name": "Jun"
+    },
+    {
+      "day": 29,
+      "year": 2026,
+      "month": 6,
+      "quarter": 2,
+      "date_key": 20260629,
+      "full_date": "2026-06-29",
+      "month_name": "Jun"
+    },
+    {
+      "day": 30,
+      "year": 2026,
+      "month": 6,
+      "quarter": 2,
+      "date_key": 20260630,
+      "full_date": "2026-06-30",
+      "month_name": "Jun"
+    },
+    {
+      "day": 1,
+      "year": 2026,
+      "month": 7,
+      "quarter": 3,
+      "date_key": 20260701,
+      "full_date": "2026-07-01",
+      "month_name": "Jul"
+    },
+    {
+      "day": 2,
+      "year": 2026,
+      "month": 7,
+      "quarter": 3,
+      "date_key": 20260702,
+      "full_date": "2026-07-02",
+      "month_name": "Jul"
+    },
+    {
+      "day": 3,
+      "year": 2026,
+      "month": 7,
+      "quarter": 3,
+      "date_key": 20260703,
+      "full_date": "2026-07-03",
+      "month_name": "Jul"
+    },
+    {
+      "day": 4,
+      "year": 2026,
+      "month": 7,
+      "quarter": 3,
+      "date_key": 20260704,
+      "full_date": "2026-07-04",
+      "month_name": "Jul"
+    },
+    {
+      "day": 5,
+      "year": 2026,
+      "month": 7,
+      "quarter": 3,
+      "date_key": 20260705,
+      "full_date": "2026-07-05",
+      "month_name": "Jul"
+    },
+    {
+      "day": 6,
+      "year": 2026,
+      "month": 7,
+      "quarter": 3,
+      "date_key": 20260706,
+      "full_date": "2026-07-06",
+      "month_name": "Jul"
+    },
+    {
+      "day": 7,
+      "year": 2026,
+      "month": 7,
+      "quarter": 3,
+      "date_key": 20260707,
+      "full_date": "2026-07-07",
+      "month_name": "Jul"
+    },
+    {
+      "day": 8,
+      "year": 2026,
+      "month": 7,
+      "quarter": 3,
+      "date_key": 20260708,
+      "full_date": "2026-07-08",
+      "month_name": "Jul"
+    },
+    {
+      "day": 9,
+      "year": 2026,
+      "month": 7,
+      "quarter": 3,
+      "date_key": 20260709,
+      "full_date": "2026-07-09",
+      "month_name": "Jul"
+    },
+    {
+      "day": 10,
+      "year": 2026,
+      "month": 7,
+      "quarter": 3,
+      "date_key": 20260710,
+      "full_date": "2026-07-10",
+      "month_name": "Jul"
+    },
+    {
+      "day": 11,
+      "year": 2026,
+      "month": 7,
+      "quarter": 3,
+      "date_key": 20260711,
+      "full_date": "2026-07-11",
+      "month_name": "Jul"
+    },
+    {
+      "day": 12,
+      "year": 2026,
+      "month": 7,
+      "quarter": 3,
+      "date_key": 20260712,
+      "full_date": "2026-07-12",
+      "month_name": "Jul"
+    },
+    {
+      "day": 13,
+      "year": 2026,
+      "month": 7,
+      "quarter": 3,
+      "date_key": 20260713,
+      "full_date": "2026-07-13",
+      "month_name": "Jul"
+    },
+    {
+      "day": 14,
+      "year": 2026,
+      "month": 7,
+      "quarter": 3,
+      "date_key": 20260714,
+      "full_date": "2026-07-14",
+      "month_name": "Jul"
+    },
+    {
+      "day": 15,
+      "year": 2026,
+      "month": 7,
+      "quarter": 3,
+      "date_key": 20260715,
+      "full_date": "2026-07-15",
+      "month_name": "Jul"
+    },
+    {
+      "day": 16,
+      "year": 2026,
+      "month": 7,
+      "quarter": 3,
+      "date_key": 20260716,
+      "full_date": "2026-07-16",
+      "month_name": "Jul"
+    },
+    {
+      "day": 17,
+      "year": 2026,
+      "month": 7,
+      "quarter": 3,
+      "date_key": 20260717,
+      "full_date": "2026-07-17",
+      "month_name": "Jul"
+    },
+    {
+      "day": 18,
+      "year": 2026,
+      "month": 7,
+      "quarter": 3,
+      "date_key": 20260718,
+      "full_date": "2026-07-18",
+      "month_name": "Jul"
+    },
+    {
+      "day": 19,
+      "year": 2026,
+      "month": 7,
+      "quarter": 3,
+      "date_key": 20260719,
+      "full_date": "2026-07-19",
+      "month_name": "Jul"
+    },
+    {
+      "day": 20,
+      "year": 2026,
+      "month": 7,
+      "quarter": 3,
+      "date_key": 20260720,
+      "full_date": "2026-07-20",
+      "month_name": "Jul"
+    },
+    {
+      "day": 21,
+      "year": 2026,
+      "month": 7,
+      "quarter": 3,
+      "date_key": 20260721,
+      "full_date": "2026-07-21",
+      "month_name": "Jul"
+    },
+    {
+      "day": 22,
+      "year": 2026,
+      "month": 7,
+      "quarter": 3,
+      "date_key": 20260722,
+      "full_date": "2026-07-22",
+      "month_name": "Jul"
+    },
+    {
+      "day": 23,
+      "year": 2026,
+      "month": 7,
+      "quarter": 3,
+      "date_key": 20260723,
+      "full_date": "2026-07-23",
+      "month_name": "Jul"
+    },
+    {
+      "day": 24,
+      "year": 2026,
+      "month": 7,
+      "quarter": 3,
+      "date_key": 20260724,
+      "full_date": "2026-07-24",
+      "month_name": "Jul"
+    },
+    {
+      "day": 25,
+      "year": 2026,
+      "month": 7,
+      "quarter": 3,
+      "date_key": 20260725,
+      "full_date": "2026-07-25",
+      "month_name": "Jul"
+    },
+    {
+      "day": 26,
+      "year": 2026,
+      "month": 7,
+      "quarter": 3,
+      "date_key": 20260726,
+      "full_date": "2026-07-26",
+      "month_name": "Jul"
+    },
+    {
+      "day": 27,
+      "year": 2026,
+      "month": 7,
+      "quarter": 3,
+      "date_key": 20260727,
+      "full_date": "2026-07-27",
+      "month_name": "Jul"
+    },
+    {
+      "day": 28,
+      "year": 2026,
+      "month": 7,
+      "quarter": 3,
+      "date_key": 20260728,
+      "full_date": "2026-07-28",
+      "month_name": "Jul"
+    },
+    {
+      "day": 29,
+      "year": 2026,
+      "month": 7,
+      "quarter": 3,
+      "date_key": 20260729,
+      "full_date": "2026-07-29",
+      "month_name": "Jul"
+    },
+    {
+      "day": 30,
+      "year": 2026,
+      "month": 7,
+      "quarter": 3,
+      "date_key": 20260730,
+      "full_date": "2026-07-30",
+      "month_name": "Jul"
+    }
+  ]
+}

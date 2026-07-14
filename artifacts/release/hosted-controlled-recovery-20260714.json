@@ -1,0 +1,69 @@
+{
+  "format": "nico-hosted-controlled-recovery-v1",
+  "verifiedAtUtc": "2026-07-14T00:15:01.898386Z",
+  "projectRef": "uketehwjsvpnohxhdvxa",
+  "failure": {
+    "runId": "80db7f54-05c1-44e5-b7e3-8f6b35e9b37f",
+    "startedAtUtc": "2026-07-14T00:14:37.470317Z",
+    "finishedAtUtc": "2026-07-14T00:14:37.587647Z",
+    "durationMs": 117,
+    "scenario": "controlled-failure",
+    "sourceRows": 1,
+    "rejectedRows": 1,
+    "reasonCode": "MISSING_POLICY_NUMBER",
+    "sanitizedStageMessage": "One or more synthetic source records were quarantined.",
+    "publishedFactsUnchanged": {
+      "premiumCount": 600,
+      "premiumChecksumBeforeAndAfter": "723d4e169bfa40effcb717a3e949a27c",
+      "lossCount": 320,
+      "lossChecksumBeforeAndAfter": "03c22b360ff30f3e70c238938973f0c9"
+    },
+    "watermarksUnchanged": true,
+    "downstreamStagesSkipped": [
+      "dimensions_scd2",
+      "facts_incremental",
+      "earned_premium_refresh",
+      "data_quality_gate",
+      "publish_watermark"
+    ]
+  },
+  "recovery": {
+    "runId": "0d93acb2-bdb2-45b6-b8ed-f38337ab8b05",
+    "recoveredFromRunId": "80db7f54-05c1-44e5-b7e3-8f6b35e9b37f",
+    "startedAtUtc": "2026-07-14T00:15:01.533975Z",
+    "finishedAtUtc": "2026-07-14T00:15:01.898386Z",
+    "durationMs": 364,
+    "scenario": "recovery",
+    "sourceRows": 2,
+    "factRowsUpdated": 1,
+    "dateDependentPremiumRowsRecalculated": 599,
+    "rejectedRows": 0,
+    "dq": {
+      "runId": "f556d825-52f4-481e-abde-70fb87038a9b",
+      "passed": 6,
+      "total": 6
+    },
+    "premiumWatermarkAdvanced": true,
+    "claimWatermarkPreserved": true
+  },
+  "quarantine": {
+    "disposition": "replayed",
+    "pendingCountAfterRecovery": 0,
+    "recoveredByRunId": "0d93acb2-bdb2-45b6-b8ed-f38337ab8b05",
+    "singleUseRecoveryUnavailableAfterReplay": true,
+    "publicEvidenceExposesRawPayload": false,
+    "publicEvidenceExposesSourceTransactionId": false
+  },
+  "finalPublicEvidence": {
+    "dataQuality": "6/6",
+    "acceptance": "10/10",
+    "successfulRecordedRuns": "9 of 10",
+    "historyInterpretation": "The one retained failure is controlled, linked to a successful recovery, and no longer represents current degradation."
+  },
+  "boundaries": [
+    "The invalid and corrected records are predefined synthetic portfolio records.",
+    "The 599 recalculations reflect the separate date-dependent premium refresh after the UTC date rollover; they are not new source inserts.",
+    "No raw payload, credential, internal SQL error, or source transaction identifier is published to browser roles.",
+    "This evidence is not a NICO system, production workload, approval, UAT result, or scale claim."
+  ]
+}
