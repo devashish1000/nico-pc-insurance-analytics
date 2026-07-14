@@ -305,6 +305,7 @@ test('controlled failure is quarantined once and recovers with lineage through m
         quarantined_at: '2026-07-13T18:05:00.000Z',
         resolved_at: null,
         recovered_by_run_id: null,
+        recoverable: true,
       }];
       await route.fulfill({ status: 200, contentType: 'application/json', json: { runId: failedRunId, status: 'failed', scenario: 'controlled-failure' } });
       return;
@@ -322,6 +323,7 @@ test('controlled failure is quarantined once and recovers with lineage through m
         disposition: 'replayed',
         resolved_at: '2026-07-13T18:06:00.000Z',
         recovered_by_run_id: recoveryRunId,
+        recoverable: false,
       }));
       await route.fulfill({
         status: 200,

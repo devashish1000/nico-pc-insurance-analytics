@@ -1,0 +1,36 @@
+{
+  "format": "nico-hosted-controlled-recovery-guard-v1",
+  "verifiedAtUtc": "2026-07-14T00:26:47Z",
+  "projectRef": "uketehwjsvpnohxhdvxa",
+  "migration": {
+    "hostedVersion": "20260714002608",
+    "name": "controlled_recovery_guard",
+    "source": "supabase/migrations/20260714002608_controlled_recovery_guard.sql"
+  },
+  "databaseContract": {
+    "acceptedTarget": "A pending premium quarantine created by a manual, failed, incremental controlled-failure run with matching run and batch lineage.",
+    "rejectedTargets": "Unknown UUIDs, scheduled/manual non-demo quarantines, non-failed runs, resolved rows, and rows outside the predefined missing-policy scenario.",
+    "browserEvidence": "The sanitized public view exposes a recoverable boolean; it does not expose payloads, source transaction identifiers, SQL errors, or stack traces.",
+    "authoritativeBoundary": "public.run_demo_pipeline_action(text, uuid) validates the target under the pipeline advisory lock before invoking the private runner."
+  },
+  "readOnlyHostedVerification": {
+    "migrationRows": 1,
+    "recoverableColumns": 1,
+    "pendingRecoverableRows": 0,
+    "pendingQuarantineRows": 0,
+    "pipelineRunCount": 10,
+    "authoritativeGuardInstalled": true,
+    "anonymousExecutionDenied": true,
+    "authenticatedExecutionDenied": true
+  },
+  "automatedVerification": {
+    "freshDatabaseReset": "pass",
+    "pgTap": "125/125 pass",
+    "checksumShapeContract": "All recorded fact checksums are 32-character lowercase hexadecimal values and the pre-recovery snapshot agrees across hosted evidence artifacts."
+  },
+  "boundaries": [
+    "Verification after the additive migration was read-only; no additional normal, failure, or recovery run was invoked.",
+    "All data and recovery scenarios are synthetic portfolio evidence.",
+    "This is not a NICO system, production workload, stakeholder approval, UAT result, or production-readiness claim."
+  ]
+}

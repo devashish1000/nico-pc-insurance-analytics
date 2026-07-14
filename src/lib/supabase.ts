@@ -96,6 +96,7 @@ export type QuarantineEvidence = {
   quarantined_at: string;
   resolved_at: string | null;
   recovered_by_run_id: string | null;
+  recoverable: boolean;
 };
 
 export type PipelineAction = 'run' | 'simulate-failure' | 'recover';

@@ -33,7 +33,7 @@ export function formatFreshness(seconds: number | null) {
 }
 
 export function getRecoveryTarget(rows: QuarantineEvidence[]) {
-  return rows.find((row) => row.disposition === 'pending')?.run_id ?? null;
+  return rows.find((row) => row.disposition === 'pending' && row.recoverable === true)?.run_id ?? null;
 }
 
 export function getRunFailureReason(run: PipelineRun | undefined) {

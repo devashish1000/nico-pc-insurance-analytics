@@ -11,7 +11,11 @@ const pipelineSource = readFileSync(new URL('../src/pc/PipelineRuns.tsx', import
 const stageSource = readFileSync(new URL('../src/pc/OperationalEvidence.tsx', import.meta.url), 'utf8');
 const qualitySource = readFileSync(new URL('../src/pc/DataQuality.tsx', import.meta.url), 'utf8');
 
-function quarantine(runId: string, disposition: QuarantineEvidence['disposition']): QuarantineEvidence {
+function quarantine(
+  runId: string,
+  disposition: QuarantineEvidence['disposition'],
+  recoverable = false,
+): QuarantineEvidence {
   return {
     quarantine_id: `${runId}-record`,
     run_id: runId,
@@ -22,6 +26,7 @@ function quarantine(runId: string, disposition: QuarantineEvidence['disposition'
     quarantined_at: '2026-07-13T12:00:00Z',
     resolved_at: null,
     recovered_by_run_id: null,
+    recoverable,
   };
 }
 
@@ -29,9 +34,17 @@ describe('hiring-manager operational evidence UI', () => {
   it('recovers the original pending quarantine owner and ignores resolved evidence', () => {
     expect(getRecoveryTarget([
       quarantine('resolved-run', 'replayed'),
-      quarantine('original-failure', 'pending'),
+      quarantine('unrelated-pending-run', 'pending'),
+      quarantine('original-failure', 'pending', true),
       quarantine('later-evidence', 'discarded'),
     ])).toBe('original-failure');
+  });
+
+  it('never offers recovery for a pending row outside the controlled-failure contract', () => {
+    expect(getRecoveryTarget([
+      quarantine('scheduled-quarantine', 'pending'),
+      quarantine('manual-non-demo-quarantine', 'pending'),
+    ])).toBeNull();
   });
 
   it('uses explicit PASS and FAIL outcomes rather than color alone', () => {

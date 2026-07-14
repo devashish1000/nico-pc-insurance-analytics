@@ -61,6 +61,11 @@
         "hostedVersion": "20260714000641",
         "hostedName": "monotonic_composite_watermarks",
         "sourcePath": "supabase/migrations/20260714000641_monotonic_composite_watermarks.sql"
+      },
+      {
+        "hostedVersion": "20260714002608",
+        "hostedName": "controlled_recovery_guard",
+        "sourcePath": "supabase/migrations/20260714002608_controlled_recovery_guard.sql"
       }
     ],
     "watermarkRemediation": {
@@ -73,12 +78,17 @@
       "status": "verified",
       "scope": "One controlled synthetic failure and its single linked recovery; failure left facts and watermarks unchanged, recovery replayed the quarantine and passed 6/6 DQ."
     },
+    "controlledRecoveryGuard": {
+      "evidencePath": "artifacts/release/hosted-controlled-recovery-guard-20260714.json",
+      "status": "verified",
+      "scope": "Authoritative recovery-target validation, sanitized recoverable evidence, execution-denial checks, and 125/125 fresh-reset pgTAP assertions."
+    },
     "foreignKeyIndexVerification": {
       "expected": 11,
       "observed": 11,
       "status": "present"
     },
-    "verificationBasis": "Read-only hosted migration history, pg_indexes inspection, and post-run watermark remediation verification.",
+    "verificationBasis": "Read-only hosted migration history, pg_indexes inspection, post-run watermark remediation verification, and controlled-recovery guard inspection.",
     "claimBoundary": "This records deployment sequence and index presence only; it is not evidence of production scale, benchmark performance, production readiness, NICO stakeholder approval, or UAT acceptance."
   },
   "screenshots": [
